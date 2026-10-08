@@ -53,17 +53,14 @@
     .st-core-node { transform-origin: 320px 240px; animation: st_pulse 4s infinite ease-in-out; }
   </style>
 
-  <!-- Container Frame -->
   <rect width="1200" height="450" rx="20" fill="url(#st_bg)"/>
   <rect width="1200" height="450" rx="20" fill="url(#st_dots)"/>
   <rect x="1" y="1" width="1198" height="448" rx="19" fill="none" stroke="url(#st_borderGrad)" stroke-width="1.5"/>
 
-  <!-- Title -->
   <g transform="translate(60, 42)">
     <text x="0" y="0" class="st-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 03 // TECHNICAL SKILLS &amp; QA STACK</text>
   </g>
 
-  <!-- Left Side: 3 Tilted Elliptical Orbits with Core Node & Tech Icons -->
   <g transform="translate(0, 10)">
     <circle cx="320" cy="235" r="140" fill="url(#st_blueGlow)"/>
 
@@ -117,7 +114,6 @@
     </g>
   </g>
 
-  <!-- Right Side: Categorized Stack Chips Grid -->
   <g transform="translate(640, 75)">
     <g transform="translate(0, 0)">
       <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">PROGRAMMING &amp; FRAMEWORKS</text>

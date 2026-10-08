@@ -3,15 +3,15 @@
 # ⚡ ABHIJAT PATEL
 ### SDET & Software Quality Engineer • Java Spring Boot & FastAPI • Multi-Agent AI & Forensics
 
-![Hero](./assets/hero.svg?v=2)
+![Hero](./assets/hero.svg?v=3)
 
-![About](./assets/about-life.svg?v=2)
+![About](./assets/about-life.svg?v=3)
 
-![Stack](./assets/stack.svg?v=2)
+![Stack](./assets/stack.svg?v=3)
 
-![Developer ID](./assets/id-dashboard.svg?v=2)
+![Developer ID](./assets/id-dashboard.svg?v=3)
 
-![Connect](./assets/connect.svg?v=2)
+![Connect](./assets/connect.svg?v=3)
 
 </div>
 

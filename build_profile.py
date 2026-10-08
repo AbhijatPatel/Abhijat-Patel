@@ -6,15 +6,13 @@ ROOT = Path(".")
 ASSETS = ROOT / "assets"
 ASSETS.mkdir(exist_ok=True)
 
-# 1. Read and encode images
+# 1. Read and encode real portrait image
 id_png = ASSETS / "id.png"
-pointing_png = ASSETS / "right_pointing.png"
 
-if not id_png.exists() or not pointing_png.exists():
-    raise FileNotFoundError("id.png or right_pointing.png missing from assets/")
+if not id_png.exists():
+    raise FileNotFoundError("id.png missing from assets/")
 
 id_b64 = "data:image/png;base64," + base64.b64encode(id_png.read_bytes()).decode("utf-8")
-pointing_b64 = "data:image/png;base64," + base64.b64encode(pointing_png.read_bytes()).decode("utf-8")
 
 # Common styling tokens
 COMMON_DEFS = """
@@ -59,7 +57,7 @@ COMMON_DEFS = """
 """
 
 # ==============================================================================
-# 1. HERO.SVG - FIXED PHOTO FRAMING (Full head, hair, chest visible with YMin align)
+# 1. HERO.SVG - Real Executive Portrait
 # ==============================================================================
 hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -112,7 +110,6 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
 
   <!-- Left Content Column -->
   <g transform="translate(60, 48)">
-    <!-- Terminal Header / Status Tag -->
     <g transform="translate(0, 0)">
       <rect x="0" y="0" width="310" height="32" rx="16" fill="#0d1933" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.4"/>
       <circle cx="16" cy="16" r="4" fill="#00e676">
@@ -121,14 +118,12 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
       <text x="30" y="21" class="h-text-mono" font-size="12" font-weight="600" fill="#247bff" letter-spacing="1.2">OPEN FOR SDET &amp; BACKEND ROLES</text>
     </g>
 
-    <!-- Sub-greeting with typing prompt -->
     <g transform="translate(0, 62)">
       <text x="0" y="0" class="h-text-mono" font-size="15" fill="#94a3b8" letter-spacing="2">
         <tspan fill="#ff354f">&gt;</tspan> HELLO WORLD, I'M
       </text>
     </g>
 
-    <!-- Giant Name Reveal with Mask -->
     <g transform="translate(0, 75)">
       <g clip-path="url(#h_nameClip)">
         <text x="0" y="70" class="h-text-sans" font-size="64" font-weight="900" fill="#ffffff" letter-spacing="-1">
@@ -137,7 +132,6 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
       </g>
     </g>
 
-    <!-- Animated Cycling Role Badges -->
     <g transform="translate(0, 175)">
       <rect x="0" y="0" width="500" height="42" rx="10" fill="#0c152a" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.5"/>
       <rect x="0" y="0" width="6" height="42" rx="3" fill="url(#h_blueGrad)"/>
@@ -159,7 +153,6 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
       <text x="470" y="27" class="h-text-mono h-cursor" font-size="18" fill="#247bff">_</text>
     </g>
 
-    <!-- One-line Pitch based on Career Objective -->
     <g transform="translate(0, 250)">
       <text x="0" y="0" class="h-text-sans" font-size="16.5" fill="#cbd5e1" font-weight="400">
         Engineering backend applications, database-driven REST APIs, and automated
@@ -169,7 +162,6 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
       </text>
     </g>
 
-    <!-- Info / Meta Row -->
     <g transform="translate(0, 325)">
       <g transform="translate(0, 0)">
         <rect x="0" y="0" width="180" height="34" rx="8" fill="#0a1224" stroke="#1e2d4d" stroke-width="1"/>
@@ -186,26 +178,21 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
     </g>
   </g>
 
-  <!-- Right Portrait Column with Generous Headroom and Perfect Fitting -->
+  <!-- Right Portrait Frame with Real Photo -->
   <g>
-    <!-- Background Frame with Dual Neon Borders -->
     <rect x="790" y="30" width="350" height="390" rx="24" fill="#091224" filter="url(#h_shadow)"/>
     <rect x="790" y="30" width="350" height="390" rx="24" fill="none" stroke="url(#h_blueGrad)" stroke-width="2"/>
     <rect x="790" y="30" width="350" height="390" rx="24" fill="none" stroke="url(#h_crimsonGrad)" stroke-width="1.2" opacity="0.6"/>
 
-    <!-- Corner Accents -->
     <path d="M 790 60 L 790 40 Q 790 30 800 30 L 820 30" fill="none" stroke="#00d2ff" stroke-width="3"/>
     <path d="M 1120 420 L 1140 420 Q 1140 420 1140 410 L 1140 390" fill="none" stroke="#ff354f" stroke-width="3"/>
 
-    <!-- Clipped Image with xMidYMin slice to preserve complete hair and full chest -->
     <g clip-path="url(#h_portraitClip)">
       <image href="{id_b64}" x="790" y="30" width="350" height="390" preserveAspectRatio="xMidYMin slice"/>
     </g>
 
-    <!-- Subtle inner vignette gradient at the bottom so it blends seamlessly -->
     <rect x="790" y="350" width="350" height="70" rx="24" fill="url(#h_bg)" opacity="0.6"/>
 
-    <!-- Floating Mini Code HUD Badge - Placed elegantly at bottom right without covering user face -->
     <g transform="translate(755, 360)" filter="url(#h_shadow)">
       <rect width="185" height="46" rx="10" fill="#060c1c" stroke="#247bff" stroke-width="1.2" opacity="0.95"/>
       <circle cx="16" cy="14" r="3.5" fill="#ff354f"/>
@@ -279,19 +266,15 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
     }}
   </style>
 
-  <!-- Container Frame -->
   <rect width="1200" height="450" rx="20" fill="url(#ab_bg)"/>
   <rect width="1200" height="450" rx="20" fill="url(#ab_dots)"/>
   <rect x="1" y="1" width="1198" height="448" rx="19" fill="none" stroke="url(#ab_borderGrad)" stroke-width="1.5"/>
 
-  <!-- Section Title -->
   <g transform="translate(60, 42)">
     <text x="0" y="0" class="ab-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 02 // TECHNICAL CAPABILITIES &amp; SOFTWARE QUALITY</text>
   </g>
 
-  <!-- Left Column: Core Technical Capabilities (4 Cards) -->
   <g transform="translate(60, 75)">
-    <!-- Card 1: Software Testing & Quality -->
     <g transform="translate(0, 0)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#247bff"/>
@@ -301,7 +284,6 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Software validation, semantic verification, data validation &amp; debugging</text>
     </g>
 
-    <!-- Card 2: Backend Development & REST APIs -->
     <g transform="translate(0, 86)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#00d2ff"/>
@@ -311,7 +293,6 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Java Spring Boot, Python FastAPI, PostgreSQL, MySQL &amp; SQLAlchemy</text>
     </g>
 
-    <!-- Card 3: Forensics & Multi-Modal AI (Clever AI & ClarifyAI) -->
     <g transform="translate(0, 172)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#ff354f"/>
@@ -321,7 +302,6 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Clever AI SHA-256 ELA forensics, ClarifyAI claim matching &amp; LangGraph</text>
     </g>
 
-    <!-- Card 4: DSA & Computer Science Core -->
     <g transform="translate(0, 258)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#ffd166"/>
@@ -332,11 +312,9 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
     </g>
   </g>
 
-  <!-- Right Column: 3-Slide Carousel with Segment Progress Bars -->
   <g transform="translate(620, 75)">
     <rect width="520" height="332" rx="18" fill="#091224" stroke="#1e2d4d" stroke-width="1.2" filter="url(#ab_shadow)"/>
 
-    <!-- Carousel Header / Tab Indicator -->
     <g transform="translate(30, 24)">
       <rect x="0" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
       <rect x="0" y="0" width="0" height="4" rx="2" fill="#247bff" class="ab-bar-1"/>
@@ -351,7 +329,6 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       <text x="320" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">03 / EXPERIENCE</text>
     </g>
 
-    <!-- Slide 1: SDET & Software Quality -->
     <g class="ab-slide-1" transform="translate(30, 70)">
       <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">Software Testing &amp; Verification</text>
       <text x="0" y="60" class="ab-sans" font-size="14" fill="#cbd5e1">
@@ -372,7 +349,6 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       </g>
     </g>
 
-    <!-- Slide 2: Clever AI Detection & Forensics -->
     <g class="ab-slide-2" transform="translate(30, 70)" opacity="0">
       <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">Clever AI Forensics &amp; ClarifyAI</text>
       <text x="0" y="60" class="ab-sans" font-size="14" fill="#cbd5e1">
@@ -393,7 +369,6 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       </g>
     </g>
 
-    <!-- Slide 3: Industry Experience & Training -->
     <g class="ab-slide-3" transform="translate(30, 70)" opacity="0">
       <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">Industry Internships &amp; Training</text>
       <text x="0" y="60" class="ab-sans" font-size="14" fill="#cbd5e1">
@@ -438,17 +413,14 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
     .st-core-node {{ transform-origin: 320px 240px; animation: st_pulse 4s infinite ease-in-out; }}
   </style>
 
-  <!-- Container Frame -->
   <rect width="1200" height="450" rx="20" fill="url(#st_bg)"/>
   <rect width="1200" height="450" rx="20" fill="url(#st_dots)"/>
   <rect x="1" y="1" width="1198" height="448" rx="19" fill="none" stroke="url(#st_borderGrad)" stroke-width="1.5"/>
 
-  <!-- Title -->
   <g transform="translate(60, 42)">
     <text x="0" y="0" class="st-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 03 // TECHNICAL SKILLS &amp; QA STACK</text>
   </g>
 
-  <!-- Left Side: 3 Tilted Elliptical Orbits with Core Node & Tech Icons -->
   <g transform="translate(0, 10)">
     <circle cx="320" cy="235" r="140" fill="url(#st_blueGlow)"/>
 
@@ -502,7 +474,6 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
     </g>
   </g>
 
-  <!-- Right Side: Categorized Stack Chips Grid -->
   <g transform="translate(640, 75)">
     <g transform="translate(0, 0)">
       <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">PROGRAMMING &amp; FRAMEWORKS</text>
@@ -572,7 +543,7 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 print("[OK] Created assets/stack.svg")
 
 # ==============================================================================
-# 4. ID-DASHBOARD.SVG - FIXED LANYARD PASS PHOTO FRAMING (Top-aligned, full head & eyes visible)
+# 4. ID-DASHBOARD.SVG - Real Executive Portrait inside Lanyard Card
 # ==============================================================================
 id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -596,7 +567,6 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
     .id-sans {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif; }}
     .id-mono {{ font-family: ui-monospace, "SF Mono", "Cascadia Code", "Fira Code", monospace; }}
 
-    /* Pendulum entrance and continuous gentle swing (+-1.7 deg) */
     @keyframes id_pendulum {{
       0% {{ transform: rotate(-12deg); }}
       20% {{ transform: rotate(8deg); }}
@@ -621,53 +591,42 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
     }}
   </style>
 
-  <!-- Container Frame -->
   <rect width="1200" height="450" rx="20" fill="url(#id_bg)"/>
   <rect width="1200" height="450" rx="20" fill="url(#id_dots)"/>
   <rect x="1" y="1" width="1198" height="448" rx="19" fill="none" stroke="url(#id_borderGrad)" stroke-width="1.5"/>
 
-  <!-- Section Title -->
   <g transform="translate(60, 42)">
     <text x="0" y="0" class="id-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 04 // DEVELOPER PASS &amp; VERIFIED CREDENTIALS</text>
   </g>
 
-  <!-- Left: Hanging Lanyard Pass Assembly with Perfectly Centered Top-Aligned Portrait -->
   <g class="id-lanyard-assembly">
-    <!-- Strap -->
     <path d="M 185 0 L 195 55 L 205 55 L 215 0" fill="url(#id_strap)" opacity="0.9"/>
     
-    <!-- Metal Clip Clasp -->
     <g transform="translate(188, 50)">
       <rect width="24" height="22" rx="4" fill="url(#id_metal)"/>
       <ellipse cx="12" cy="22" rx="6" ry="4" fill="#334155"/>
       <rect x="8" y="24" width="8" height="12" rx="2" fill="url(#id_metal)"/>
     </g>
 
-    <!-- ID Badge Card Body -->
     <g filter="url(#id_shadow)">
       <rect x="70" y="80" width="260" height="315" rx="20" fill="#091326" stroke="#247bff" stroke-width="1.8"/>
       
-      <!-- Top Lanyard Hole Slot -->
       <rect x="180" y="86" width="40" height="6" rx="3" fill="#020611"/>
 
-      <!-- Embedded Photo inside Card - xMidYMin slice ensures head and face are fully visible -->
       <g clip-path="url(#id_cardPhotoClip)">
         <image href="{id_b64}" x="85" y="100" width="230" height="155" preserveAspectRatio="xMidYMin slice"/>
       </g>
       <rect x="85" y="100" width="230" height="155" rx="14" fill="none" stroke="#247bff" stroke-width="1" opacity="0.6"/>
 
-      <!-- Cardholder Details -->
       <text x="85" y="280" class="id-sans" font-size="20" font-weight="900" fill="#ffffff">ABHIJAT PATEL</text>
       <text x="85" y="300" class="id-mono" font-size="11" font-weight="700" fill="#247bff" letter-spacing="1">SDET &amp; SOFTWARE ENGINEER</text>
       
-      <!-- Hologram / Barcode Footer -->
       <g transform="translate(85, 318)">
         <rect width="230" height="24" rx="4" fill="#040914"/>
         <path d="M 10 6 h 3 m 4 0 h 2 m 4 0 h 6 m 3 0 h 2 m 5 0 h 4 m 6 0 h 2 m 5 0 h 5 m 3 0 h 2 m 5 0 h 6 m 4 0 h 3 m 5 0 h 2 m 6 0 h 4 m 5 0 h 2 m 5 0 h 5 m 4 0 h 2 m 6 0 h 6 m 3 0 h 2 m 5 0 h 3" stroke="#e2e8f0" stroke-width="1.5"/>
         <text x="175" y="16" class="id-mono" font-size="9" fill="#247bff">#DEV-2027</text>
       </g>
 
-      <!-- Verified Ribbon Badge -->
       <g transform="translate(268, 92)">
         <circle cx="14" cy="14" r="13" fill="#00e676" filter="url(#id_shadow)"/>
         <text x="14" y="19" text-anchor="middle" font-size="13" font-weight="900" fill="#020611">✓</text>
@@ -675,11 +634,8 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
     </g>
   </g>
 
-  <!-- Right: Verified Developer Dashboard & Education Cards -->
   <g transform="translate(380, 75)">
-    <!-- Top Row: Verified Metrics Cards -->
     <g transform="translate(0, 0)">
-      <!-- Card 1: Verified CGPA -->
       <g transform="translate(0, 0)">
         <rect width="245" height="100" rx="14" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
         <rect x="0" y="0" width="4" height="100" rx="2" fill="#247bff"/>
@@ -688,7 +644,6 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
         <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">B.Tech IT • 2023–2027</text>
       </g>
 
-      <!-- Card 2: Industry Internship -->
       <g transform="translate(265, 0)">
         <rect width="245" height="100" rx="14" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
         <rect x="0" y="0" width="4" height="100" rx="2" fill="#ff354f"/>
@@ -697,7 +652,6 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
         <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">AI Intern + IBM SkillsBuild</text>
       </g>
 
-      <!-- Card 3: Target Role -->
       <g transform="translate(530, 0)">
         <rect width="230" height="100" rx="14" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
         <rect x="0" y="0" width="4" height="100" rx="2" fill="#00e676"/>
@@ -707,11 +661,9 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
       </g>
     </g>
 
-    <!-- Bottom Row: Education & Milestone Overview -->
     <g transform="translate(0, 120)">
       <rect width="760" height="205" rx="16" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       
-      <!-- Education Section -->
       <g transform="translate(30, 25)">
         <text x="0" y="16" class="id-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">ACADEMIC &amp; ENGINEERING CREDENTIALS</text>
         
@@ -722,7 +674,6 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 
       <line x1="30" y1="138" x2="730" y2="138" stroke="#1b2d4d" stroke-width="1"/>
 
-      <!-- Engineering Roadmap Goals -->
       <g transform="translate(30, 155)">
         <text x="0" y="16" class="id-mono" font-size="11" font-weight="700" fill="#00d2ff">CAREER OBJECTIVE:</text>
         <text x="0" y="36" class="id-sans" font-size="13" fill="#ffffff">
@@ -737,13 +688,13 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 print("[OK] Created assets/id-dashboard.svg")
 
 # ==============================================================================
-# 5. CONNECT.SVG - FIXED CHARACTER POSITIONING (Smooth bottom fit without border cut)
+# 5. CONNECT.SVG - Real Executive Portrait with Animated Glow & Connecting Arrow
 # ==============================================================================
 connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
     {COMMON_DEFS.format(ns="cn_")}
-    <clipPath id="cn_charClip">
-      <rect x="20" y="15" width="460" height="420" rx="16"/>
+    <clipPath id="cn_realPhotoClip">
+      <rect x="60" y="50" width="340" height="360" rx="24"/>
     </clipPath>
   </defs>
 
@@ -753,7 +704,7 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 
     @keyframes cn_nudge {{
       0%, 100% {{ transform: translateX(0px); }}
-      50% {{ transform: translateX(10px); }}
+      50% {{ transform: translateX(12px); }}
     }}
     .cn-arrow-nudge {{ animation: cn_nudge 1.5s infinite ease-in-out; }}
 
@@ -768,18 +719,38 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
   <rect x="1" y="1" width="1198" height="448" rx="19" fill="none" stroke="url(#cn_borderGrad)" stroke-width="1.5"/>
 
   <!-- Ambient Glows -->
-  <circle cx="280" cy="240" r="180" fill="url(#cn_blueGlow)"/>
+  <circle cx="230" cy="230" r="200" fill="url(#cn_blueGlow)"/>
   <circle cx="850" cy="225" r="220" fill="url(#cn_crimsonGlow)" opacity="0.4"/>
 
-  <!-- Left: Pointing Character Perfectly Scaled and Positioned -->
-  <g clip-path="url(#cn_charClip)">
-    <image href="{pointing_b64}" x="15" y="20" width="460" height="415" preserveAspectRatio="xMidYMax meet"/>
+  <!-- Left: Real Executive Portrait Card Frame -->
+  <g>
+    <rect x="60" y="50" width="340" height="360" rx="24" fill="#091224" filter="url(#cn_shadow)"/>
+    <rect x="60" y="50" width="340" height="360" rx="24" fill="none" stroke="url(#cn_blueGrad)" stroke-width="2"/>
+    <rect x="60" y="50" width="340" height="360" rx="24" fill="none" stroke="url(#cn_crimsonGrad)" stroke-width="1.2" opacity="0.6"/>
+
+    <!-- Corner Accents -->
+    <path d="M 60 80 L 60 60 Q 60 50 70 50 L 90 50" fill="none" stroke="#00d2ff" stroke-width="3"/>
+    <path d="M 370 410 L 390 410 Q 400 410 400 400 L 400 380" fill="none" stroke="#ff354f" stroke-width="3"/>
+
+    <!-- Clipped Real Portrait with xMidYMin slice to fit head, hair and suit perfectly -->
+    <g clip-path="url(#cn_realPhotoClip)">
+      <image href="{id_b64}" x="60" y="50" width="340" height="360" preserveAspectRatio="xMidYMin slice"/>
+    </g>
+
+    <!-- Overlay Title Tag inside Portrait Card -->
+    <g transform="translate(80, 345)" filter="url(#cn_shadow)">
+      <rect width="200" height="42" rx="10" fill="#060c1c" stroke="#247bff" stroke-width="1.2" opacity="0.95"/>
+      <circle cx="16" cy="21" r="4" fill="#00e676">
+        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="30" y="26" class="cn-mono" font-size="12" font-weight="700" fill="#ffffff">LET'S CONNECT</text>
+    </g>
   </g>
 
-  <!-- Dynamic Nudging Arrow from Finger towards Social Cards -->
-  <g transform="translate(450, 230)" class="cn-arrow-nudge">
-    <path d="M 0 0 C 40 -20, 60 10, 95 0" fill="none" stroke="#247bff" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="8 6"/>
-    <polygon points="95,-8 112,0 95,8" fill="#ff354f"/>
+  <!-- Dynamic Nudging Arrow from Portrait towards Social Cards -->
+  <g transform="translate(420, 220)" class="cn-arrow-nudge">
+    <path d="M 0 0 C 40 -20, 70 15, 120 0" fill="none" stroke="#247bff" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="8 6"/>
+    <polygon points="120,-8 138,0 120,8" fill="#ff354f"/>
   </g>
 
   <!-- Right: Generously Spaced Interactive-Styled Social Cards -->
@@ -840,7 +811,6 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
       </g>
     </g>
 
-    <!-- Interactive Links Notice -->
     <g transform="translate(0, 312)">
       <text x="0" y="0" class="cn-mono" font-size="11" fill="#64748b">
         💡 <tspan fill="#cbd5e1">Clickable badges and project links are available directly below.</tspan>
@@ -853,22 +823,22 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 print("[OK] Created assets/connect.svg")
 
 # ==============================================================================
-# 6. ROOT README.MD (With all projects and updated assets)
+# 6. ROOT README.MD (Cache-busted with ?v=3 to refresh GitHub Camo cache)
 # ==============================================================================
 readme_content = """<div align="center">
 
 # ⚡ ABHIJAT PATEL
 ### SDET & Software Quality Engineer • Java Spring Boot & FastAPI • Multi-Agent AI & Forensics
 
-![Hero](./assets/hero.svg?v=2)
+![Hero](./assets/hero.svg?v=3)
 
-![About](./assets/about-life.svg?v=2)
+![About](./assets/about-life.svg?v=3)
 
-![Stack](./assets/stack.svg?v=2)
+![Stack](./assets/stack.svg?v=3)
 
-![Developer ID](./assets/id-dashboard.svg?v=2)
+![Developer ID](./assets/id-dashboard.svg?v=3)
 
-![Connect](./assets/connect.svg?v=2)
+![Connect](./assets/connect.svg?v=3)
 
 </div>
 
@@ -948,7 +918,7 @@ npx abhijat-patel
 print("[OK] Created README.md")
 
 # ==============================================================================
-# 7. PREVIEW.HTML (Interactive local preview)
+# 7. PREVIEW.HTML
 # ==============================================================================
 preview_html = """<!DOCTYPE html>
 <html lang="en">
@@ -1020,19 +990,19 @@ preview_html = """<!DOCTYPE html>
 
   <div class="container">
     <div class="card">
-      <img src="./assets/hero.svg?v=2" alt="Hero Section"/>
+      <img src="./assets/hero.svg?v=3" alt="Hero Section"/>
     </div>
     <div class="card">
-      <img src="./assets/about-life.svg?v=2" alt="About Section"/>
+      <img src="./assets/about-life.svg?v=3" alt="About Section"/>
     </div>
     <div class="card">
-      <img src="./assets/stack.svg?v=2" alt="Tech Stack Section"/>
+      <img src="./assets/stack.svg?v=3" alt="Tech Stack Section"/>
     </div>
     <div class="card">
-      <img src="./assets/id-dashboard.svg?v=2" alt="ID Dashboard Section"/>
+      <img src="./assets/id-dashboard.svg?v=3" alt="ID Dashboard Section"/>
     </div>
     <div class="card">
-      <img src="./assets/connect.svg?v=2" alt="Connect Section"/>
+      <img src="./assets/connect.svg?v=3" alt="Connect Section"/>
     </div>
   </div>
 </body>
