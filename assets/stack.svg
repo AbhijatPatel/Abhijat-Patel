@@ -60,7 +60,7 @@
 
   <!-- Title -->
   <g transform="translate(60, 42)">
-    <text x="0" y="0" class="st-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 03 // TECHNICAL SKILLS &amp; PLANETARY STACK</text>
+    <text x="0" y="0" class="st-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 03 // TECHNICAL SKILLS &amp; QA STACK</text>
   </g>
 
   <!-- Left Side: 3 Tilted Elliptical Orbits with Core Node & Tech Icons -->
@@ -68,7 +68,7 @@
     <!-- Glow behind orbit core -->
     <circle cx="320" cy="235" r="140" fill="url(#st_blueGlow)"/>
 
-    <!-- Orbit 1: Outer Orbit (Databases & Cloud / Tools) -->
+    <!-- Orbit 1: Outer Orbit (Databases & Tools) -->
     <g transform="rotate(-15 320 235)">
       <ellipse cx="320" cy="235" rx="260" ry="110" fill="none" stroke="#1b305c" stroke-width="1.5" stroke-dasharray="6 6"/>
       <g transform="translate(80, 210)">
@@ -85,7 +85,7 @@
       </g>
     </g>
 
-    <!-- Orbit 2: Mid Orbit (Backend & Core Languages: Java, Python, Go, C++) -->
+    <!-- Orbit 2: Mid Orbit (Languages: Java, Python, C++, SQL) -->
     <g transform="rotate(18 320 235)">
       <ellipse cx="320" cy="235" rx="190" ry="80" fill="none" stroke="#247bff" stroke-width="1.5" opacity="0.6"/>
       <g transform="translate(135, 215)">
@@ -93,8 +93,8 @@
         <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#f89820">Java</text>
       </g>
       <g transform="translate(465, 215)">
-        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#00ADD8" stroke-width="1.5"/>
-        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#00ADD8">Go</text>
+        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#00599C" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#659AD2">C++</text>
       </g>
       <g transform="translate(305, 145)">
         <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#3776AB" stroke-width="1.5"/>
@@ -102,12 +102,12 @@
       </g>
     </g>
 
-    <!-- Orbit 3: Inner Orbit (AI Frameworks & Web) -->
+    <!-- Orbit 3: Inner Orbit (Frameworks & QA) -->
     <g transform="rotate(-5 320 235)">
       <ellipse cx="320" cy="235" rx="115" ry="50" fill="none" stroke="#ff354f" stroke-width="1.5" opacity="0.7"/>
       <g transform="translate(205, 218)">
-        <circle cx="16" cy="16" r="18" fill="#0d1b33" stroke="#61DAFB" stroke-width="1.5"/>
-        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="10" font-weight="700" fill="#61DAFB">React</text>
+        <circle cx="16" cy="16" r="18" fill="#0d1b33" stroke="#6DB33F" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="9" font-weight="700" fill="#6DB33F">Spring</text>
       </g>
       <g transform="translate(395, 218)">
         <circle cx="16" cy="16" r="18" fill="#0d1b33" stroke="#00d2ff" stroke-width="1.5"/>
@@ -124,71 +124,71 @@
 
   <!-- Right Side: Categorized Stack Chips Grid -->
   <g transform="translate(640, 75)">
-    <!-- Category 1: Backend & Languages -->
+    <!-- Category 1: Languages & Core Development -->
     <g transform="translate(0, 0)">
-      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">BACKEND &amp; LANGUAGES</text>
+      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">PROGRAMMING &amp; FRAMEWORKS</text>
       <g transform="translate(0, 28)">
-        <!-- Spring Boot -->
-        <rect x="0" y="0" width="125" height="34" rx="8" fill="url(#st_cardBg)" stroke="#6DB33F" stroke-width="1" stroke-opacity="0.7"/>
+        <!-- Java & Spring Boot -->
+        <rect x="0" y="0" width="145" height="34" rx="8" fill="url(#st_cardBg)" stroke="#6DB33F" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="16" cy="17" r="4" fill="#6DB33F"/>
-        <text x="30" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Spring Boot</text>
+        <text x="30" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Java • Spring Boot</text>
 
-        <!-- FastAPI -->
-        <rect x="135" y="0" width="105" height="34" rx="8" fill="url(#st_cardBg)" stroke="#009688" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="151" cy="17" r="4" fill="#009688"/>
-        <text x="165" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">FastAPI</text>
-
-        <!-- Go / Golang -->
-        <rect x="250" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00ADD8" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="266" cy="17" r="4" fill="#00ADD8"/>
-        <text x="280" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Go (Golang)</text>
-
-        <!-- Java / Python -->
-        <rect x="375" y="0" width="125" height="34" rx="8" fill="url(#st_cardBg)" stroke="#f89820" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="391" cy="17" r="4" fill="#f89820"/>
-        <text x="405" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Java • Python</text>
-      </g>
-    </g>
-
-    <!-- Category 2: AI / ML & Multi-Agent -->
-    <g transform="translate(0, 90)">
-      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#00d2ff" letter-spacing="1">AI / ML &amp; AGENTIC SYSTEMS</text>
-      <g transform="translate(0, 28)">
-        <!-- LangChain / LangGraph -->
-        <rect x="0" y="0" width="165" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00d2ff" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="16" cy="17" r="4" fill="#00d2ff"/>
-        <text x="30" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">LangGraph / Agents</text>
-
-        <!-- RAG & LLMs -->
-        <rect x="175" y="0" width="145" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ffd166" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="191" cy="17" r="4" fill="#ffd166"/>
-        <text x="205" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">RAG &amp; LLM APIs</text>
-
-        <!-- Forensics / SHA-256 -->
-        <rect x="330" y="0" width="170" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ff354f" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="346" cy="17" r="4" fill="#ff354f"/>
-        <text x="360" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Digital Forensics</text>
-      </g>
-    </g>
-
-    <!-- Category 3: Databases, Core CS & Frontend -->
-    <g transform="translate(0, 180)">
-      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#ff354f" letter-spacing="1">DATABASES &amp; CORE FOUNDATIONS</text>
-      <g transform="translate(0, 28)">
-        <!-- MySQL / PostgreSQL -->
-        <rect x="0" y="0" width="155" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00758F" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="16" cy="17" r="4" fill="#00758F"/>
-        <text x="30" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">MySQL • PostgreSQL</text>
+        <!-- Python & FastAPI -->
+        <rect x="155" y="0" width="135" height="34" rx="8" fill="url(#st_cardBg)" stroke="#009688" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="171" cy="17" r="4" fill="#009688"/>
+        <text x="185" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Python • FastAPI</text>
 
         <!-- C++ & DSA -->
-        <rect x="165" y="0" width="145" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00599C" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="181" cy="17" r="4" fill="#659AD2"/>
-        <text x="195" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">C++ &amp; DSA • OOP</text>
+        <rect x="300" y="0" width="105" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00599C" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="316" cy="17" r="4" fill="#659AD2"/>
+        <text x="330" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">C++ • DSA</text>
 
-        <!-- React & Next.js -->
-        <rect x="320" y="0" width="180" height="34" rx="8" fill="url(#st_cardBg)" stroke="#61DAFB" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="336" cy="17" r="4" fill="#61DAFB"/>
-        <text x="350" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">React.js • Next.js</text>
+        <!-- React.js / Node -->
+        <rect x="415" y="0" width="85" height="34" rx="8" fill="url(#st_cardBg)" stroke="#61DAFB" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="428" cy="17" r="4" fill="#61DAFB"/>
+        <text x="440" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">React.js</text>
+      </g>
+    </g>
+
+    <!-- Category 2: Software Testing & Quality Engineering -->
+    <g transform="translate(0, 90)">
+      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#00d2ff" letter-spacing="1">SOFTWARE TESTING &amp; QUALITY</text>
+      <g transform="translate(0, 28)">
+        <!-- Software Validation -->
+        <rect x="0" y="0" width="155" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00d2ff" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="16" cy="17" r="4" fill="#00d2ff"/>
+        <text x="30" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">Software Validation</text>
+
+        <!-- Semantic Verification (NLI) -->
+        <rect x="165" y="0" width="165" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ffd166" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="181" cy="17" r="4" fill="#ffd166"/>
+        <text x="195" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">Semantic Verification</text>
+
+        <!-- Debugging & Data Validation -->
+        <rect x="340" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ff354f" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="356" cy="17" r="4" fill="#ff354f"/>
+        <text x="370" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">Debugging &amp; Model Eval</text>
+      </g>
+    </g>
+
+    <!-- Category 3: Databases & AI/ML APIs -->
+    <g transform="translate(0, 180)">
+      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#ff354f" letter-spacing="1">DATABASES, RAG &amp; TOOLING</text>
+      <g transform="translate(0, 28)">
+        <!-- MySQL & PostgreSQL -->
+        <rect x="0" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00758F" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="16" cy="17" r="4" fill="#00758F"/>
+        <text x="30" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">MySQL • PostgreSQL</text>
+
+        <!-- LangChain & RAG -->
+        <rect x="170" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ffd166" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="186" cy="17" r="4" fill="#ffd166"/>
+        <text x="200" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">LangGraph • RAG • LLM</text>
+
+        <!-- Tools / Git -->
+        <rect x="340" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#F05032" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="356" cy="17" r="4" fill="#F05032"/>
+        <text x="370" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">Git • VS Code • Antigravity</text>
       </g>
     </g>
 
@@ -196,7 +196,7 @@
     <g transform="translate(0, 275)">
       <rect width="500" height="50" rx="12" fill="#0c162d" stroke="#1f335c" stroke-width="1"/>
       <text x="20" y="30" class="st-sans" font-size="13" fill="#94a3b8">
-        Focused on building <tspan fill="#00d2ff" font-weight="700">secure, high-throughput REST APIs</tspan> &amp; autonomous agent workflows.
+        Applying strong <tspan fill="#00d2ff" font-weight="700">programming and analytical skills</tspan> to software quality and testing.
       </text>
     </g>
   </g>

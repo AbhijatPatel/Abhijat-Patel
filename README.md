@@ -1,7 +1,7 @@
 <div align="center">
 
 # ⚡ ABHIJAT PATEL
-### Backend & Distributed Systems Developer • Multi-Agent AI & RAG • C++ & DSA
+### SDET & Software Quality Engineer • Java Spring Boot & FastAPI • Multi-Agent AI & Verification
 
 ![Hero](./assets/hero.svg?v=1)
 
@@ -21,9 +21,9 @@
 
 | Project | Description | Stack & Architecture | Links |
 | :--- | :--- | :--- | :---: |
-| 🎓 **CampusConnect** | **AI-Powered Placement & Resume Matching Portal**<br/>Developed a Java Spring Boot & MySQL backend with REST APIs for managing candidate profiles, recruiter dashboards, and job postings. Designed a priority-based ranking algorithm using DSA and an NLP microservice to compute resume-to-job similarity. | `Java` `Spring Boot` `MySQL` `REST APIs` `React` `Python NLP` `DSA` | [GitHub](https://github.com/AbhijatPatel) |
-| 🤖 **AgentIQ** | **Autonomous Multi-Agent Research & Task Assistant**<br/>Built a multi-agent pipeline of planning, research, writing, and critique stages decomposing research goals into subtasks. Implemented RAG + web retrieval with self-critique loops and a real-time React monitoring dashboard. | `Python` `FastAPI` `LangChain` `LangGraph` `LLM APIs` `RAG` `React` | [GitHub](https://github.com/AbhijatPatel) |
-| 🛡️ **Clever AI Detection** | **Multi-Modal AI Content Intelligence & Digital Forensics Platform**<br/>Engineered a FastAPI backend verifying authenticity of text, audio, images, and video using Error Level Analysis (ELA), text stylometry, and deepfake temporal checks. Features SHA-256 data integrity checks with sentence-level AI likelihood dossiers. | `Python` `FastAPI` `Next.js` `SHA-256` `Digital Forensics` `Explainable AI` | [GitHub](https://github.com/AbhijatPatel) |
+| 🎓 **CampusConnect** | **AI-Powered Placement & Resume Matching Portal**<br/>• Developed a Java Spring Boot and MySQL backend for managing student profiles, company job postings, and applications.<br/>• Built an end-to-end software workflow connecting student/company profiles, job postings, an AI microservice, ranking engine, and recruiter dashboard.<br/>• Designed a priority-based ranking algorithm using DSA and an NLP microservice to calculate resume-to-job-description similarity and rank candidates.<br/>• Worked across Java backend, Python services, database operations, and frontend components while validating end-to-end application workflows. | `Java` `Spring Boot` `MySQL` `React` `Python` `AI/NLP` `DSA` | [GitHub](https://github.com/AbhijatPatel) |
+| 🔍 **ClarifyAI** | **Confidence-Scored, Source-Verified Answer Engine**<br/>• Developed an end-to-end verification pipeline covering evidence retrieval, answer generation, claim extraction, evidence-claim matching, confidence scoring, and verified output.<br/>• Built a modular FastAPI backend with PostgreSQL and SQLAlchemy and implemented validation logic to classify claims as *Supported*, *Contradicted*, or *Insufficient*.<br/>• Engineered confidence-scoring mechanisms using evidence relevance, semantic support, contradiction signals, and source quality.<br/>• Debugged and validated software components across the verification pipeline. | `Python` `FastAPI` `PostgreSQL` `SQLAlchemy` `LLM APIs` `NLI` | [GitHub](https://github.com/AbhijatPatel) |
+| 🤖 **AgentIQ** | **Autonomous Multi-Agent Research & Task Assistant**<br/>• Developed a multi-agent software pipeline consisting of planning, research, writing, and critique stages.<br/>• Implemented RAG and web-search retrieval to validate and ground generated outputs.<br/>• Developed a self-critique workflow in which generated drafts are reviewed and revised before producing the final report.<br/>• Exposed the application through FastAPI and developed a React dashboard for monitoring agent workflows and tool calls. | `Python` `LangChain` `LangGraph` `LLM APIs` `RAG` `FastAPI` `React` | [GitHub](https://github.com/AbhijatPatel) |
 | 🌐 **Developer Portfolio** | **Interactive Modern Engineering Portfolio**<br/>High-performance developer showcase highlighting production projects, technical capabilities, interactive demos, and contact integration. | `HTML5` `CSS3` `JavaScript` `Responsive UI` | [Live Site](https://abhijatpatel.github.io/My-Portfolio-Website/) • [GitHub](https://github.com/AbhijatPatel) |
 
 ---
@@ -31,11 +31,18 @@
 ## 💼 Industry Experience & Education
 
 - 🏢 **Artificial Intelligence Intern** — *Codec Technologies Pvt. Ltd.* (Jun 2026 – Jul 2026)
-  - Applied Python and core AI/ML workflows for data preprocessing and model evaluation.
-  - Developed and evaluated software-based solutions, strengthening data validation and debugging.
+  - Applied Python and core AI/ML concepts across practical modules and real-world tasks.
+  - Worked on projects involving data preprocessing and model evaluation, strengthening validation, debugging, and analytical problem-solving skills.
+  - Developed and evaluated software-based solutions using Python.
 - ☁️ **GenAI & Cloud Computing Intern** — *IBM SkillsBuild AICTE–BharatCares Program*
-  - Completed structured training on Generative AI, cloud infrastructure, and AI tooling.
-- 🎓 **B.Tech in Information Technology** (2023 – 2027) — *JSS Academy of Technical Education, Noida* | **CGPA: 7.27 / 10**
+  - Gained industry-aligned exposure to Generative AI, AI tools, and cloud computing fundamentals.
+  - Completed structured modules involving cloud fundamentals and practical GenAI use cases.
+- 🎓 **Bachelor of Technology (B.Tech) in Information Technology** (2023 – 2027)
+  - *JSS Academy of Technical Education, Noida* | **CGPA: 7.27 / 10**
+- 📜 **Certifications**:
+  - Communication Skills — *TCS iON, Tata Consultancy Services*
+  - GenAI & Cloud Computing Internship — *IBM SkillsBuild, AICTE–BharatCares*
+  - Artificial Intelligence Internship Certificate — *Codec Technologies Pvt. Ltd.*
 
 ---
 
@@ -72,7 +79,7 @@ npx abhijat-patel
 ---
 
 <p align="center">
-  <b>BUILD • SECURE • SCALE • INNOVATE</b><br/>
+  <b>VALIDATE • TEST • BUILD • SCALE</b><br/>
   <i>Crafted with precision for Abhijat Patel</i>
 </p>
 

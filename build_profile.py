@@ -111,11 +111,11 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
   <g transform="translate(60, 48)">
     <!-- Terminal Header / Status Tag -->
     <g transform="translate(0, 0)">
-      <rect x="0" y="0" width="280" height="32" rx="16" fill="#0d1933" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.4"/>
+      <rect x="0" y="0" width="310" height="32" rx="16" fill="#0d1933" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.4"/>
       <circle cx="16" cy="16" r="4" fill="#00e676">
         <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
       </circle>
-      <text x="30" y="21" class="h-text-mono" font-size="12" font-weight="600" fill="#247bff" letter-spacing="1.2">OPEN FOR BACKEND &amp; AI ROLES</text>
+      <text x="30" y="21" class="h-text-mono" font-size="12" font-weight="600" fill="#247bff" letter-spacing="1.2">OPEN FOR SDET &amp; BACKEND ROLES</text>
     </g>
 
     <!-- Sub-greeting with typing prompt -->
@@ -137,37 +137,37 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
     <!-- Animated Cycling Role Badges -->
     <g transform="translate(0, 175)">
       <!-- Base container badge -->
-      <rect x="0" y="0" width="490" height="42" rx="10" fill="#0c152a" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.5"/>
+      <rect x="0" y="0" width="500" height="42" rx="10" fill="#0c152a" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.5"/>
       <rect x="0" y="0" width="6" height="42" rx="3" fill="url(#h_blueGrad)"/>
 
       <g transform="translate(24, 26)">
-        <!-- Role 1 -->
+        <!-- Role 1: SDET / Testing -->
         <g class="h-role-1">
-          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#247bff">⚡ BACKEND &amp; DISTRIBUTED SYSTEMS</text>
+          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#247bff">🛡️ SDET &amp; SOFTWARE QUALITY ENGINEER</text>
         </g>
-        <!-- Role 2 -->
+        <!-- Role 2: Backend Development -->
         <g class="h-role-2" opacity="0">
-          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#00d2ff">🤖 MULTI-AGENT AI &amp; RAG ARCHITECT</text>
+          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#00d2ff">⚡ JAVA SPRING BOOT &amp; FASTAPI DEV</text>
         </g>
-        <!-- Role 3 -->
+        <!-- Role 3: AI & Verification -->
         <g class="h-role-3" opacity="0">
-          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ff354f">☕ JAVA SPRING BOOT &amp; FASTAPI</text>
+          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ff354f">🤖 MULTI-AGENT AI &amp; SEMANTIC VERIFICATION</text>
         </g>
-        <!-- Role 4 -->
+        <!-- Role 4: DSA & Core CS -->
         <g class="h-role-4" opacity="0">
-          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ffd166">🧠 C++ &amp; DSA PROBLEM SOLVER</text>
+          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ffd166">🧠 C++, JAVA &amp; DSA PROBLEM SOLVER</text>
         </g>
       </g>
-      <text x="460" y="27" class="h-text-mono h-cursor" font-size="18" fill="#247bff">_</text>
+      <text x="470" y="27" class="h-text-mono h-cursor" font-size="18" fill="#247bff">_</text>
     </g>
 
-    <!-- One-line Pitch based on Resume -->
+    <!-- One-line Pitch based on Updated Career Objective -->
     <g transform="translate(0, 250)">
       <text x="0" y="0" class="h-text-sans" font-size="16.5" fill="#cbd5e1" font-weight="400">
-        Building database-driven REST APIs, autonomous multi-agent pipelines,
+        Engineering backend applications, database-driven REST APIs, and automated
       </text>
       <text x="0" y="25" class="h-text-sans" font-size="16.5" fill="#cbd5e1" font-weight="400">
-        and security-focused digital forensics platforms with clean scalable code.
+        software verification pipelines with rigorous validation and high reliability.
       </text>
     </g>
 
@@ -201,13 +201,13 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
     <path d="M 40 45 L 40 25 Q 40 15 50 15 L 70 15" fill="none" stroke="#00d2ff" stroke-width="3"/>
     <path d="M 350 385 L 370 385 Q 380 385 380 375 L 380 355" fill="none" stroke="#ff354f" stroke-width="3"/>
 
-    <!-- Clipped Portrait Image -->
+    <!-- Clipped Real Executive Portrait Image -->
     <clipPath id="h_portraitClip">
       <rect x="42" y="17" width="336" height="366" rx="26"/>
     </clipPath>
 
     <g clip-path="url(#h_portraitClip)">
-      <image href="{id_b64}" x="35" y="10" width="350" height="380" preserveAspectRatio="xMidYMid slice"/>
+      <image href="{id_b64}" x="40" y="15" width="340" height="370" preserveAspectRatio="xMidYMid slice"/>
     </g>
 
     <!-- Floating Mini Code HUD Badge -->
@@ -216,7 +216,7 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
       <circle cx="16" cy="18" r="4" fill="#ff354f"/>
       <circle cx="28" cy="18" r="4" fill="#ffb703"/>
       <circle cx="40" cy="18" r="4" fill="#00e676"/>
-      <text x="16" y="44" class="h-text-mono" font-size="12" font-weight="700" fill="#00d2ff">const dev = "backend";</text>
+      <text x="16" y="44" class="h-text-mono" font-size="12" font-weight="700" fill="#00d2ff">assert dev.status == OK</text>
     </g>
   </g>
 </svg>"""
@@ -292,49 +292,49 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 
   <!-- Section Title -->
   <g transform="translate(60, 42)">
-    <text x="0" y="0" class="ab-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 02 // CORE CAPABILITIES &amp; ENGINEERING MINDSET</text>
+    <text x="0" y="0" class="ab-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 02 // TECHNICAL CAPABILITIES &amp; SOFTWARE QUALITY</text>
   </g>
 
   <!-- Left Column: Core Technical Capabilities (4 Cards) -->
   <g transform="translate(60, 75)">
-    <!-- Card 1: Backend & REST APIs -->
+    <!-- Card 1: Software Testing & Quality -->
     <g transform="translate(0, 0)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#247bff"/>
       <circle cx="36" cy="37" r="18" fill="#0d244d"/>
-      <text x="36" y="42" text-anchor="middle" font-size="18">⚡</text>
-      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Backend &amp; RESTful API Systems</text>
-      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Java Spring Boot, FastAPI, Go (learning), Node.js &amp; MySQL</text>
+      <text x="36" y="42" text-anchor="middle" font-size="18">🛡️</text>
+      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Software Testing &amp; Quality Engineering</text>
+      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Software validation, semantic verification, data validation &amp; debugging</text>
     </g>
 
-    <!-- Card 2: Multi-Agent AI & RAG -->
+    <!-- Card 2: Backend Development & REST APIs -->
     <g transform="translate(0, 86)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#00d2ff"/>
       <circle cx="36" cy="37" r="18" fill="#0b2e3b"/>
-      <text x="36" y="42" text-anchor="middle" font-size="18">🤖</text>
-      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Multi-Agent AI &amp; LangGraph / RAG</text>
-      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Autonomous task planning, critique loops &amp; LLM tool-calling</text>
+      <text x="36" y="42" text-anchor="middle" font-size="18">⚡</text>
+      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Backend Development &amp; REST APIs</text>
+      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Java Spring Boot, Python FastAPI, PostgreSQL, MySQL &amp; SQLAlchemy</text>
     </g>
 
-    <!-- Card 3: Forensics & Data Security -->
+    <!-- Card 3: AI Verification & Multi-Agent -->
     <g transform="translate(0, 172)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#ff354f"/>
       <circle cx="36" cy="37" r="18" fill="#3b1523"/>
-      <text x="36" y="42" text-anchor="middle" font-size="18">🛡️</text>
-      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Digital Forensics &amp; SHA-256 Integrity</text>
-      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Metadata analysis, ELA &amp; deepfake temporal consistency</text>
+      <text x="36" y="42" text-anchor="middle" font-size="18">🤖</text>
+      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">ClarifyAI &amp; AgentIQ Verification Engines</text>
+      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Evidence retrieval, claim validation (NLI), LangGraph &amp; RAG pipelines</text>
     </g>
 
-    <!-- Card 4: DSA & Core CS Foundations -->
+    <!-- Card 4: DSA & Computer Science Core -->
     <g transform="translate(0, 258)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#ffd166"/>
       <circle cx="36" cy="37" r="18" fill="#3b320d"/>
       <text x="36" y="42" text-anchor="middle" font-size="18">🧩</text>
-      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Data Structures &amp; Core Computer Science</text>
-      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">C++, Java, OOP Principles, DBMS, OS &amp; Computer Networks</text>
+      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Data Structures &amp; Core CS Foundations</text>
+      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">OOP Principles, DBMS, Operating Systems, Networks in Java, Python, C++</text>
     </g>
   </g>
 
@@ -348,12 +348,12 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       <!-- Segment 1 -->
       <rect x="0" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
       <rect x="0" y="0" width="0" height="4" rx="2" fill="#247bff" class="ab-bar-1"/>
-      <text x="0" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">01 / BACKEND</text>
+      <text x="0" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">01 / SDET &amp; QA</text>
 
       <!-- Segment 2 -->
       <rect x="160" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
       <rect x="160" y="0" width="0" height="4" rx="2" fill="#00d2ff" class="ab-bar-2"/>
-      <text x="160" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">02 / AGENTS &amp; AI</text>
+      <text x="160" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">02 / BACKEND</text>
 
       <!-- Segment 3 -->
       <rect x="320" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
@@ -361,47 +361,47 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       <text x="320" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">03 / EXPERIENCE</text>
     </g>
 
-    <!-- Slide 1: Backend Architecture -->
+    <!-- Slide 1: SDET & Software Quality -->
     <g class="ab-slide-1" transform="translate(30, 70)">
-      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">Backend &amp; API Engineering</text>
+      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">Software Testing &amp; Verification</text>
       <text x="0" y="60" class="ab-sans" font-size="14" fill="#cbd5e1">
-        Designing robust database-backed services using Java Spring Boot
+        Applying strong software validation, test automation logic, and
       </text>
       <text x="0" y="82" class="ab-sans" font-size="14" fill="#cbd5e1">
-        and FastAPI with strict data validation, clean OOP &amp; SQL indexing.
+        semantic verification to guarantee robust, bug-free production code.
       </text>
 
       <!-- Highlight Chips -->
       <g transform="translate(0, 115)">
         <rect width="215" height="60" rx="10" fill="#0e1b38" stroke="#247bff" stroke-width="1"/>
-        <text x="16" y="26" class="ab-mono" font-size="12" fill="#247bff" font-weight="700">CORE STACK</text>
-        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">Spring Boot, FastAPI, MySQL</text>
+        <text x="16" y="26" class="ab-mono" font-size="12" fill="#247bff" font-weight="700">TARGET ROLE</text>
+        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">SDET / QA Engineer</text>
 
         <rect x="230" width="225" height="60" rx="10" fill="#0e1b38" stroke="#247bff" stroke-width="1"/>
-        <text x="246" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">CURRENT FOCUS</text>
-        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">Go (Golang) Microservices</text>
+        <text x="246" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">CORE FOCUS</text>
+        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">Validation &amp; Verification</text>
       </g>
     </g>
 
-    <!-- Slide 2: Multi-Agent AI & Forensics -->
+    <!-- Slide 2: ClarifyAI & Backend Architecture -->
     <g class="ab-slide-2" transform="translate(30, 70)" opacity="0">
-      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">AgentIQ &amp; Forensics Platform</text>
+      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">ClarifyAI &amp; Backend Systems</text>
       <text x="0" y="60" class="ab-sans" font-size="14" fill="#cbd5e1">
-        Implemented autonomous multi-agent pipelines with LangGraph and
+        Engineered end-to-end evidence verification pipelines classifying
       </text>
       <text x="0" y="82" class="ab-sans" font-size="14" fill="#cbd5e1">
-        forensics engines verifying text/audio/video authenticity via SHA-256.
+        claims with confidence scoring on FastAPI, PostgreSQL &amp; SQLAlchemy.
       </text>
 
       <!-- Highlight Chips -->
       <g transform="translate(0, 115)">
         <rect width="215" height="60" rx="10" fill="#0c232e" stroke="#00d2ff" stroke-width="1"/>
-        <text x="16" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">AI ORCHESTRATION</text>
-        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">LangChain, LangGraph, RAG</text>
+        <text x="16" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">VERIFICATION ENGINE</text>
+        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">Evidence Retrieval &amp; NLI</text>
 
         <rect x="230" width="225" height="60" rx="10" fill="#0c232e" stroke="#00d2ff" stroke-width="1"/>
-        <text x="246" y="26" class="ab-mono" font-size="12" fill="#ffd166" font-weight="700">INTEGRITY &amp; SECURITY</text>
-        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">Error Level Analysis &amp; Hashing</text>
+        <text x="246" y="26" class="ab-mono" font-size="12" fill="#ffd166" font-weight="700">BACKEND STACK</text>
+        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">Spring Boot &amp; FastAPI</text>
       </g>
     </g>
 
@@ -433,7 +433,7 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 print("[OK] Created assets/about-life.svg")
 
 # ==============================================================================
-# 3. STACK.SVG (Complete Tech Orbit including Java, Go, Spring Boot, FastAPI, LangGraph)
+# 3. STACK.SVG (Technical Skills Taxonomy from Updated Resume)
 # ==============================================================================
 stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -458,7 +458,7 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 
   <!-- Title -->
   <g transform="translate(60, 42)">
-    <text x="0" y="0" class="st-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 03 // TECHNICAL SKILLS &amp; PLANETARY STACK</text>
+    <text x="0" y="0" class="st-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 03 // TECHNICAL SKILLS &amp; QA STACK</text>
   </g>
 
   <!-- Left Side: 3 Tilted Elliptical Orbits with Core Node & Tech Icons -->
@@ -466,7 +466,7 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
     <!-- Glow behind orbit core -->
     <circle cx="320" cy="235" r="140" fill="url(#st_blueGlow)"/>
 
-    <!-- Orbit 1: Outer Orbit (Databases & Cloud / Tools) -->
+    <!-- Orbit 1: Outer Orbit (Databases & Tools) -->
     <g transform="rotate(-15 320 235)">
       <ellipse cx="320" cy="235" rx="260" ry="110" fill="none" stroke="#1b305c" stroke-width="1.5" stroke-dasharray="6 6"/>
       <g transform="translate(80, 210)">
@@ -483,7 +483,7 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       </g>
     </g>
 
-    <!-- Orbit 2: Mid Orbit (Backend & Core Languages: Java, Python, Go, C++) -->
+    <!-- Orbit 2: Mid Orbit (Languages: Java, Python, C++, SQL) -->
     <g transform="rotate(18 320 235)">
       <ellipse cx="320" cy="235" rx="190" ry="80" fill="none" stroke="#247bff" stroke-width="1.5" opacity="0.6"/>
       <g transform="translate(135, 215)">
@@ -491,8 +491,8 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
         <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#f89820">Java</text>
       </g>
       <g transform="translate(465, 215)">
-        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#00ADD8" stroke-width="1.5"/>
-        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#00ADD8">Go</text>
+        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#00599C" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#659AD2">C++</text>
       </g>
       <g transform="translate(305, 145)">
         <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#3776AB" stroke-width="1.5"/>
@@ -500,12 +500,12 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       </g>
     </g>
 
-    <!-- Orbit 3: Inner Orbit (AI Frameworks & Web) -->
+    <!-- Orbit 3: Inner Orbit (Frameworks & QA) -->
     <g transform="rotate(-5 320 235)">
       <ellipse cx="320" cy="235" rx="115" ry="50" fill="none" stroke="#ff354f" stroke-width="1.5" opacity="0.7"/>
       <g transform="translate(205, 218)">
-        <circle cx="16" cy="16" r="18" fill="#0d1b33" stroke="#61DAFB" stroke-width="1.5"/>
-        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="10" font-weight="700" fill="#61DAFB">React</text>
+        <circle cx="16" cy="16" r="18" fill="#0d1b33" stroke="#6DB33F" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="9" font-weight="700" fill="#6DB33F">Spring</text>
       </g>
       <g transform="translate(395, 218)">
         <circle cx="16" cy="16" r="18" fill="#0d1b33" stroke="#00d2ff" stroke-width="1.5"/>
@@ -522,71 +522,71 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 
   <!-- Right Side: Categorized Stack Chips Grid -->
   <g transform="translate(640, 75)">
-    <!-- Category 1: Backend & Languages -->
+    <!-- Category 1: Languages & Core Development -->
     <g transform="translate(0, 0)">
-      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">BACKEND &amp; LANGUAGES</text>
+      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">PROGRAMMING &amp; FRAMEWORKS</text>
       <g transform="translate(0, 28)">
-        <!-- Spring Boot -->
-        <rect x="0" y="0" width="125" height="34" rx="8" fill="url(#st_cardBg)" stroke="#6DB33F" stroke-width="1" stroke-opacity="0.7"/>
+        <!-- Java & Spring Boot -->
+        <rect x="0" y="0" width="145" height="34" rx="8" fill="url(#st_cardBg)" stroke="#6DB33F" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="16" cy="17" r="4" fill="#6DB33F"/>
-        <text x="30" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Spring Boot</text>
+        <text x="30" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Java • Spring Boot</text>
 
-        <!-- FastAPI -->
-        <rect x="135" y="0" width="105" height="34" rx="8" fill="url(#st_cardBg)" stroke="#009688" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="151" cy="17" r="4" fill="#009688"/>
-        <text x="165" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">FastAPI</text>
-
-        <!-- Go / Golang -->
-        <rect x="250" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00ADD8" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="266" cy="17" r="4" fill="#00ADD8"/>
-        <text x="280" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Go (Golang)</text>
-
-        <!-- Java / Python -->
-        <rect x="375" y="0" width="125" height="34" rx="8" fill="url(#st_cardBg)" stroke="#f89820" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="391" cy="17" r="4" fill="#f89820"/>
-        <text x="405" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Java • Python</text>
-      </g>
-    </g>
-
-    <!-- Category 2: AI / ML & Multi-Agent -->
-    <g transform="translate(0, 90)">
-      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#00d2ff" letter-spacing="1">AI / ML &amp; AGENTIC SYSTEMS</text>
-      <g transform="translate(0, 28)">
-        <!-- LangChain / LangGraph -->
-        <rect x="0" y="0" width="165" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00d2ff" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="16" cy="17" r="4" fill="#00d2ff"/>
-        <text x="30" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">LangGraph / Agents</text>
-
-        <!-- RAG & LLMs -->
-        <rect x="175" y="0" width="145" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ffd166" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="191" cy="17" r="4" fill="#ffd166"/>
-        <text x="205" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">RAG &amp; LLM APIs</text>
-
-        <!-- Forensics / SHA-256 -->
-        <rect x="330" y="0" width="170" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ff354f" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="346" cy="17" r="4" fill="#ff354f"/>
-        <text x="360" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Digital Forensics</text>
-      </g>
-    </g>
-
-    <!-- Category 3: Databases, Core CS & Frontend -->
-    <g transform="translate(0, 180)">
-      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#ff354f" letter-spacing="1">DATABASES &amp; CORE FOUNDATIONS</text>
-      <g transform="translate(0, 28)">
-        <!-- MySQL / PostgreSQL -->
-        <rect x="0" y="0" width="155" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00758F" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="16" cy="17" r="4" fill="#00758F"/>
-        <text x="30" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">MySQL • PostgreSQL</text>
+        <!-- Python & FastAPI -->
+        <rect x="155" y="0" width="135" height="34" rx="8" fill="url(#st_cardBg)" stroke="#009688" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="171" cy="17" r="4" fill="#009688"/>
+        <text x="185" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Python • FastAPI</text>
 
         <!-- C++ & DSA -->
-        <rect x="165" y="0" width="145" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00599C" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="181" cy="17" r="4" fill="#659AD2"/>
-        <text x="195" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">C++ &amp; DSA • OOP</text>
+        <rect x="300" y="0" width="105" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00599C" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="316" cy="17" r="4" fill="#659AD2"/>
+        <text x="330" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">C++ • DSA</text>
 
-        <!-- React & Next.js -->
-        <rect x="320" y="0" width="180" height="34" rx="8" fill="url(#st_cardBg)" stroke="#61DAFB" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="336" cy="17" r="4" fill="#61DAFB"/>
-        <text x="350" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">React.js • Next.js</text>
+        <!-- React.js / Node -->
+        <rect x="415" y="0" width="85" height="34" rx="8" fill="url(#st_cardBg)" stroke="#61DAFB" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="428" cy="17" r="4" fill="#61DAFB"/>
+        <text x="440" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">React.js</text>
+      </g>
+    </g>
+
+    <!-- Category 2: Software Testing & Quality Engineering -->
+    <g transform="translate(0, 90)">
+      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#00d2ff" letter-spacing="1">SOFTWARE TESTING &amp; QUALITY</text>
+      <g transform="translate(0, 28)">
+        <!-- Software Validation -->
+        <rect x="0" y="0" width="155" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00d2ff" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="16" cy="17" r="4" fill="#00d2ff"/>
+        <text x="30" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">Software Validation</text>
+
+        <!-- Semantic Verification (NLI) -->
+        <rect x="165" y="0" width="165" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ffd166" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="181" cy="17" r="4" fill="#ffd166"/>
+        <text x="195" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">Semantic Verification</text>
+
+        <!-- Debugging & Data Validation -->
+        <rect x="340" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ff354f" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="356" cy="17" r="4" fill="#ff354f"/>
+        <text x="370" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">Debugging &amp; Model Eval</text>
+      </g>
+    </g>
+
+    <!-- Category 3: Databases & AI/ML APIs -->
+    <g transform="translate(0, 180)">
+      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#ff354f" letter-spacing="1">DATABASES, RAG &amp; TOOLING</text>
+      <g transform="translate(0, 28)">
+        <!-- MySQL & PostgreSQL -->
+        <rect x="0" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00758F" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="16" cy="17" r="4" fill="#00758F"/>
+        <text x="30" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">MySQL • PostgreSQL</text>
+
+        <!-- LangChain & RAG -->
+        <rect x="170" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ffd166" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="186" cy="17" r="4" fill="#ffd166"/>
+        <text x="200" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">LangGraph • RAG • LLM</text>
+
+        <!-- Tools / Git -->
+        <rect x="340" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#F05032" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="356" cy="17" r="4" fill="#F05032"/>
+        <text x="370" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">Git • VS Code • Antigravity</text>
       </g>
     </g>
 
@@ -594,7 +594,7 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
     <g transform="translate(0, 275)">
       <rect width="500" height="50" rx="12" fill="#0c162d" stroke="#1f335c" stroke-width="1"/>
       <text x="20" y="30" class="st-sans" font-size="13" fill="#94a3b8">
-        Focused on building <tspan fill="#00d2ff" font-weight="700">secure, high-throughput REST APIs</tspan> &amp; autonomous agent workflows.
+        Applying strong <tspan fill="#00d2ff" font-weight="700">programming and analytical skills</tspan> to software quality and testing.
       </text>
     </g>
   </g>
@@ -604,7 +604,7 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 print("[OK] Created assets/stack.svg")
 
 # ==============================================================================
-# 4. ID-DASHBOARD.SVG (Verified Resume CGPA 7.27, JSS Noida, Internships & Goals)
+# 4. ID-DASHBOARD.SVG (Verified Resume CGPA 7.27, JSS Noida, SDET Career Objective)
 # ==============================================================================
 id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -684,13 +684,13 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 
       <!-- Embedded Photo inside Card -->
       <g clip-path="url(#id_cardPhotoClip)">
-        <image href="{id_b64}" x="75" y="80" width="250" height="200" preserveAspectRatio="xMidYMid slice"/>
+        <image href="{id_b64}" x="85" y="90" width="230" height="170" preserveAspectRatio="xMidYMid slice"/>
       </g>
       <rect x="85" y="95" width="230" height="150" rx="12" fill="none" stroke="#247bff" stroke-width="1" opacity="0.6"/>
 
       <!-- Cardholder Details -->
       <text x="85" y="272" class="id-sans" font-size="20" font-weight="900" fill="#ffffff">ABHIJAT PATEL</text>
-      <text x="85" y="292" class="id-mono" font-size="11" font-weight="700" fill="#247bff" letter-spacing="1">BACKEND &amp; AI DEVELOPER</text>
+      <text x="85" y="292" class="id-mono" font-size="11" font-weight="700" fill="#247bff" letter-spacing="1">SDET &amp; SOFTWARE ENGINEER</text>
       
       <!-- Hologram / Barcode Footer -->
       <g transform="translate(85, 312)">
@@ -729,13 +729,13 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
         <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">AI Intern + IBM SkillsBuild</text>
       </g>
 
-      <!-- Card 3: Availability -->
+      <!-- Card 3: Target Role -->
       <g transform="translate(530, 0)">
         <rect width="230" height="100" rx="14" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
         <rect x="0" y="0" width="4" height="100" rx="2" fill="#00e676"/>
         <text x="24" y="32" class="id-mono" font-size="11" font-weight="700" fill="#00e676">TARGET ROLE</text>
-        <text x="24" y="60" class="id-sans" font-size="19" font-weight="800" fill="#ffffff">Backend Intern</text>
-        <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">Golang / Spring / FastAPI</text>
+        <text x="24" y="60" class="id-sans" font-size="19" font-weight="800" fill="#ffffff">SDET / Backend</text>
+        <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">Software Quality &amp; Dev</text>
       </g>
     </g>
 
@@ -749,7 +749,7 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
         
         <text x="0" y="48" class="id-sans" font-size="18" font-weight="800" fill="#ffffff">Bachelor of Technology (B.Tech) — Information Technology</text>
         <text x="0" y="74" class="id-sans" font-size="14" fill="#cbd5e1">🏛️ JSS Academy of Technical Education, Noida • CGPA: 7.27/10</text>
-        <text x="0" y="98" class="id-sans" font-size="13" fill="#94a3b8">📜 Certifications: TCS iON Communication Skills • IBM SkillsBuild GenAI</text>
+        <text x="0" y="98" class="id-sans" font-size="13" fill="#94a3b8">📜 Certifications: TCS iON Communication Skills • IBM SkillsBuild GenAI • Codec Tech AI</text>
       </g>
 
       <line x1="30" y1="138" x2="730" y2="138" stroke="#1b2d4d" stroke-width="1"/>
@@ -758,7 +758,7 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
       <g transform="translate(30, 155)">
         <text x="0" y="16" class="id-mono" font-size="11" font-weight="700" fill="#00d2ff">CAREER OBJECTIVE:</text>
         <text x="0" y="36" class="id-sans" font-size="13" fill="#ffffff">
-          "Building secure, high-throughput, maintainable backend systems with Go, Spring Boot, and AI pipelines."
+          "Applying strong programming in Java, Python, C++, and analytical skills to software quality, testing, and backend engineering."
         </text>
       </g>
     </g>
@@ -823,7 +823,7 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
       <text x="0" y="0" class="cn-mono" font-size="13" font-weight="700" fill="#ff354f" letter-spacing="2">&gt; 05 // LET'S COLLABORATE &amp; CONNECT</text>
       <text x="0" y="38" class="cn-sans" font-size="34" font-weight="900" fill="#ffffff">LET'S BUILD TOGETHER</text>
       <text x="0" y="66" class="cn-sans" font-size="14" fill="#94a3b8">
-        Open for Backend Engineering Internships, Multi-Agent AI Projects &amp; Collaborations!
+        Open for SDET, Software Testing, Backend Engineering &amp; AI Opportunities!
       </text>
     </g>
 
@@ -887,12 +887,12 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 print("[OK] Created assets/connect.svg")
 
 # ==============================================================================
-# 6. ROOT README.MD (With all resume details, projects table & clickable socials)
+# 6. ROOT README.MD (With updated ClarifyAI, CampusConnect, AgentIQ & SDET profile)
 # ==============================================================================
 readme_content = """<div align="center">
 
 # ⚡ ABHIJAT PATEL
-### Backend & Distributed Systems Developer • Multi-Agent AI & RAG • C++ & DSA
+### SDET & Software Quality Engineer • Java Spring Boot & FastAPI • Multi-Agent AI & Verification
 
 ![Hero](./assets/hero.svg?v=1)
 
@@ -912,9 +912,9 @@ readme_content = """<div align="center">
 
 | Project | Description | Stack & Architecture | Links |
 | :--- | :--- | :--- | :---: |
-| 🎓 **CampusConnect** | **AI-Powered Placement & Resume Matching Portal**<br/>Developed a Java Spring Boot & MySQL backend with REST APIs for managing candidate profiles, recruiter dashboards, and job postings. Designed a priority-based ranking algorithm using DSA and an NLP microservice to compute resume-to-job similarity. | `Java` `Spring Boot` `MySQL` `REST APIs` `React` `Python NLP` `DSA` | [GitHub](https://github.com/AbhijatPatel) |
-| 🤖 **AgentIQ** | **Autonomous Multi-Agent Research & Task Assistant**<br/>Built a multi-agent pipeline of planning, research, writing, and critique stages decomposing research goals into subtasks. Implemented RAG + web retrieval with self-critique loops and a real-time React monitoring dashboard. | `Python` `FastAPI` `LangChain` `LangGraph` `LLM APIs` `RAG` `React` | [GitHub](https://github.com/AbhijatPatel) |
-| 🛡️ **Clever AI Detection** | **Multi-Modal AI Content Intelligence & Digital Forensics Platform**<br/>Engineered a FastAPI backend verifying authenticity of text, audio, images, and video using Error Level Analysis (ELA), text stylometry, and deepfake temporal checks. Features SHA-256 data integrity checks with sentence-level AI likelihood dossiers. | `Python` `FastAPI` `Next.js` `SHA-256` `Digital Forensics` `Explainable AI` | [GitHub](https://github.com/AbhijatPatel) |
+| 🎓 **CampusConnect** | **AI-Powered Placement & Resume Matching Portal**<br/>• Developed a Java Spring Boot and MySQL backend for managing student profiles, company job postings, and applications.<br/>• Built an end-to-end software workflow connecting student/company profiles, job postings, an AI microservice, ranking engine, and recruiter dashboard.<br/>• Designed a priority-based ranking algorithm using DSA and an NLP microservice to calculate resume-to-job-description similarity and rank candidates.<br/>• Worked across Java backend, Python services, database operations, and frontend components while validating end-to-end application workflows. | `Java` `Spring Boot` `MySQL` `React` `Python` `AI/NLP` `DSA` | [GitHub](https://github.com/AbhijatPatel) |
+| 🔍 **ClarifyAI** | **Confidence-Scored, Source-Verified Answer Engine**<br/>• Developed an end-to-end verification pipeline covering evidence retrieval, answer generation, claim extraction, evidence-claim matching, confidence scoring, and verified output.<br/>• Built a modular FastAPI backend with PostgreSQL and SQLAlchemy and implemented validation logic to classify claims as *Supported*, *Contradicted*, or *Insufficient*.<br/>• Engineered confidence-scoring mechanisms using evidence relevance, semantic support, contradiction signals, and source quality.<br/>• Debugged and validated software components across the verification pipeline. | `Python` `FastAPI` `PostgreSQL` `SQLAlchemy` `LLM APIs` `NLI` | [GitHub](https://github.com/AbhijatPatel) |
+| 🤖 **AgentIQ** | **Autonomous Multi-Agent Research & Task Assistant**<br/>• Developed a multi-agent software pipeline consisting of planning, research, writing, and critique stages.<br/>• Implemented RAG and web-search retrieval to validate and ground generated outputs.<br/>• Developed a self-critique workflow in which generated drafts are reviewed and revised before producing the final report.<br/>• Exposed the application through FastAPI and developed a React dashboard for monitoring agent workflows and tool calls. | `Python` `LangChain` `LangGraph` `LLM APIs` `RAG` `FastAPI` `React` | [GitHub](https://github.com/AbhijatPatel) |
 | 🌐 **Developer Portfolio** | **Interactive Modern Engineering Portfolio**<br/>High-performance developer showcase highlighting production projects, technical capabilities, interactive demos, and contact integration. | `HTML5` `CSS3` `JavaScript` `Responsive UI` | [Live Site](https://abhijatpatel.github.io/My-Portfolio-Website/) • [GitHub](https://github.com/AbhijatPatel) |
 
 ---
@@ -922,11 +922,18 @@ readme_content = """<div align="center">
 ## 💼 Industry Experience & Education
 
 - 🏢 **Artificial Intelligence Intern** — *Codec Technologies Pvt. Ltd.* (Jun 2026 – Jul 2026)
-  - Applied Python and core AI/ML workflows for data preprocessing and model evaluation.
-  - Developed and evaluated software-based solutions, strengthening data validation and debugging.
+  - Applied Python and core AI/ML concepts across practical modules and real-world tasks.
+  - Worked on projects involving data preprocessing and model evaluation, strengthening validation, debugging, and analytical problem-solving skills.
+  - Developed and evaluated software-based solutions using Python.
 - ☁️ **GenAI & Cloud Computing Intern** — *IBM SkillsBuild AICTE–BharatCares Program*
-  - Completed structured training on Generative AI, cloud infrastructure, and AI tooling.
-- 🎓 **B.Tech in Information Technology** (2023 – 2027) — *JSS Academy of Technical Education, Noida* | **CGPA: 7.27 / 10**
+  - Gained industry-aligned exposure to Generative AI, AI tools, and cloud computing fundamentals.
+  - Completed structured modules involving cloud fundamentals and practical GenAI use cases.
+- 🎓 **Bachelor of Technology (B.Tech) in Information Technology** (2023 – 2027)
+  - *JSS Academy of Technical Education, Noida* | **CGPA: 7.27 / 10**
+- 📜 **Certifications**:
+  - Communication Skills — *TCS iON, Tata Consultancy Services*
+  - GenAI & Cloud Computing Internship — *IBM SkillsBuild, AICTE–BharatCares*
+  - Artificial Intelligence Internship Certificate — *Codec Technologies Pvt. Ltd.*
 
 ---
 
@@ -963,7 +970,7 @@ npx abhijat-patel
 ---
 
 <p align="center">
-  <b>BUILD • SECURE • SCALE • INNOVATE</b><br/>
+  <b>VALIDATE • TEST • BUILD • SCALE</b><br/>
   <i>Crafted with precision for Abhijat Patel</i>
 </p>
 
