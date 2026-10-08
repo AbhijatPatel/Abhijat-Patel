@@ -25,8 +25,8 @@ COMMON_DEFS = """
         <stop offset="100%" stop-color="#060a14"/>
       </linearGradient>
       <linearGradient id="{ns}cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#0d172e" stop-opacity="0.85"/>
-        <stop offset="100%" stop-color="#080e1e" stop-opacity="0.95"/>
+        <stop offset="0%" stop-color="#0d172e" stop-opacity="0.88"/>
+        <stop offset="100%" stop-color="#080e1e" stop-opacity="0.96"/>
       </linearGradient>
       <linearGradient id="{ns}blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="#247bff"/>
@@ -42,22 +42,18 @@ COMMON_DEFS = """
         <stop offset="100%" stop-color="#247bff" stop-opacity="0.2"/>
       </linearGradient>
       <radialGradient id="{ns}blueGlow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#247bff" stop-opacity="0.4"/>
+        <stop offset="0%" stop-color="#247bff" stop-opacity="0.45"/>
         <stop offset="100%" stop-color="#247bff" stop-opacity="0"/>
       </radialGradient>
       <radialGradient id="{ns}crimsonGlow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#ff354f" stop-opacity="0.35"/>
+        <stop offset="0%" stop-color="#ff354f" stop-opacity="0.4"/>
         <stop offset="100%" stop-color="#ff354f" stop-opacity="0"/>
       </radialGradient>
       <pattern id="{ns}dots" width="24" height="24" patternUnits="userSpaceOnUse">
         <circle cx="2" cy="2" r="1.2" fill="#247bff" opacity="0.12"/>
       </pattern>
-      <filter id="{ns}glowFilter" x="-20%" y="-20%" width="140%" height="140%">
-        <feGaussianBlur stdDeviation="8" result="blur" />
-        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-      </filter>
       <filter id="{ns}shadow" x="-10%" y="-10%" width="120%" height="120%">
-        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.65"/>
       </filter>
     </defs>
 """
@@ -85,20 +81,6 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
     }}
     .h-cursor {{ animation: h_cursorBlink 0.8s infinite; }}
     
-    @keyframes h_roleCycle {{
-      0%, 20% {{ opacity: 1; transform: translateY(0px); }}
-      23%, 25% {{ opacity: 0; transform: translateY(-12px); }}
-      26% {{ opacity: 0; transform: translateY(12px); }}
-      28%, 45% {{ opacity: 1; transform: translateY(0px); }}
-      48%, 50% {{ opacity: 0; transform: translateY(-12px); }}
-      51% {{ opacity: 0; transform: translateY(12px); }}
-      53%, 70% {{ opacity: 1; transform: translateY(0px); }}
-      73%, 75% {{ opacity: 0; transform: translateY(-12px); }}
-      76% {{ opacity: 0; transform: translateY(12px); }}
-      78%, 95% {{ opacity: 1; transform: translateY(0px); }}
-      98%, 100% {{ opacity: 0; transform: translateY(-12px); }}
-    }}
-
     .h-role-1 {{ animation: h_role1 12s infinite; }}
     .h-role-2 {{ animation: h_role2 12s infinite; }}
     .h-role-3 {{ animation: h_role3 12s infinite; }}
@@ -126,25 +108,25 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
   <circle cx="200" cy="100" r="150" fill="url(#h_blueGlow)" opacity="0.3"/>
 
   <!-- Left Content Column -->
-  <g transform="translate(60, 50)">
+  <g transform="translate(60, 48)">
     <!-- Terminal Header / Status Tag -->
     <g transform="translate(0, 0)">
-      <rect x="0" y="0" width="260" height="32" rx="16" fill="#0d1933" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.4"/>
+      <rect x="0" y="0" width="280" height="32" rx="16" fill="#0d1933" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.4"/>
       <circle cx="16" cy="16" r="4" fill="#00e676">
         <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
       </circle>
-      <text x="30" y="21" class="h-text-mono" font-size="12" font-weight="600" fill="#247bff" letter-spacing="1.5">OPEN FOR ROLES &amp; COLLABS</text>
+      <text x="30" y="21" class="h-text-mono" font-size="12" font-weight="600" fill="#247bff" letter-spacing="1.2">OPEN FOR BACKEND &amp; AI ROLES</text>
     </g>
 
     <!-- Sub-greeting with typing prompt -->
-    <g transform="translate(0, 65)">
-      <text x="0" y="0" class="h-text-mono" font-size="16" fill="#94a3b8" letter-spacing="2">
+    <g transform="translate(0, 62)">
+      <text x="0" y="0" class="h-text-mono" font-size="15" fill="#94a3b8" letter-spacing="2">
         <tspan fill="#ff354f">&gt;</tspan> HELLO WORLD, I'M
       </text>
     </g>
 
     <!-- Giant Name Reveal with Mask -->
-    <g transform="translate(0, 80)">
+    <g transform="translate(0, 75)">
       <g clip-path="url(#h_nameClip)">
         <text x="0" y="70" class="h-text-sans" font-size="64" font-weight="900" fill="#ffffff" letter-spacing="-1">
           ABHIJAT <tspan fill="url(#h_crimsonGrad)">PATEL</tspan>
@@ -153,39 +135,39 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
     </g>
 
     <!-- Animated Cycling Role Badges -->
-    <g transform="translate(0, 180)">
+    <g transform="translate(0, 175)">
       <!-- Base container badge -->
-      <rect x="0" y="0" width="460" height="42" rx="10" fill="#0c152a" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.5"/>
+      <rect x="0" y="0" width="490" height="42" rx="10" fill="#0c152a" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.5"/>
       <rect x="0" y="0" width="6" height="42" rx="3" fill="url(#h_blueGrad)"/>
 
       <g transform="translate(24, 26)">
         <!-- Role 1 -->
         <g class="h-role-1">
-          <text x="0" y="0" class="h-text-mono" font-size="16" font-weight="700" fill="#247bff">⚡ FULL STACK DEVELOPER</text>
+          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#247bff">⚡ BACKEND &amp; DISTRIBUTED SYSTEMS</text>
         </g>
         <!-- Role 2 -->
         <g class="h-role-2" opacity="0">
-          <text x="0" y="0" class="h-text-mono" font-size="16" font-weight="700" fill="#00d2ff">🚀 MERN STACK ARCHITECT</text>
+          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#00d2ff">🤖 MULTI-AGENT AI &amp; RAG ARCHITECT</text>
         </g>
         <!-- Role 3 -->
         <g class="h-role-3" opacity="0">
-          <text x="0" y="0" class="h-text-mono" font-size="16" font-weight="700" fill="#ff354f">🧠 C++ &amp; DSA PROBLEM SOLVER</text>
+          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ff354f">☕ JAVA SPRING BOOT &amp; FASTAPI</text>
         </g>
         <!-- Role 4 -->
         <g class="h-role-4" opacity="0">
-          <text x="0" y="0" class="h-text-mono" font-size="16" font-weight="700" fill="#ffd166">🤖 AI SYSTEMS &amp; TECH EXPLORER</text>
+          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ffd166">🧠 C++ &amp; DSA PROBLEM SOLVER</text>
         </g>
       </g>
-      <text x="430" y="27" class="h-text-mono h-cursor" font-size="18" fill="#247bff">_</text>
+      <text x="460" y="27" class="h-text-mono h-cursor" font-size="18" fill="#247bff">_</text>
     </g>
 
-    <!-- One-line Pitch -->
-    <g transform="translate(0, 255)">
-      <text x="0" y="0" class="h-text-sans" font-size="18" fill="#cbd5e1" font-weight="400">
-        Crafting high-performance full-stack applications, intelligent AI tools,
+    <!-- One-line Pitch based on Resume -->
+    <g transform="translate(0, 250)">
+      <text x="0" y="0" class="h-text-sans" font-size="16.5" fill="#cbd5e1" font-weight="400">
+        Building database-driven REST APIs, autonomous multi-agent pipelines,
       </text>
-      <text x="0" y="26" class="h-text-sans" font-size="18" fill="#cbd5e1" font-weight="400">
-        and scalable software with relentless curiosity.
+      <text x="0" y="25" class="h-text-sans" font-size="16.5" fill="#cbd5e1" font-weight="400">
+        and security-focused digital forensics platforms with clean scalable code.
       </text>
     </g>
 
@@ -193,14 +175,14 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
     <g transform="translate(0, 325)">
       <!-- Location Chip -->
       <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="160" height="34" rx="8" fill="#0a1224" stroke="#1e2d4d" stroke-width="1"/>
+        <rect x="0" y="0" width="180" height="34" rx="8" fill="#0a1224" stroke="#1e2d4d" stroke-width="1"/>
         <circle cx="18" cy="17" r="4" fill="#ff354f"/>
-        <text x="32" y="22" class="h-text-sans" font-size="13" font-weight="500" fill="#94a3b8">Noida, India</text>
+        <text x="32" y="22" class="h-text-sans" font-size="13" font-weight="500" fill="#94a3b8">Noida, UP, India</text>
       </g>
 
       <!-- University / Org Chip -->
-      <g transform="translate(175, 0)">
-        <rect x="0" y="0" width="310" height="34" rx="8" fill="#0a1224" stroke="#1e2d4d" stroke-width="1"/>
+      <g transform="translate(195, 0)">
+        <rect x="0" y="0" width="305" height="34" rx="8" fill="#0a1224" stroke="#1e2d4d" stroke-width="1"/>
         <text x="16" y="22" class="h-text-sans" font-size="13" font-weight="500" fill="#94a3b8">
           🎓 <tspan fill="#e2e8f0">JSS Academy of Tech Education</tspan>
         </text>
@@ -230,11 +212,11 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
 
     <!-- Floating Mini Code HUD Badge -->
     <g transform="translate(15, 305)" filter="url(#h_shadow)">
-      <rect width="180" height="58" rx="12" fill="#060c1c" stroke="#247bff" stroke-width="1.2" opacity="0.95"/>
+      <rect width="195" height="58" rx="12" fill="#060c1c" stroke="#247bff" stroke-width="1.2" opacity="0.95"/>
       <circle cx="16" cy="18" r="4" fill="#ff354f"/>
       <circle cx="28" cy="18" r="4" fill="#ffb703"/>
       <circle cx="40" cy="18" r="4" fill="#00e676"/>
-      <text x="16" y="44" class="h-text-mono" font-size="12" font-weight="700" fill="#00d2ff">const dev = "builder";</text>
+      <text x="16" y="44" class="h-text-mono" font-size="12" font-weight="700" fill="#00d2ff">const dev = "backend";</text>
     </g>
   </g>
 </svg>"""
@@ -243,7 +225,7 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
 print("[OK] Created assets/hero.svg")
 
 # ==============================================================================
-# 2. ABOUT-LIFE.SVG (3-slide Carousel with segment progress bars & capabilities)
+# 2. ABOUT-LIFE.SVG (Resume-grounded Capabilities & 3-Slide Carousel)
 # ==============================================================================
 about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -310,49 +292,49 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 
   <!-- Section Title -->
   <g transform="translate(60, 42)">
-    <text x="0" y="0" class="ab-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 02 // CAPABILITIES &amp; BEYOND THE TERMINAL</text>
+    <text x="0" y="0" class="ab-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 02 // CORE CAPABILITIES &amp; ENGINEERING MINDSET</text>
   </g>
 
   <!-- Left Column: Core Technical Capabilities (4 Cards) -->
   <g transform="translate(60, 75)">
-    <!-- Card 1: Full-Stack Architecture -->
+    <!-- Card 1: Backend & REST APIs -->
     <g transform="translate(0, 0)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#247bff"/>
       <circle cx="36" cy="37" r="18" fill="#0d244d"/>
       <text x="36" y="42" text-anchor="middle" font-size="18">⚡</text>
-      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Full-Stack Web Architecture</text>
-      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">React, Node.js, Express &amp; Modern REST / GraphQL APIs</text>
+      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Backend &amp; RESTful API Systems</text>
+      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Java Spring Boot, FastAPI, Go (learning), Node.js &amp; MySQL</text>
     </g>
 
-    <!-- Card 2: Algorithms & Problem Solving -->
+    <!-- Card 2: Multi-Agent AI & RAG -->
     <g transform="translate(0, 86)">
-      <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
-      <rect x="0" y="0" width="4" height="74" rx="2" fill="#ff354f"/>
-      <circle cx="36" cy="37" r="18" fill="#3b1523"/>
-      <text x="36" y="42" text-anchor="middle" font-size="18">🧩</text>
-      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Data Structures &amp; Problem Solving</text>
-      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Deep foundation in C++, algorithmic optimization &amp; logic</text>
-    </g>
-
-    <!-- Card 3: Database & Cloud Infrastructure -->
-    <g transform="translate(0, 172)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#00d2ff"/>
       <circle cx="36" cy="37" r="18" fill="#0b2e3b"/>
-      <text x="36" y="42" text-anchor="middle" font-size="18">🗄️</text>
-      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Database &amp; Data Systems</text>
-      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">MongoDB, MySQL schema modeling, indexing &amp; performance</text>
+      <text x="36" y="42" text-anchor="middle" font-size="18">🤖</text>
+      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Multi-Agent AI &amp; LangGraph / RAG</text>
+      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Autonomous task planning, critique loops &amp; LLM tool-calling</text>
     </g>
 
-    <!-- Card 4: AI Integration & Tooling -->
+    <!-- Card 3: Forensics & Data Security -->
+    <g transform="translate(0, 172)">
+      <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
+      <rect x="0" y="0" width="4" height="74" rx="2" fill="#ff354f"/>
+      <circle cx="36" cy="37" r="18" fill="#3b1523"/>
+      <text x="36" y="42" text-anchor="middle" font-size="18">🛡️</text>
+      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Digital Forensics &amp; SHA-256 Integrity</text>
+      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Metadata analysis, ELA &amp; deepfake temporal consistency</text>
+    </g>
+
+    <!-- Card 4: DSA & Core CS Foundations -->
     <g transform="translate(0, 258)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#ffd166"/>
       <circle cx="36" cy="37" r="18" fill="#3b320d"/>
-      <text x="36" y="42" text-anchor="middle" font-size="18">🤖</text>
-      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">AI Tooling &amp; Intelligent Workflows</text>
-      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">LLM pipelines, AI-assisted development &amp; agentic features</text>
+      <text x="36" y="42" text-anchor="middle" font-size="18">🧩</text>
+      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Data Structures &amp; Core Computer Science</text>
+      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">C++, Java, OOP Principles, DBMS, OS &amp; Computer Networks</text>
     </g>
   </g>
 
@@ -366,82 +348,82 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       <!-- Segment 1 -->
       <rect x="0" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
       <rect x="0" y="0" width="0" height="4" rx="2" fill="#247bff" class="ab-bar-1"/>
-      <text x="0" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">01 / CREATOR</text>
+      <text x="0" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">01 / BACKEND</text>
 
       <!-- Segment 2 -->
       <rect x="160" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
-      <rect x="160" y="0" width="0" height="4" rx="2" fill="#ff354f" class="ab-bar-2"/>
-      <text x="160" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">02 / DISCIPLINE</text>
+      <rect x="160" y="0" width="0" height="4" rx="2" fill="#00d2ff" class="ab-bar-2"/>
+      <text x="160" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">02 / AGENTS &amp; AI</text>
 
       <!-- Segment 3 -->
       <rect x="320" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
-      <rect x="320" y="0" width="0" height="4" rx="2" fill="#00d2ff" class="ab-bar-3"/>
-      <text x="320" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">03 / EXPLORER</text>
+      <rect x="320" y="0" width="0" height="4" rx="2" fill="#ff354f" class="ab-bar-3"/>
+      <text x="320" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">03 / EXPERIENCE</text>
     </g>
 
-    <!-- Slide 1: Software & Product Creation -->
+    <!-- Slide 1: Backend Architecture -->
     <g class="ab-slide-1" transform="translate(30, 70)">
-      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">Software &amp; Digital Craft</text>
-      <text x="0" y="60" class="ab-sans" font-size="14" fill="#cbd5e1" line-height="1.6">
-        Passionate about crafting pixel-perfect, highly responsive interfaces
+      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">Backend &amp; API Engineering</text>
+      <text x="0" y="60" class="ab-sans" font-size="14" fill="#cbd5e1">
+        Designing robust database-backed services using Java Spring Boot
       </text>
       <text x="0" y="82" class="ab-sans" font-size="14" fill="#cbd5e1">
-        backed by robust server architectures and elegant data schemas.
+        and FastAPI with strict data validation, clean OOP &amp; SQL indexing.
       </text>
 
       <!-- Highlight Chips -->
       <g transform="translate(0, 115)">
         <rect width="215" height="60" rx="10" fill="#0e1b38" stroke="#247bff" stroke-width="1"/>
-        <text x="16" y="26" class="ab-mono" font-size="12" fill="#247bff" font-weight="700">PROJECT FOCUS</text>
-        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">Full-Stack SaaS &amp; AI Tools</text>
+        <text x="16" y="26" class="ab-mono" font-size="12" fill="#247bff" font-weight="700">CORE STACK</text>
+        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">Spring Boot, FastAPI, MySQL</text>
 
         <rect x="230" width="225" height="60" rx="10" fill="#0e1b38" stroke="#247bff" stroke-width="1"/>
-        <text x="246" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">CODE PHILOSOPHY</text>
-        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">Clean, Modular &amp; Scalable</text>
+        <text x="246" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">CURRENT FOCUS</text>
+        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">Go (Golang) Microservices</text>
       </g>
     </g>
 
-    <!-- Slide 2: Fitness & Physical Discipline -->
+    <!-- Slide 2: Multi-Agent AI & Forensics -->
     <g class="ab-slide-2" transform="translate(30, 70)" opacity="0">
-      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">Fitness &amp; Daily Discipline</text>
+      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">AgentIQ &amp; Forensics Platform</text>
       <text x="0" y="60" class="ab-sans" font-size="14" fill="#cbd5e1">
-        Believing physical strength powers mental clarity. Daily workouts
+        Implemented autonomous multi-agent pipelines with LangGraph and
       </text>
       <text x="0" y="82" class="ab-sans" font-size="14" fill="#cbd5e1">
-        and fitness routines instill consistency, grit, and long-term focus.
-      </text>
-
-      <!-- Highlight Chips -->
-      <g transform="translate(0, 115)">
-        <rect width="215" height="60" rx="10" fill="#290e1b" stroke="#ff354f" stroke-width="1"/>
-        <text x="16" y="26" class="ab-mono" font-size="12" fill="#ff354f" font-weight="700">CORE HABIT</text>
-        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">Strength &amp; Endurance</text>
-
-        <rect x="230" width="225" height="60" rx="10" fill="#290e1b" stroke="#ff354f" stroke-width="1"/>
-        <text x="246" y="26" class="ab-mono" font-size="12" fill="#ff758c" font-weight="700">MINDSET</text>
-        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">1% Better Every Single Day</text>
-      </g>
-    </g>
-
-    <!-- Slide 3: Travel, Gaming & Curiosity -->
-    <g class="ab-slide-3" transform="translate(30, 70)" opacity="0">
-      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">Travel, Gaming &amp; Curiosity</text>
-      <text x="0" y="60" class="ab-sans" font-size="14" fill="#cbd5e1">
-        Exploring new landscapes, immersing in gaming narratives, and
-      </text>
-      <text x="0" y="82" class="ab-sans" font-size="14" fill="#cbd5e1">
-        gathering perspectives that inspire fresh creative problem solving.
+        forensics engines verifying text/audio/video authenticity via SHA-256.
       </text>
 
       <!-- Highlight Chips -->
       <g transform="translate(0, 115)">
         <rect width="215" height="60" rx="10" fill="#0c232e" stroke="#00d2ff" stroke-width="1"/>
-        <text x="16" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">EXPLORATION</text>
-        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">Travel &amp; New Cultures</text>
+        <text x="16" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">AI ORCHESTRATION</text>
+        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">LangChain, LangGraph, RAG</text>
 
         <rect x="230" width="225" height="60" rx="10" fill="#0c232e" stroke="#00d2ff" stroke-width="1"/>
-        <text x="246" y="26" class="ab-mono" font-size="12" fill="#ffd166" font-weight="700">LEISURE</text>
-        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">Strategy Games &amp; Sci-Fi</text>
+        <text x="246" y="26" class="ab-mono" font-size="12" fill="#ffd166" font-weight="700">INTEGRITY &amp; SECURITY</text>
+        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">Error Level Analysis &amp; Hashing</text>
+      </g>
+    </g>
+
+    <!-- Slide 3: Industry Experience & Training -->
+    <g class="ab-slide-3" transform="translate(30, 70)" opacity="0">
+      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">Industry Internships &amp; Training</text>
+      <text x="0" y="60" class="ab-sans" font-size="14" fill="#cbd5e1">
+        Hands-on experience at Codec Technologies (AI Intern) and IBM
+      </text>
+      <text x="0" y="82" class="ab-sans" font-size="14" fill="#cbd5e1">
+        SkillsBuild (GenAI &amp; Cloud), shipping verified software solutions.
+      </text>
+
+      <!-- Highlight Chips -->
+      <g transform="translate(0, 115)">
+        <rect width="215" height="60" rx="10" fill="#290e1b" stroke="#ff354f" stroke-width="1"/>
+        <text x="16" y="26" class="ab-mono" font-size="12" fill="#ff354f" font-weight="700">CODEC TECH</text>
+        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">AI &amp; Data Validation Intern</text>
+
+        <rect x="230" width="225" height="60" rx="10" fill="#290e1b" stroke="#ff354f" stroke-width="1"/>
+        <text x="246" y="26" class="ab-mono" font-size="12" fill="#ff758c" font-weight="700">IBM SKILLSBUILD</text>
+        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">GenAI &amp; Cloud Fundamentals</text>
       </g>
     </g>
   </g>
@@ -451,7 +433,7 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 print("[OK] Created assets/about-life.svg")
 
 # ==============================================================================
-# 3. STACK.SVG (Tilted Orbits with Pulsing Nodes & Grouped Tech Chips)
+# 3. STACK.SVG (Complete Tech Orbit including Java, Go, Spring Boot, FastAPI, LangGraph)
 # ==============================================================================
 stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -476,7 +458,7 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 
   <!-- Title -->
   <g transform="translate(60, 42)">
-    <text x="0" y="0" class="st-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 03 // TECH STACK &amp; PLANETARY ECOSYSTEM</text>
+    <text x="0" y="0" class="st-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 03 // TECHNICAL SKILLS &amp; PLANETARY STACK</text>
   </g>
 
   <!-- Left Side: 3 Tilted Elliptical Orbits with Core Node & Tech Icons -->
@@ -484,17 +466,16 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
     <!-- Glow behind orbit core -->
     <circle cx="320" cy="235" r="140" fill="url(#st_blueGlow)"/>
 
-    <!-- Orbit 1: Outer Orbit (Cloud / DB) -->
+    <!-- Orbit 1: Outer Orbit (Databases & Cloud / Tools) -->
     <g transform="rotate(-15 320 235)">
       <ellipse cx="320" cy="235" rx="260" ry="110" fill="none" stroke="#1b305c" stroke-width="1.5" stroke-dasharray="6 6"/>
-      <!-- Orbit 1 Tech Nodes -->
       <g transform="translate(80, 210)">
-        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#47A248" stroke-width="1.5"/>
-        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#47A248">Mongo</text>
+        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#00758F" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="10" font-weight="700" fill="#00758F">MySQL</text>
       </g>
       <g transform="translate(520, 220)">
-        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#00618A" stroke-width="1.5"/>
-        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#00758F">MySQL</text>
+        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#336791" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="9" font-weight="700" fill="#336791">Postgres</text>
       </g>
       <g transform="translate(320, 115)">
         <circle cx="16" cy="16" r="18" fill="#0d1b33" stroke="#F05032" stroke-width="1.5"/>
@@ -502,35 +483,33 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       </g>
     </g>
 
-    <!-- Orbit 2: Mid Orbit (Backend / Languages) -->
+    <!-- Orbit 2: Mid Orbit (Backend & Core Languages: Java, Python, Go, C++) -->
     <g transform="rotate(18 320 235)">
       <ellipse cx="320" cy="235" rx="190" ry="80" fill="none" stroke="#247bff" stroke-width="1.5" opacity="0.6"/>
-      <!-- Orbit 2 Tech Nodes -->
-      <g transform="translate(140, 215)">
-        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#83CD29" stroke-width="1.5"/>
-        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#83CD29">Node</text>
+      <g transform="translate(135, 215)">
+        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#f89820" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#f89820">Java</text>
       </g>
-      <g transform="translate(460, 215)">
-        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#3776AB" stroke-width="1.5"/>
-        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#3776AB">Python</text>
+      <g transform="translate(465, 215)">
+        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#00ADD8" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#00ADD8">Go</text>
       </g>
       <g transform="translate(305, 145)">
-        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#00599C" stroke-width="1.5"/>
-        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#659AD2">C++</text>
+        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#3776AB" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="10" font-weight="700" fill="#3776AB">Python</text>
       </g>
     </g>
 
-    <!-- Orbit 3: Inner Orbit (Frontend) -->
+    <!-- Orbit 3: Inner Orbit (AI Frameworks & Web) -->
     <g transform="rotate(-5 320 235)">
       <ellipse cx="320" cy="235" rx="115" ry="50" fill="none" stroke="#ff354f" stroke-width="1.5" opacity="0.7"/>
-      <!-- Orbit 3 Tech Nodes -->
       <g transform="translate(205, 218)">
         <circle cx="16" cy="16" r="18" fill="#0d1b33" stroke="#61DAFB" stroke-width="1.5"/>
         <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="10" font-weight="700" fill="#61DAFB">React</text>
       </g>
       <g transform="translate(395, 218)">
-        <circle cx="16" cy="16" r="18" fill="#0d1b33" stroke="#F7DF1E" stroke-width="1.5"/>
-        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="10" font-weight="700" fill="#F7DF1E">JS</text>
+        <circle cx="16" cy="16" r="18" fill="#0d1b33" stroke="#00d2ff" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="9" font-weight="700" fill="#00d2ff">FastAPI</text>
       </g>
     </g>
 
@@ -543,81 +522,71 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 
   <!-- Right Side: Categorized Stack Chips Grid -->
   <g transform="translate(640, 75)">
-    <!-- Category 1: Frontend & UI -->
+    <!-- Category 1: Backend & Languages -->
     <g transform="translate(0, 0)">
-      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">FRONTEND &amp; CLIENT</text>
+      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">BACKEND &amp; LANGUAGES</text>
       <g transform="translate(0, 28)">
-        <!-- React -->
-        <rect x="0" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#61DAFB" stroke-width="1" stroke-opacity="0.6"/>
-        <circle cx="16" cy="17" r="4" fill="#61DAFB"/>
-        <text x="30" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">React.js</text>
+        <!-- Spring Boot -->
+        <rect x="0" y="0" width="125" height="34" rx="8" fill="url(#st_cardBg)" stroke="#6DB33F" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="16" cy="17" r="4" fill="#6DB33F"/>
+        <text x="30" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Spring Boot</text>
 
-        <!-- JavaScript -->
-        <rect x="125" y="0" width="125" height="34" rx="8" fill="url(#st_cardBg)" stroke="#F7DF1E" stroke-width="1" stroke-opacity="0.6"/>
-        <circle cx="141" cy="17" r="4" fill="#F7DF1E"/>
-        <text x="155" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">JavaScript (ES6+)</text>
+        <!-- FastAPI -->
+        <rect x="135" y="0" width="105" height="34" rx="8" fill="url(#st_cardBg)" stroke="#009688" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="151" cy="17" r="4" fill="#009688"/>
+        <text x="165" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">FastAPI</text>
 
-        <!-- HTML5/CSS3 -->
-        <rect x="260" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#E34F26" stroke-width="1" stroke-opacity="0.6"/>
-        <circle cx="276" cy="17" r="4" fill="#E34F26"/>
-        <text x="290" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">HTML5 / CSS3</text>
+        <!-- Go / Golang -->
+        <rect x="250" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00ADD8" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="266" cy="17" r="4" fill="#00ADD8"/>
+        <text x="280" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Go (Golang)</text>
 
-        <!-- Tailwind -->
-        <rect x="385" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.6"/>
-        <circle cx="401" cy="17" r="4" fill="#38BDF8"/>
-        <text x="415" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">TailwindCSS</text>
+        <!-- Java / Python -->
+        <rect x="375" y="0" width="125" height="34" rx="8" fill="url(#st_cardBg)" stroke="#f89820" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="391" cy="17" r="4" fill="#f89820"/>
+        <text x="405" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Java • Python</text>
       </g>
     </g>
 
-    <!-- Category 2: Backend & Server -->
+    <!-- Category 2: AI / ML & Multi-Agent -->
     <g transform="translate(0, 90)">
-      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#00d2ff" letter-spacing="1">BACKEND &amp; RUNTIMES</text>
+      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#00d2ff" letter-spacing="1">AI / ML &amp; AGENTIC SYSTEMS</text>
       <g transform="translate(0, 28)">
-        <!-- Node.js -->
-        <rect x="0" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#83CD29" stroke-width="1" stroke-opacity="0.6"/>
-        <circle cx="16" cy="17" r="4" fill="#83CD29"/>
-        <text x="30" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Node.js</text>
+        <!-- LangChain / LangGraph -->
+        <rect x="0" y="0" width="165" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00d2ff" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="16" cy="17" r="4" fill="#00d2ff"/>
+        <text x="30" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">LangGraph / Agents</text>
 
-        <!-- Express.js -->
-        <rect x="125" y="0" width="125" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ffffff" stroke-width="1" stroke-opacity="0.4"/>
-        <circle cx="141" cy="17" r="4" fill="#ffffff"/>
-        <text x="155" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Express.js</text>
+        <!-- RAG & LLMs -->
+        <rect x="175" y="0" width="145" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ffd166" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="191" cy="17" r="4" fill="#ffd166"/>
+        <text x="205" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">RAG &amp; LLM APIs</text>
 
-        <!-- REST APIs -->
-        <rect x="260" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#247bff" stroke-width="1" stroke-opacity="0.6"/>
-        <circle cx="276" cy="17" r="4" fill="#247bff"/>
-        <text x="290" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">REST APIs</text>
-
-        <!-- Python -->
-        <rect x="385" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#3776AB" stroke-width="1" stroke-opacity="0.6"/>
-        <circle cx="401" cy="17" r="4" fill="#3776AB"/>
-        <text x="415" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Python</text>
+        <!-- Forensics / SHA-256 -->
+        <rect x="330" y="0" width="170" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ff354f" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="346" cy="17" r="4" fill="#ff354f"/>
+        <text x="360" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Digital Forensics</text>
       </g>
     </g>
 
-    <!-- Category 3: Databases, Algorithms & Tools -->
+    <!-- Category 3: Databases, Core CS & Frontend -->
     <g transform="translate(0, 180)">
-      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#ff354f" letter-spacing="1">DATA, DSA &amp; SYSTEM TOOLS</text>
+      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#ff354f" letter-spacing="1">DATABASES &amp; CORE FOUNDATIONS</text>
       <g transform="translate(0, 28)">
-        <!-- MongoDB -->
-        <rect x="0" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#47A248" stroke-width="1" stroke-opacity="0.6"/>
-        <circle cx="16" cy="17" r="4" fill="#47A248"/>
-        <text x="30" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">MongoDB</text>
+        <!-- MySQL / PostgreSQL -->
+        <rect x="0" y="0" width="155" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00758F" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="16" cy="17" r="4" fill="#00758F"/>
+        <text x="30" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">MySQL • PostgreSQL</text>
 
-        <!-- MySQL -->
-        <rect x="125" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00758F" stroke-width="1" stroke-opacity="0.6"/>
-        <circle cx="141" cy="17" r="4" fill="#00758F"/>
-        <text x="155" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">MySQL</text>
+        <!-- C++ & DSA -->
+        <rect x="165" y="0" width="145" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00599C" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="181" cy="17" r="4" fill="#659AD2"/>
+        <text x="195" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">C++ &amp; DSA • OOP</text>
 
-        <!-- C++ DSA -->
-        <rect x="250" y="0" width="125" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00599C" stroke-width="1" stroke-opacity="0.6"/>
-        <circle cx="266" cy="17" r="4" fill="#659AD2"/>
-        <text x="280" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">C++ &amp; DSA</text>
-
-        <!-- Git / GitHub -->
-        <rect x="385" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#F05032" stroke-width="1" stroke-opacity="0.6"/>
-        <circle cx="401" cy="17" r="4" fill="#F05032"/>
-        <text x="415" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Git / GitHub</text>
+        <!-- React & Next.js -->
+        <rect x="320" y="0" width="180" height="34" rx="8" fill="url(#st_cardBg)" stroke="#61DAFB" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="336" cy="17" r="4" fill="#61DAFB"/>
+        <text x="350" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">React.js • Next.js</text>
       </g>
     </g>
 
@@ -625,7 +594,7 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
     <g transform="translate(0, 275)">
       <rect width="500" height="50" rx="12" fill="#0c162d" stroke="#1f335c" stroke-width="1"/>
       <text x="20" y="30" class="st-sans" font-size="13" fill="#94a3b8">
-        Focused on building <tspan fill="#00d2ff" font-weight="700">clean architectures</tspan>, optimized queries &amp; scalable web services.
+        Focused on building <tspan fill="#00d2ff" font-weight="700">secure, high-throughput REST APIs</tspan> &amp; autonomous agent workflows.
       </text>
     </g>
   </g>
@@ -635,7 +604,7 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 print("[OK] Created assets/stack.svg")
 
 # ==============================================================================
-# 4. ID-DASHBOARD.SVG (Hanging Lanyard ID with Damped Swing Motion & Metrics)
+# 4. ID-DASHBOARD.SVG (Verified Resume CGPA 7.27, JSS Noida, Internships & Goals)
 # ==============================================================================
 id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -650,9 +619,6 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
       <stop offset="50%" stop-color="#e2e8f0"/>
       <stop offset="100%" stop-color="#64748b"/>
     </linearGradient>
-    <clipPath id="id_passClip">
-      <rect x="70" y="80" width="260" height="310" rx="18"/>
-    </clipPath>
     <clipPath id="id_cardPhotoClip">
       <rect x="85" y="95" width="230" height="150" rx="12"/>
     </clipPath>
@@ -694,7 +660,7 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 
   <!-- Section Title -->
   <g transform="translate(60, 42)">
-    <text x="0" y="0" class="id-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 04 // DEVELOPER PASS &amp; VERIFIED METRICS</text>
+    <text x="0" y="0" class="id-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 04 // DEVELOPER PASS &amp; VERIFIED CREDENTIALS</text>
   </g>
 
   <!-- Left: Hanging Lanyard Pass Assembly -->
@@ -724,7 +690,7 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 
       <!-- Cardholder Details -->
       <text x="85" y="272" class="id-sans" font-size="20" font-weight="900" fill="#ffffff">ABHIJAT PATEL</text>
-      <text x="85" y="292" class="id-mono" font-size="11" font-weight="700" fill="#247bff" letter-spacing="1">FULL STACK DEVELOPER</text>
+      <text x="85" y="292" class="id-mono" font-size="11" font-weight="700" fill="#247bff" letter-spacing="1">BACKEND &amp; AI DEVELOPER</text>
       
       <!-- Hologram / Barcode Footer -->
       <g transform="translate(85, 312)">
@@ -745,31 +711,31 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
   <g transform="translate(380, 75)">
     <!-- Top Row: Verified Metrics Cards -->
     <g transform="translate(0, 0)">
-      <!-- Card 1: Primary Focus -->
+      <!-- Card 1: Verified CGPA -->
       <g transform="translate(0, 0)">
         <rect width="245" height="100" rx="14" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
         <rect x="0" y="0" width="4" height="100" rx="2" fill="#247bff"/>
-        <text x="24" y="32" class="id-mono" font-size="11" font-weight="700" fill="#247bff">CORE FOCUS</text>
-        <text x="24" y="60" class="id-sans" font-size="20" font-weight="800" fill="#ffffff">MERN &amp; DSA</text>
-        <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">Active Daily Problem Solving</text>
+        <text x="24" y="32" class="id-mono" font-size="11" font-weight="700" fill="#247bff">VERIFIED ACADEMIC</text>
+        <text x="24" y="60" class="id-sans" font-size="22" font-weight="800" fill="#ffffff">7.27 / 10.0</text>
+        <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">B.Tech IT • 2023–2027</text>
       </g>
 
-      <!-- Card 2: Degree & Academic standing -->
+      <!-- Card 2: Industry Internship -->
       <g transform="translate(265, 0)">
         <rect width="245" height="100" rx="14" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
         <rect x="0" y="0" width="4" height="100" rx="2" fill="#ff354f"/>
-        <text x="24" y="32" class="id-mono" font-size="11" font-weight="700" fill="#ff354f">ACADEMIC CGPA</text>
-        <text x="24" y="60" class="id-sans" font-size="20" font-weight="800" fill="#ffffff">7.13 / 10.0</text>
-        <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">Information Technology</text>
+        <text x="24" y="32" class="id-mono" font-size="11" font-weight="700" fill="#ff354f">INTERNSHIP EXP</text>
+        <text x="24" y="60" class="id-sans" font-size="20" font-weight="800" fill="#ffffff">Codec Tech</text>
+        <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">AI Intern + IBM SkillsBuild</text>
       </g>
 
-      <!-- Card 3: Status -->
+      <!-- Card 3: Availability -->
       <g transform="translate(530, 0)">
         <rect width="230" height="100" rx="14" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
         <rect x="0" y="0" width="4" height="100" rx="2" fill="#00e676"/>
-        <text x="24" y="32" class="id-mono" font-size="11" font-weight="700" fill="#00e676">DEV STATUS</text>
-        <text x="24" y="60" class="id-sans" font-size="20" font-weight="800" fill="#ffffff">ACTIVE</text>
-        <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">Available for Opportunities</text>
+        <text x="24" y="32" class="id-mono" font-size="11" font-weight="700" fill="#00e676">TARGET ROLE</text>
+        <text x="24" y="60" class="id-sans" font-size="19" font-weight="800" fill="#ffffff">Backend Intern</text>
+        <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">Golang / Spring / FastAPI</text>
       </g>
     </g>
 
@@ -779,20 +745,20 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
       
       <!-- Education Section -->
       <g transform="translate(30, 25)">
-        <text x="0" y="16" class="id-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">EDUCATION &amp; FORMAL TRAINING</text>
+        <text x="0" y="16" class="id-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">ACADEMIC &amp; ENGINEERING CREDENTIALS</text>
         
         <text x="0" y="48" class="id-sans" font-size="18" font-weight="800" fill="#ffffff">Bachelor of Technology (B.Tech) — Information Technology</text>
-        <text x="0" y="74" class="id-sans" font-size="14" fill="#cbd5e1">🏛️ JSS Academy of Technical Education, Noida</text>
-        <text x="0" y="98" class="id-sans" font-size="13" fill="#94a3b8">📅 2023 – 2027 • Full-time Engineering</text>
+        <text x="0" y="74" class="id-sans" font-size="14" fill="#cbd5e1">🏛️ JSS Academy of Technical Education, Noida • CGPA: 7.27/10</text>
+        <text x="0" y="98" class="id-sans" font-size="13" fill="#94a3b8">📜 Certifications: TCS iON Communication Skills • IBM SkillsBuild GenAI</text>
       </g>
 
       <line x1="30" y1="138" x2="730" y2="138" stroke="#1b2d4d" stroke-width="1"/>
 
       <!-- Engineering Roadmap Goals -->
       <g transform="translate(30, 155)">
-        <text x="0" y="16" class="id-mono" font-size="11" font-weight="700" fill="#00d2ff">CURRENT ENGINEERING GOAL:</text>
+        <text x="0" y="16" class="id-mono" font-size="11" font-weight="700" fill="#00d2ff">CAREER OBJECTIVE:</text>
         <text x="0" y="36" class="id-sans" font-size="13" fill="#ffffff">
-          "Mastering distributed systems, full-stack product development, and shipping real-world AI applications."
+          "Building secure, high-throughput, maintainable backend systems with Go, Spring Boot, and AI pipelines."
         </text>
       </g>
     </g>
@@ -803,7 +769,7 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 print("[OK] Created assets/id-dashboard.svg")
 
 # ==============================================================================
-# 5. CONNECT.SVG (Right-Pointing Character with Social Cards & Nudging Arrows)
+# 5. CONNECT.SVG (Accurate Instagram @theabhijatpatel, Portfolio & Links)
 # ==============================================================================
 connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -857,7 +823,7 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
       <text x="0" y="0" class="cn-mono" font-size="13" font-weight="700" fill="#ff354f" letter-spacing="2">&gt; 05 // LET'S COLLABORATE &amp; CONNECT</text>
       <text x="0" y="38" class="cn-sans" font-size="34" font-weight="900" fill="#ffffff">LET'S BUILD TOGETHER</text>
       <text x="0" y="66" class="cn-sans" font-size="14" fill="#94a3b8">
-        Have an open role, project idea, or just want to talk tech? Reach out below!
+        Open for Backend Engineering Internships, Multi-Agent AI Projects &amp; Collaborations!
       </text>
     </g>
 
@@ -866,7 +832,6 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
       <!-- 1. GitHub Card -->
       <g transform="translate(0, 0)">
         <rect width="270" height="90" rx="14" fill="url(#cn_cardBg)" stroke="#247bff" stroke-width="1.2"/>
-        <!-- GitHub Mark -->
         <circle cx="36" cy="45" r="20" fill="#181717" stroke="#ffffff" stroke-width="0.8"/>
         <path d="M36 31c-7.7 0-14 6.3-14 14 0 6.2 4 11.4 9.6 13.3.7.1 1-.3 1-.7v-2.4c-3.9.8-4.7-1.9-4.7-1.9-.6-1.6-1.5-2.1-1.5-2.1-1.3-.9.1-.9.1-.9 1.4.1 2.2 1.4 2.2 1.4 1.2 2.2 3.3 1.5 4.1 1.2.1-.9.5-1.5.9-1.9-3.1-.4-6.4-1.6-6.4-7 0-1.5.5-2.8 1.4-3.8-.1-.4-.6-1.8.1-3.7 0 0 1.2-.4 3.9 1.5 1.1-.3 2.3-.5 3.5-.5s2.4.2 3.5.5c2.7-1.9 3.9-1.5 3.9-1.5.8 1.9.3 3.3.1 3.7.9 1 1.4 2.3 1.4 3.8 0 5.4-3.3 6.6-6.4 7 .5.4 1 1.3 1 2.5v3.8c0 .4.3.8 1 .7 5.6-1.9 9.6-7.1 9.6-13.3 0-7.7-6.3-14-14-14z" fill="#ffffff"/>
         
@@ -882,37 +847,37 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
         <text x="36" y="52" text-anchor="middle" class="cn-sans" font-size="18" font-weight="900" fill="#ffffff">in</text>
         
         <text x="68" y="38" class="cn-sans" font-size="15" font-weight="700" fill="#ffffff">LinkedIn</text>
-        <text x="68" y="58" class="cn-mono" font-size="12" fill="#00d2ff">Connect &amp; Message</text>
+        <text x="68" y="58" class="cn-mono" font-size="12" fill="#00d2ff">/in/abhijatpatel01</text>
         <text x="240" y="52" class="cn-sans" font-size="18" fill="#00d2ff">→</text>
       </g>
 
-      <!-- 3. Instagram / Social Card -->
+      <!-- 3. Portfolio Card -->
       <g transform="translate(0, 105)">
+        <rect width="270" height="90" rx="14" fill="url(#cn_cardBg)" stroke="#00e676" stroke-width="1.2"/>
+        <circle cx="36" cy="45" r="20" fill="#0b2e1f"/>
+        <text x="36" y="52" text-anchor="middle" class="cn-sans" font-size="16" font-weight="900" fill="#00e676">🌐</text>
+        
+        <text x="68" y="38" class="cn-sans" font-size="15" font-weight="700" fill="#ffffff">Portfolio Website</text>
+        <text x="68" y="58" class="cn-mono" font-size="12" fill="#00e676">Live Projects &amp; Demos</text>
+        <text x="240" y="52" class="cn-sans" font-size="18" fill="#00e676">→</text>
+      </g>
+
+      <!-- 4. Instagram Card -->
+      <g transform="translate(290, 105)">
         <rect width="270" height="90" rx="14" fill="url(#cn_cardBg)" stroke="#E4405F" stroke-width="1.2"/>
         <circle cx="36" cy="45" r="20" fill="#E4405F"/>
         <text x="36" y="52" text-anchor="middle" class="cn-sans" font-size="16" font-weight="900" fill="#ffffff">📷</text>
         
         <text x="68" y="38" class="cn-sans" font-size="15" font-weight="700" fill="#ffffff">Instagram</text>
-        <text x="68" y="58" class="cn-mono" font-size="12" fill="#ff758c">Follow Journey</text>
+        <text x="68" y="58" class="cn-mono" font-size="12" fill="#ff758c">@theabhijatpatel</text>
         <text x="240" y="52" class="cn-sans" font-size="18" fill="#ff758c">→</text>
-      </g>
-
-      <!-- 4. Email / YouTube Card -->
-      <g transform="translate(290, 105)">
-        <rect width="270" height="90" rx="14" fill="url(#cn_cardBg)" stroke="#ff354f" stroke-width="1.2"/>
-        <circle cx="36" cy="45" r="20" fill="#ff354f"/>
-        <text x="36" y="52" text-anchor="middle" class="cn-sans" font-size="16" font-weight="900" fill="#ffffff">▶</text>
-        
-        <text x="68" y="38" class="cn-sans" font-size="15" font-weight="700" fill="#ffffff">YouTube &amp; Media</text>
-        <text x="68" y="58" class="cn-mono" font-size="12" fill="#ff354f">Tech &amp; Dev Content</text>
-        <text x="240" y="52" class="cn-sans" font-size="18" fill="#ff354f">→</text>
       </g>
     </g>
 
     <!-- Interactive Links Notice -->
     <g transform="translate(0, 312)">
       <text x="0" y="0" class="cn-mono" font-size="11" fill="#64748b">
-        💡 <tspan fill="#cbd5e1">Clickable badges and repository links are available below the artwork.</tspan>
+        💡 <tspan fill="#cbd5e1">Clickable badges and project links are available directly below.</tspan>
       </text>
     </g>
   </g>
@@ -922,12 +887,12 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 print("[OK] Created assets/connect.svg")
 
 # ==============================================================================
-# 6. ROOT README.MD (With all 5 relative paths ?v=1, Projects Table & Clickable Socials)
+# 6. ROOT README.MD (With all resume details, projects table & clickable socials)
 # ==============================================================================
 readme_content = """<div align="center">
 
 # ⚡ ABHIJAT PATEL
-### Full Stack Developer • MERN Architect • C++ & DSA • AI Explorer
+### Backend & Distributed Systems Developer • Multi-Agent AI & RAG • C++ & DSA
 
 ![Hero](./assets/hero.svg?v=1)
 
@@ -945,13 +910,23 @@ readme_content = """<div align="center">
 
 ## 🚀 Featured Projects
 
-| Project | Description | Stack / Category | Status |
+| Project | Description | Stack & Architecture | Links |
 | :--- | :--- | :--- | :---: |
-| 🛡️ **[Clever AI](https://github.com/AbhijatPatel)** | AI Content Intelligence & Forensics Platform for deepfake detection and semantic verification | `React` `Python` `AI/LLM` `Node.js` | 🟢 Active |
-| ⚽ **[MatchStory.AI](https://github.com/AbhijatPatel)** | Automated AI-powered sports storytelling & interactive match commentary generation engine | `React` `FastAPI` `NLP` `TailwindCSS` | 🟢 Active |
-| 🌐 **[Developer Portfolio](https://github.com/AbhijatPatel)** | Ultra-fast personal engineering portfolio with sleek dark mode, micro-animations and interactive UI | `HTML5` `CSS3` `JavaScript` `Responsive` | 🟢 Active |
-| 🌦️ **[Weather Dashboard](https://github.com/AbhijatPatel)** | Real-time weather intelligence dashboard with geolocation forecasting and climate analytics | `JavaScript` `OpenWeather API` `CSS Grid` | 🟢 Active |
-| 🔢 **[NebulaCalc Pro](https://github.com/AbhijatPatel)** | High-precision scientific calculator with formula history parsing and custom themes | `C++` `Modern Web` `Algorithms` | 🟢 Active |
+| 🎓 **CampusConnect** | **AI-Powered Placement & Resume Matching Portal**<br/>Developed a Java Spring Boot & MySQL backend with REST APIs for managing candidate profiles, recruiter dashboards, and job postings. Designed a priority-based ranking algorithm using DSA and an NLP microservice to compute resume-to-job similarity. | `Java` `Spring Boot` `MySQL` `REST APIs` `React` `Python NLP` `DSA` | [GitHub](https://github.com/AbhijatPatel) |
+| 🤖 **AgentIQ** | **Autonomous Multi-Agent Research & Task Assistant**<br/>Built a multi-agent pipeline of planning, research, writing, and critique stages decomposing research goals into subtasks. Implemented RAG + web retrieval with self-critique loops and a real-time React monitoring dashboard. | `Python` `FastAPI` `LangChain` `LangGraph` `LLM APIs` `RAG` `React` | [GitHub](https://github.com/AbhijatPatel) |
+| 🛡️ **Clever AI Detection** | **Multi-Modal AI Content Intelligence & Digital Forensics Platform**<br/>Engineered a FastAPI backend verifying authenticity of text, audio, images, and video using Error Level Analysis (ELA), text stylometry, and deepfake temporal checks. Features SHA-256 data integrity checks with sentence-level AI likelihood dossiers. | `Python` `FastAPI` `Next.js` `SHA-256` `Digital Forensics` `Explainable AI` | [GitHub](https://github.com/AbhijatPatel) |
+| 🌐 **Developer Portfolio** | **Interactive Modern Engineering Portfolio**<br/>High-performance developer showcase highlighting production projects, technical capabilities, interactive demos, and contact integration. | `HTML5` `CSS3` `JavaScript` `Responsive UI` | [Live Site](https://abhijatpatel.github.io/My-Portfolio-Website/) • [GitHub](https://github.com/AbhijatPatel) |
+
+---
+
+## 💼 Industry Experience & Education
+
+- 🏢 **Artificial Intelligence Intern** — *Codec Technologies Pvt. Ltd.* (Jun 2026 – Jul 2026)
+  - Applied Python and core AI/ML workflows for data preprocessing and model evaluation.
+  - Developed and evaluated software-based solutions, strengthening data validation and debugging.
+- ☁️ **GenAI & Cloud Computing Intern** — *IBM SkillsBuild AICTE–BharatCares Program*
+  - Completed structured training on Generative AI, cloud infrastructure, and AI tooling.
+- 🎓 **B.Tech in Information Technology** (2023 – 2027) — *JSS Academy of Technical Education, Noida* | **CGPA: 7.27 / 10**
 
 ---
 
@@ -963,16 +938,20 @@ readme_content = """<div align="center">
   <img src="https://img.shields.io/badge/GitHub-AbhijatPatel-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
 </a>
 &nbsp;
-<a href="https://linkedin.com/in/abhijat-patel" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+<a href="https://linkedin.com/in/abhijatpatel01" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-abhijatpatel01-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
 &nbsp;
-<a href="https://instagram.com" target="_blank">
-  <img src="https://img.shields.io/badge/Instagram-Follow-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
+<a href="https://abhijatpatel.github.io/My-Portfolio-Website/" target="_blank">
+  <img src="https://img.shields.io/badge/Portfolio-Live_Demo-00E676?style=for-the-badge&logo=googlechrome&logoColor=black" alt="Portfolio"/>
 </a>
 &nbsp;
-<a href="https://youtube.com" target="_blank">
-  <img src="https://img.shields.io/badge/YouTube-Subscribe-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
+<a href="https://www.instagram.com/theabhijatpatel" target="_blank">
+  <img src="https://img.shields.io/badge/Instagram-@theabhijatpatel-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
+</a>
+&nbsp;
+<a href="mailto:abhijatpatelfaizabad@gmail.com" target="_blank">
+  <img src="https://img.shields.io/badge/Email-Get_in_Touch-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
 </a>
 
 <br/><br/>
@@ -984,8 +963,8 @@ npx abhijat-patel
 ---
 
 <p align="center">
-  <b>BUILD • LEARN • SOLVE • REPEAT</b><br/>
-  <i>Crafted with passion by Abhijat Patel</i>
+  <b>BUILD • SECURE • SCALE • INNOVATE</b><br/>
+  <i>Crafted with precision for Abhijat Patel</i>
 </p>
 
 </div>
@@ -995,7 +974,7 @@ npx abhijat-patel
 print("[OK] Created README.md")
 
 # ==============================================================================
-# 7. PREVIEW.HTML (Interactive local preview with timeline scrubbing & responsive testing)
+# 7. PREVIEW.HTML (Interactive local preview)
 # ==============================================================================
 preview_html = """<!DOCTYPE html>
 <html lang="en">
@@ -1049,7 +1028,7 @@ preview_html = """<!DOCTYPE html>
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
-    .card img, .card object {
+    .card img {
       display: block;
       width: 100%;
       height: auto;

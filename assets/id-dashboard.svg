@@ -8,8 +8,8 @@
         <stop offset="100%" stop-color="#060a14"/>
       </linearGradient>
       <linearGradient id="id_cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#0d172e" stop-opacity="0.85"/>
-        <stop offset="100%" stop-color="#080e1e" stop-opacity="0.95"/>
+        <stop offset="0%" stop-color="#0d172e" stop-opacity="0.88"/>
+        <stop offset="100%" stop-color="#080e1e" stop-opacity="0.96"/>
       </linearGradient>
       <linearGradient id="id_blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="#247bff"/>
@@ -25,22 +25,18 @@
         <stop offset="100%" stop-color="#247bff" stop-opacity="0.2"/>
       </linearGradient>
       <radialGradient id="id_blueGlow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#247bff" stop-opacity="0.4"/>
+        <stop offset="0%" stop-color="#247bff" stop-opacity="0.45"/>
         <stop offset="100%" stop-color="#247bff" stop-opacity="0"/>
       </radialGradient>
       <radialGradient id="id_crimsonGlow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#ff354f" stop-opacity="0.35"/>
+        <stop offset="0%" stop-color="#ff354f" stop-opacity="0.4"/>
         <stop offset="100%" stop-color="#ff354f" stop-opacity="0"/>
       </radialGradient>
       <pattern id="id_dots" width="24" height="24" patternUnits="userSpaceOnUse">
         <circle cx="2" cy="2" r="1.2" fill="#247bff" opacity="0.12"/>
       </pattern>
-      <filter id="id_glowFilter" x="-20%" y="-20%" width="140%" height="140%">
-        <feGaussianBlur stdDeviation="8" result="blur" />
-        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-      </filter>
       <filter id="id_shadow" x="-10%" y="-10%" width="120%" height="120%">
-        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.65"/>
       </filter>
     </defs>
 
@@ -54,9 +50,6 @@
       <stop offset="50%" stop-color="#e2e8f0"/>
       <stop offset="100%" stop-color="#64748b"/>
     </linearGradient>
-    <clipPath id="id_passClip">
-      <rect x="70" y="80" width="260" height="310" rx="18"/>
-    </clipPath>
     <clipPath id="id_cardPhotoClip">
       <rect x="85" y="95" width="230" height="150" rx="12"/>
     </clipPath>
@@ -98,7 +91,7 @@
 
   <!-- Section Title -->
   <g transform="translate(60, 42)">
-    <text x="0" y="0" class="id-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 04 // DEVELOPER PASS &amp; VERIFIED METRICS</text>
+    <text x="0" y="0" class="id-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 04 // DEVELOPER PASS &amp; VERIFIED CREDENTIALS</text>
   </g>
 
   <!-- Left: Hanging Lanyard Pass Assembly -->
@@ -128,7 +121,7 @@
 
       <!-- Cardholder Details -->
       <text x="85" y="272" class="id-sans" font-size="20" font-weight="900" fill="#ffffff">ABHIJAT PATEL</text>
-      <text x="85" y="292" class="id-mono" font-size="11" font-weight="700" fill="#247bff" letter-spacing="1">FULL STACK DEVELOPER</text>
+      <text x="85" y="292" class="id-mono" font-size="11" font-weight="700" fill="#247bff" letter-spacing="1">BACKEND &amp; AI DEVELOPER</text>
       
       <!-- Hologram / Barcode Footer -->
       <g transform="translate(85, 312)">
@@ -149,31 +142,31 @@
   <g transform="translate(380, 75)">
     <!-- Top Row: Verified Metrics Cards -->
     <g transform="translate(0, 0)">
-      <!-- Card 1: Primary Focus -->
+      <!-- Card 1: Verified CGPA -->
       <g transform="translate(0, 0)">
         <rect width="245" height="100" rx="14" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
         <rect x="0" y="0" width="4" height="100" rx="2" fill="#247bff"/>
-        <text x="24" y="32" class="id-mono" font-size="11" font-weight="700" fill="#247bff">CORE FOCUS</text>
-        <text x="24" y="60" class="id-sans" font-size="20" font-weight="800" fill="#ffffff">MERN &amp; DSA</text>
-        <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">Active Daily Problem Solving</text>
+        <text x="24" y="32" class="id-mono" font-size="11" font-weight="700" fill="#247bff">VERIFIED ACADEMIC</text>
+        <text x="24" y="60" class="id-sans" font-size="22" font-weight="800" fill="#ffffff">7.27 / 10.0</text>
+        <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">B.Tech IT • 2023–2027</text>
       </g>
 
-      <!-- Card 2: Degree & Academic standing -->
+      <!-- Card 2: Industry Internship -->
       <g transform="translate(265, 0)">
         <rect width="245" height="100" rx="14" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
         <rect x="0" y="0" width="4" height="100" rx="2" fill="#ff354f"/>
-        <text x="24" y="32" class="id-mono" font-size="11" font-weight="700" fill="#ff354f">ACADEMIC CGPA</text>
-        <text x="24" y="60" class="id-sans" font-size="20" font-weight="800" fill="#ffffff">7.13 / 10.0</text>
-        <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">Information Technology</text>
+        <text x="24" y="32" class="id-mono" font-size="11" font-weight="700" fill="#ff354f">INTERNSHIP EXP</text>
+        <text x="24" y="60" class="id-sans" font-size="20" font-weight="800" fill="#ffffff">Codec Tech</text>
+        <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">AI Intern + IBM SkillsBuild</text>
       </g>
 
-      <!-- Card 3: Status -->
+      <!-- Card 3: Availability -->
       <g transform="translate(530, 0)">
         <rect width="230" height="100" rx="14" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
         <rect x="0" y="0" width="4" height="100" rx="2" fill="#00e676"/>
-        <text x="24" y="32" class="id-mono" font-size="11" font-weight="700" fill="#00e676">DEV STATUS</text>
-        <text x="24" y="60" class="id-sans" font-size="20" font-weight="800" fill="#ffffff">ACTIVE</text>
-        <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">Available for Opportunities</text>
+        <text x="24" y="32" class="id-mono" font-size="11" font-weight="700" fill="#00e676">TARGET ROLE</text>
+        <text x="24" y="60" class="id-sans" font-size="19" font-weight="800" fill="#ffffff">Backend Intern</text>
+        <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">Golang / Spring / FastAPI</text>
       </g>
     </g>
 
@@ -183,20 +176,20 @@
       
       <!-- Education Section -->
       <g transform="translate(30, 25)">
-        <text x="0" y="16" class="id-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">EDUCATION &amp; FORMAL TRAINING</text>
+        <text x="0" y="16" class="id-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">ACADEMIC &amp; ENGINEERING CREDENTIALS</text>
         
         <text x="0" y="48" class="id-sans" font-size="18" font-weight="800" fill="#ffffff">Bachelor of Technology (B.Tech) — Information Technology</text>
-        <text x="0" y="74" class="id-sans" font-size="14" fill="#cbd5e1">🏛️ JSS Academy of Technical Education, Noida</text>
-        <text x="0" y="98" class="id-sans" font-size="13" fill="#94a3b8">📅 2023 – 2027 • Full-time Engineering</text>
+        <text x="0" y="74" class="id-sans" font-size="14" fill="#cbd5e1">🏛️ JSS Academy of Technical Education, Noida • CGPA: 7.27/10</text>
+        <text x="0" y="98" class="id-sans" font-size="13" fill="#94a3b8">📜 Certifications: TCS iON Communication Skills • IBM SkillsBuild GenAI</text>
       </g>
 
       <line x1="30" y1="138" x2="730" y2="138" stroke="#1b2d4d" stroke-width="1"/>
 
       <!-- Engineering Roadmap Goals -->
       <g transform="translate(30, 155)">
-        <text x="0" y="16" class="id-mono" font-size="11" font-weight="700" fill="#00d2ff">CURRENT ENGINEERING GOAL:</text>
+        <text x="0" y="16" class="id-mono" font-size="11" font-weight="700" fill="#00d2ff">CAREER OBJECTIVE:</text>
         <text x="0" y="36" class="id-sans" font-size="13" fill="#ffffff">
-          "Mastering distributed systems, full-stack product development, and shipping real-world AI applications."
+          "Building secure, high-throughput, maintainable backend systems with Go, Spring Boot, and AI pipelines."
         </text>
       </g>
     </g>

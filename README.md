@@ -1,7 +1,7 @@
 <div align="center">
 
 # ⚡ ABHIJAT PATEL
-### Full Stack Developer • MERN Architect • C++ & DSA • AI Explorer
+### Backend & Distributed Systems Developer • Multi-Agent AI & RAG • C++ & DSA
 
 ![Hero](./assets/hero.svg?v=1)
 
@@ -19,13 +19,23 @@
 
 ## 🚀 Featured Projects
 
-| Project | Description | Stack / Category | Status |
+| Project | Description | Stack & Architecture | Links |
 | :--- | :--- | :--- | :---: |
-| 🛡️ **[Clever AI](https://github.com/AbhijatPatel)** | AI Content Intelligence & Forensics Platform for deepfake detection and semantic verification | `React` `Python` `AI/LLM` `Node.js` | 🟢 Active |
-| ⚽ **[MatchStory.AI](https://github.com/AbhijatPatel)** | Automated AI-powered sports storytelling & interactive match commentary generation engine | `React` `FastAPI` `NLP` `TailwindCSS` | 🟢 Active |
-| 🌐 **[Developer Portfolio](https://github.com/AbhijatPatel)** | Ultra-fast personal engineering portfolio with sleek dark mode, micro-animations and interactive UI | `HTML5` `CSS3` `JavaScript` `Responsive` | 🟢 Active |
-| 🌦️ **[Weather Dashboard](https://github.com/AbhijatPatel)** | Real-time weather intelligence dashboard with geolocation forecasting and climate analytics | `JavaScript` `OpenWeather API` `CSS Grid` | 🟢 Active |
-| 🔢 **[NebulaCalc Pro](https://github.com/AbhijatPatel)** | High-precision scientific calculator with formula history parsing and custom themes | `C++` `Modern Web` `Algorithms` | 🟢 Active |
+| 🎓 **CampusConnect** | **AI-Powered Placement & Resume Matching Portal**<br/>Developed a Java Spring Boot & MySQL backend with REST APIs for managing candidate profiles, recruiter dashboards, and job postings. Designed a priority-based ranking algorithm using DSA and an NLP microservice to compute resume-to-job similarity. | `Java` `Spring Boot` `MySQL` `REST APIs` `React` `Python NLP` `DSA` | [GitHub](https://github.com/AbhijatPatel) |
+| 🤖 **AgentIQ** | **Autonomous Multi-Agent Research & Task Assistant**<br/>Built a multi-agent pipeline of planning, research, writing, and critique stages decomposing research goals into subtasks. Implemented RAG + web retrieval with self-critique loops and a real-time React monitoring dashboard. | `Python` `FastAPI` `LangChain` `LangGraph` `LLM APIs` `RAG` `React` | [GitHub](https://github.com/AbhijatPatel) |
+| 🛡️ **Clever AI Detection** | **Multi-Modal AI Content Intelligence & Digital Forensics Platform**<br/>Engineered a FastAPI backend verifying authenticity of text, audio, images, and video using Error Level Analysis (ELA), text stylometry, and deepfake temporal checks. Features SHA-256 data integrity checks with sentence-level AI likelihood dossiers. | `Python` `FastAPI` `Next.js` `SHA-256` `Digital Forensics` `Explainable AI` | [GitHub](https://github.com/AbhijatPatel) |
+| 🌐 **Developer Portfolio** | **Interactive Modern Engineering Portfolio**<br/>High-performance developer showcase highlighting production projects, technical capabilities, interactive demos, and contact integration. | `HTML5` `CSS3` `JavaScript` `Responsive UI` | [Live Site](https://abhijatpatel.github.io/My-Portfolio-Website/) • [GitHub](https://github.com/AbhijatPatel) |
+
+---
+
+## 💼 Industry Experience & Education
+
+- 🏢 **Artificial Intelligence Intern** — *Codec Technologies Pvt. Ltd.* (Jun 2026 – Jul 2026)
+  - Applied Python and core AI/ML workflows for data preprocessing and model evaluation.
+  - Developed and evaluated software-based solutions, strengthening data validation and debugging.
+- ☁️ **GenAI & Cloud Computing Intern** — *IBM SkillsBuild AICTE–BharatCares Program*
+  - Completed structured training on Generative AI, cloud infrastructure, and AI tooling.
+- 🎓 **B.Tech in Information Technology** (2023 – 2027) — *JSS Academy of Technical Education, Noida* | **CGPA: 7.27 / 10**
 
 ---
 
@@ -37,16 +47,20 @@
   <img src="https://img.shields.io/badge/GitHub-AbhijatPatel-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
 </a>
 &nbsp;
-<a href="https://linkedin.com/in/abhijat-patel" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+<a href="https://linkedin.com/in/abhijatpatel01" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-abhijatpatel01-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
 &nbsp;
-<a href="https://instagram.com" target="_blank">
-  <img src="https://img.shields.io/badge/Instagram-Follow-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
+<a href="https://abhijatpatel.github.io/My-Portfolio-Website/" target="_blank">
+  <img src="https://img.shields.io/badge/Portfolio-Live_Demo-00E676?style=for-the-badge&logo=googlechrome&logoColor=black" alt="Portfolio"/>
 </a>
 &nbsp;
-<a href="https://youtube.com" target="_blank">
-  <img src="https://img.shields.io/badge/YouTube-Subscribe-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
+<a href="https://www.instagram.com/theabhijatpatel" target="_blank">
+  <img src="https://img.shields.io/badge/Instagram-@theabhijatpatel-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
+</a>
+&nbsp;
+<a href="mailto:abhijatpatelfaizabad@gmail.com" target="_blank">
+  <img src="https://img.shields.io/badge/Email-Get_in_Touch-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
 </a>
 
 <br/><br/>
@@ -58,8 +72,8 @@ npx abhijat-patel
 ---
 
 <p align="center">
-  <b>BUILD • LEARN • SOLVE • REPEAT</b><br/>
-  <i>Crafted with passion by Abhijat Patel</i>
+  <b>BUILD • SECURE • SCALE • INNOVATE</b><br/>
+  <i>Crafted with precision for Abhijat Patel</i>
 </p>
 
 </div>

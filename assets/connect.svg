@@ -8,8 +8,8 @@
         <stop offset="100%" stop-color="#060a14"/>
       </linearGradient>
       <linearGradient id="cn_cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#0d172e" stop-opacity="0.85"/>
-        <stop offset="100%" stop-color="#080e1e" stop-opacity="0.95"/>
+        <stop offset="0%" stop-color="#0d172e" stop-opacity="0.88"/>
+        <stop offset="100%" stop-color="#080e1e" stop-opacity="0.96"/>
       </linearGradient>
       <linearGradient id="cn_blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="#247bff"/>
@@ -25,22 +25,18 @@
         <stop offset="100%" stop-color="#247bff" stop-opacity="0.2"/>
       </linearGradient>
       <radialGradient id="cn_blueGlow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#247bff" stop-opacity="0.4"/>
+        <stop offset="0%" stop-color="#247bff" stop-opacity="0.45"/>
         <stop offset="100%" stop-color="#247bff" stop-opacity="0"/>
       </radialGradient>
       <radialGradient id="cn_crimsonGlow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#ff354f" stop-opacity="0.35"/>
+        <stop offset="0%" stop-color="#ff354f" stop-opacity="0.4"/>
         <stop offset="100%" stop-color="#ff354f" stop-opacity="0"/>
       </radialGradient>
       <pattern id="cn_dots" width="24" height="24" patternUnits="userSpaceOnUse">
         <circle cx="2" cy="2" r="1.2" fill="#247bff" opacity="0.12"/>
       </pattern>
-      <filter id="cn_glowFilter" x="-20%" y="-20%" width="140%" height="140%">
-        <feGaussianBlur stdDeviation="8" result="blur" />
-        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-      </filter>
       <filter id="cn_shadow" x="-10%" y="-10%" width="120%" height="120%">
-        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.65"/>
       </filter>
     </defs>
 
@@ -93,7 +89,7 @@
       <text x="0" y="0" class="cn-mono" font-size="13" font-weight="700" fill="#ff354f" letter-spacing="2">&gt; 05 // LET'S COLLABORATE &amp; CONNECT</text>
       <text x="0" y="38" class="cn-sans" font-size="34" font-weight="900" fill="#ffffff">LET'S BUILD TOGETHER</text>
       <text x="0" y="66" class="cn-sans" font-size="14" fill="#94a3b8">
-        Have an open role, project idea, or just want to talk tech? Reach out below!
+        Open for Backend Engineering Internships, Multi-Agent AI Projects &amp; Collaborations!
       </text>
     </g>
 
@@ -102,7 +98,6 @@
       <!-- 1. GitHub Card -->
       <g transform="translate(0, 0)">
         <rect width="270" height="90" rx="14" fill="url(#cn_cardBg)" stroke="#247bff" stroke-width="1.2"/>
-        <!-- GitHub Mark -->
         <circle cx="36" cy="45" r="20" fill="#181717" stroke="#ffffff" stroke-width="0.8"/>
         <path d="M36 31c-7.7 0-14 6.3-14 14 0 6.2 4 11.4 9.6 13.3.7.1 1-.3 1-.7v-2.4c-3.9.8-4.7-1.9-4.7-1.9-.6-1.6-1.5-2.1-1.5-2.1-1.3-.9.1-.9.1-.9 1.4.1 2.2 1.4 2.2 1.4 1.2 2.2 3.3 1.5 4.1 1.2.1-.9.5-1.5.9-1.9-3.1-.4-6.4-1.6-6.4-7 0-1.5.5-2.8 1.4-3.8-.1-.4-.6-1.8.1-3.7 0 0 1.2-.4 3.9 1.5 1.1-.3 2.3-.5 3.5-.5s2.4.2 3.5.5c2.7-1.9 3.9-1.5 3.9-1.5.8 1.9.3 3.3.1 3.7.9 1 1.4 2.3 1.4 3.8 0 5.4-3.3 6.6-6.4 7 .5.4 1 1.3 1 2.5v3.8c0 .4.3.8 1 .7 5.6-1.9 9.6-7.1 9.6-13.3 0-7.7-6.3-14-14-14z" fill="#ffffff"/>
         
@@ -118,37 +113,37 @@
         <text x="36" y="52" text-anchor="middle" class="cn-sans" font-size="18" font-weight="900" fill="#ffffff">in</text>
         
         <text x="68" y="38" class="cn-sans" font-size="15" font-weight="700" fill="#ffffff">LinkedIn</text>
-        <text x="68" y="58" class="cn-mono" font-size="12" fill="#00d2ff">Connect &amp; Message</text>
+        <text x="68" y="58" class="cn-mono" font-size="12" fill="#00d2ff">/in/abhijatpatel01</text>
         <text x="240" y="52" class="cn-sans" font-size="18" fill="#00d2ff">→</text>
       </g>
 
-      <!-- 3. Instagram / Social Card -->
+      <!-- 3. Portfolio Card -->
       <g transform="translate(0, 105)">
+        <rect width="270" height="90" rx="14" fill="url(#cn_cardBg)" stroke="#00e676" stroke-width="1.2"/>
+        <circle cx="36" cy="45" r="20" fill="#0b2e1f"/>
+        <text x="36" y="52" text-anchor="middle" class="cn-sans" font-size="16" font-weight="900" fill="#00e676">🌐</text>
+        
+        <text x="68" y="38" class="cn-sans" font-size="15" font-weight="700" fill="#ffffff">Portfolio Website</text>
+        <text x="68" y="58" class="cn-mono" font-size="12" fill="#00e676">Live Projects &amp; Demos</text>
+        <text x="240" y="52" class="cn-sans" font-size="18" fill="#00e676">→</text>
+      </g>
+
+      <!-- 4. Instagram Card -->
+      <g transform="translate(290, 105)">
         <rect width="270" height="90" rx="14" fill="url(#cn_cardBg)" stroke="#E4405F" stroke-width="1.2"/>
         <circle cx="36" cy="45" r="20" fill="#E4405F"/>
         <text x="36" y="52" text-anchor="middle" class="cn-sans" font-size="16" font-weight="900" fill="#ffffff">📷</text>
         
         <text x="68" y="38" class="cn-sans" font-size="15" font-weight="700" fill="#ffffff">Instagram</text>
-        <text x="68" y="58" class="cn-mono" font-size="12" fill="#ff758c">Follow Journey</text>
+        <text x="68" y="58" class="cn-mono" font-size="12" fill="#ff758c">@theabhijatpatel</text>
         <text x="240" y="52" class="cn-sans" font-size="18" fill="#ff758c">→</text>
-      </g>
-
-      <!-- 4. Email / YouTube Card -->
-      <g transform="translate(290, 105)">
-        <rect width="270" height="90" rx="14" fill="url(#cn_cardBg)" stroke="#ff354f" stroke-width="1.2"/>
-        <circle cx="36" cy="45" r="20" fill="#ff354f"/>
-        <text x="36" y="52" text-anchor="middle" class="cn-sans" font-size="16" font-weight="900" fill="#ffffff">▶</text>
-        
-        <text x="68" y="38" class="cn-sans" font-size="15" font-weight="700" fill="#ffffff">YouTube &amp; Media</text>
-        <text x="68" y="58" class="cn-mono" font-size="12" fill="#ff354f">Tech &amp; Dev Content</text>
-        <text x="240" y="52" class="cn-sans" font-size="18" fill="#ff354f">→</text>
       </g>
     </g>
 
     <!-- Interactive Links Notice -->
     <g transform="translate(0, 312)">
       <text x="0" y="0" class="cn-mono" font-size="11" fill="#64748b">
-        💡 <tspan fill="#cbd5e1">Clickable badges and repository links are available below the artwork.</tspan>
+        💡 <tspan fill="#cbd5e1">Clickable badges and project links are available directly below.</tspan>
       </text>
     </g>
   </g>
