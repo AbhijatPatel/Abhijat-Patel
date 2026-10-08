@@ -73,9 +73,7 @@
 
 <br/><br/>
 
-```bash
-npx abhijat-patel
-```
+
 
 ---
 
