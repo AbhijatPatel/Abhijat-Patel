@@ -59,7 +59,7 @@ COMMON_DEFS = """
 """
 
 # ==============================================================================
-# 1. HERO.SVG
+# 1. HERO.SVG - FIXED PHOTO FRAMING (Full head, hair, chest visible with YMin align)
 # ==============================================================================
 hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -68,6 +68,9 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
       <rect x="0" y="0" width="700" height="90">
         <animate attributeName="y" values="90;0" dur="0.9s" begin="0.2s" fill="freeze" keyTimes="0;1" keySplines="0.16 1 0.3 1" calcMode="spline"/>
       </rect>
+    </clipPath>
+    <clipPath id="h_portraitClip">
+      <rect x="790" y="30" width="350" height="390" rx="24"/>
     </clipPath>
   </defs>
 
@@ -103,7 +106,7 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
   <rect x="1" y="1" width="1198" height="448" rx="19" fill="none" stroke="url(#h_borderGrad)" stroke-width="1.5"/>
 
   <!-- Background Ambience Glows -->
-  <circle cx="980" cy="225" r="240" fill="url(#h_blueGlow)"/>
+  <circle cx="960" cy="225" r="240" fill="url(#h_blueGlow)"/>
   <circle cx="1060" cy="250" r="180" fill="url(#h_crimsonGlow)"/>
   <circle cx="200" cy="100" r="150" fill="url(#h_blueGlow)" opacity="0.3"/>
 
@@ -136,24 +139,19 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
 
     <!-- Animated Cycling Role Badges -->
     <g transform="translate(0, 175)">
-      <!-- Base container badge -->
       <rect x="0" y="0" width="500" height="42" rx="10" fill="#0c152a" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.5"/>
       <rect x="0" y="0" width="6" height="42" rx="3" fill="url(#h_blueGrad)"/>
 
       <g transform="translate(24, 26)">
-        <!-- Role 1: SDET / Testing -->
         <g class="h-role-1">
           <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#247bff">🛡️ SDET &amp; SOFTWARE QUALITY ENGINEER</text>
         </g>
-        <!-- Role 2: Backend Development -->
         <g class="h-role-2" opacity="0">
           <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#00d2ff">⚡ JAVA SPRING BOOT &amp; FASTAPI DEV</text>
         </g>
-        <!-- Role 3: AI & Verification -->
         <g class="h-role-3" opacity="0">
           <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ff354f">🤖 MULTI-AGENT AI &amp; FORENSICS ENGINE</text>
         </g>
-        <!-- Role 4: DSA & Core CS -->
         <g class="h-role-4" opacity="0">
           <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ffd166">🧠 C++, JAVA &amp; DSA PROBLEM SOLVER</text>
         </g>
@@ -173,14 +171,12 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
 
     <!-- Info / Meta Row -->
     <g transform="translate(0, 325)">
-      <!-- Location Chip -->
       <g transform="translate(0, 0)">
         <rect x="0" y="0" width="180" height="34" rx="8" fill="#0a1224" stroke="#1e2d4d" stroke-width="1"/>
         <circle cx="18" cy="17" r="4" fill="#ff354f"/>
         <text x="32" y="22" class="h-text-sans" font-size="13" font-weight="500" fill="#94a3b8">Noida, UP, India</text>
       </g>
 
-      <!-- University / Org Chip -->
       <g transform="translate(195, 0)">
         <rect x="0" y="0" width="305" height="34" rx="8" fill="#0a1224" stroke="#1e2d4d" stroke-width="1"/>
         <text x="16" y="22" class="h-text-sans" font-size="13" font-weight="500" fill="#94a3b8">
@@ -190,33 +186,32 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
     </g>
   </g>
 
-  <!-- Right Portrait Column with Neon Glow & Tech Accents -->
-  <g transform="translate(760, 25)">
-    <!-- Backdrop Card Frame with Dual Gradient Neon Rim -->
-    <rect x="40" y="15" width="340" height="370" rx="28" fill="#091224" filter="url(#h_shadow)"/>
-    <rect x="40" y="15" width="340" height="370" rx="28" fill="none" stroke="url(#h_blueGrad)" stroke-width="2"/>
-    <rect x="40" y="15" width="340" height="370" rx="28" fill="none" stroke="url(#h_crimsonGrad)" stroke-width="1.2" opacity="0.6"/>
+  <!-- Right Portrait Column with Generous Headroom and Perfect Fitting -->
+  <g>
+    <!-- Background Frame with Dual Neon Borders -->
+    <rect x="790" y="30" width="350" height="390" rx="24" fill="#091224" filter="url(#h_shadow)"/>
+    <rect x="790" y="30" width="350" height="390" rx="24" fill="none" stroke="url(#h_blueGrad)" stroke-width="2"/>
+    <rect x="790" y="30" width="350" height="390" rx="24" fill="none" stroke="url(#h_crimsonGrad)" stroke-width="1.2" opacity="0.6"/>
 
-    <!-- Decorative Corner Marks -->
-    <path d="M 40 45 L 40 25 Q 40 15 50 15 L 70 15" fill="none" stroke="#00d2ff" stroke-width="3"/>
-    <path d="M 350 385 L 370 385 Q 380 385 380 375 L 380 355" fill="none" stroke="#ff354f" stroke-width="3"/>
+    <!-- Corner Accents -->
+    <path d="M 790 60 L 790 40 Q 790 30 800 30 L 820 30" fill="none" stroke="#00d2ff" stroke-width="3"/>
+    <path d="M 1120 420 L 1140 420 Q 1140 420 1140 410 L 1140 390" fill="none" stroke="#ff354f" stroke-width="3"/>
 
-    <!-- Clipped Real Executive Portrait Image -->
-    <clipPath id="h_portraitClip">
-      <rect x="42" y="17" width="336" height="366" rx="26"/>
-    </clipPath>
-
+    <!-- Clipped Image with xMidYMin slice to preserve complete hair and full chest -->
     <g clip-path="url(#h_portraitClip)">
-      <image href="{id_b64}" x="40" y="15" width="340" height="370" preserveAspectRatio="xMidYMid slice"/>
+      <image href="{id_b64}" x="790" y="30" width="350" height="390" preserveAspectRatio="xMidYMin slice"/>
     </g>
 
-    <!-- Floating Mini Code HUD Badge -->
-    <g transform="translate(15, 305)" filter="url(#h_shadow)">
-      <rect width="195" height="58" rx="12" fill="#060c1c" stroke="#247bff" stroke-width="1.2" opacity="0.95"/>
-      <circle cx="16" cy="18" r="4" fill="#ff354f"/>
-      <circle cx="28" cy="18" r="4" fill="#ffb703"/>
-      <circle cx="40" cy="18" r="4" fill="#00e676"/>
-      <text x="16" y="44" class="h-text-mono" font-size="12" font-weight="700" fill="#00d2ff">assert test.passed == OK</text>
+    <!-- Subtle inner vignette gradient at the bottom so it blends seamlessly -->
+    <rect x="790" y="350" width="350" height="70" rx="24" fill="url(#h_bg)" opacity="0.6"/>
+
+    <!-- Floating Mini Code HUD Badge - Placed elegantly at bottom right without covering user face -->
+    <g transform="translate(755, 360)" filter="url(#h_shadow)">
+      <rect width="185" height="46" rx="10" fill="#060c1c" stroke="#247bff" stroke-width="1.2" opacity="0.95"/>
+      <circle cx="16" cy="14" r="3.5" fill="#ff354f"/>
+      <circle cx="26" cy="14" r="3.5" fill="#ffb703"/>
+      <circle cx="36" cy="14" r="3.5" fill="#00e676"/>
+      <text x="16" y="34" class="h-text-mono" font-size="11.5" font-weight="700" fill="#00d2ff">assert test.passed == OK</text>
     </g>
   </g>
 </svg>"""
@@ -225,7 +220,7 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
 print("[OK] Created assets/hero.svg")
 
 # ==============================================================================
-# 2. ABOUT-LIFE.SVG (Resume-grounded Capabilities & 3-Slide Carousel)
+# 2. ABOUT-LIFE.SVG
 # ==============================================================================
 about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -236,7 +231,6 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
     .ab-sans {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif; }}
     .ab-mono {{ font-family: ui-monospace, "SF Mono", "Cascadia Code", "Fira Code", monospace; }}
 
-    /* 3-Slide Carousel Keyframes (12s total: 4s per slide) */
     @keyframes slide1Fade {{
       0%, 30% {{ opacity: 1; visibility: visible; }}
       33.3%, 96.6% {{ opacity: 0; visibility: hidden; }}
@@ -340,22 +334,18 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 
   <!-- Right Column: 3-Slide Carousel with Segment Progress Bars -->
   <g transform="translate(620, 75)">
-    <!-- Outer Card Wrapper -->
     <rect width="520" height="332" rx="18" fill="#091224" stroke="#1e2d4d" stroke-width="1.2" filter="url(#ab_shadow)"/>
 
     <!-- Carousel Header / Tab Indicator -->
     <g transform="translate(30, 24)">
-      <!-- Segment 1 -->
       <rect x="0" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
       <rect x="0" y="0" width="0" height="4" rx="2" fill="#247bff" class="ab-bar-1"/>
       <text x="0" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">01 / SDET &amp; QA</text>
 
-      <!-- Segment 2 -->
       <rect x="160" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
       <rect x="160" y="0" width="0" height="4" rx="2" fill="#00d2ff" class="ab-bar-2"/>
       <text x="160" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">02 / FORENSICS &amp; AI</text>
 
-      <!-- Segment 3 -->
       <rect x="320" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
       <rect x="320" y="0" width="0" height="4" rx="2" fill="#ff354f" class="ab-bar-3"/>
       <text x="320" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">03 / EXPERIENCE</text>
@@ -371,7 +361,6 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
         semantic verification to guarantee robust, bug-free production code.
       </text>
 
-      <!-- Highlight Chips -->
       <g transform="translate(0, 115)">
         <rect width="215" height="60" rx="10" fill="#0e1b38" stroke="#247bff" stroke-width="1"/>
         <text x="16" y="26" class="ab-mono" font-size="12" fill="#247bff" font-weight="700">TARGET ROLE</text>
@@ -393,7 +382,6 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
         SHA-256 integrity, Error Level Analysis &amp; NLI evidence matching.
       </text>
 
-      <!-- Highlight Chips -->
       <g transform="translate(0, 115)">
         <rect width="215" height="60" rx="10" fill="#0c232e" stroke="#00d2ff" stroke-width="1"/>
         <text x="16" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">CLEVER AI PLATFORM</text>
@@ -415,7 +403,6 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
         SkillsBuild (GenAI &amp; Cloud), shipping verified software solutions.
       </text>
 
-      <!-- Highlight Chips -->
       <g transform="translate(0, 115)">
         <rect width="215" height="60" rx="10" fill="#290e1b" stroke="#ff354f" stroke-width="1"/>
         <text x="16" y="26" class="ab-mono" font-size="12" fill="#ff354f" font-weight="700">CODEC TECH</text>
@@ -433,7 +420,7 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 print("[OK] Created assets/about-life.svg")
 
 # ==============================================================================
-# 3. STACK.SVG (Technical Skills Taxonomy)
+# 3. STACK.SVG
 # ==============================================================================
 stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -463,10 +450,8 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 
   <!-- Left Side: 3 Tilted Elliptical Orbits with Core Node & Tech Icons -->
   <g transform="translate(0, 10)">
-    <!-- Glow behind orbit core -->
     <circle cx="320" cy="235" r="140" fill="url(#st_blueGlow)"/>
 
-    <!-- Orbit 1: Outer Orbit (Databases & Tools) -->
     <g transform="rotate(-15 320 235)">
       <ellipse cx="320" cy="235" rx="260" ry="110" fill="none" stroke="#1b305c" stroke-width="1.5" stroke-dasharray="6 6"/>
       <g transform="translate(80, 210)">
@@ -483,7 +468,6 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       </g>
     </g>
 
-    <!-- Orbit 2: Mid Orbit (Languages: Java, Python, C++, SQL) -->
     <g transform="rotate(18 320 235)">
       <ellipse cx="320" cy="235" rx="190" ry="80" fill="none" stroke="#247bff" stroke-width="1.5" opacity="0.6"/>
       <g transform="translate(135, 215)">
@@ -500,7 +484,6 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       </g>
     </g>
 
-    <!-- Orbit 3: Inner Orbit (Frameworks & QA) -->
     <g transform="rotate(-5 320 235)">
       <ellipse cx="320" cy="235" rx="115" ry="50" fill="none" stroke="#ff354f" stroke-width="1.5" opacity="0.7"/>
       <g transform="translate(205, 218)">
@@ -513,7 +496,6 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       </g>
     </g>
 
-    <!-- Planetary Core Node -->
     <g class="st-core-node">
       <circle cx="320" cy="235" r="36" fill="#0b1733" stroke="url(#st_blueGrad)" stroke-width="2.5" filter="url(#st_shadow)"/>
       <text x="320" y="242" text-anchor="middle" class="st-mono" font-size="15" font-weight="900" fill="#ffffff">&lt;/&gt;</text>
@@ -522,75 +504,61 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 
   <!-- Right Side: Categorized Stack Chips Grid -->
   <g transform="translate(640, 75)">
-    <!-- Category 1: Languages & Core Development -->
     <g transform="translate(0, 0)">
       <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">PROGRAMMING &amp; FRAMEWORKS</text>
       <g transform="translate(0, 28)">
-        <!-- Java & Spring Boot -->
         <rect x="0" y="0" width="145" height="34" rx="8" fill="url(#st_cardBg)" stroke="#6DB33F" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="16" cy="17" r="4" fill="#6DB33F"/>
         <text x="30" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Java • Spring Boot</text>
 
-        <!-- Python & FastAPI -->
         <rect x="155" y="0" width="135" height="34" rx="8" fill="url(#st_cardBg)" stroke="#009688" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="171" cy="17" r="4" fill="#009688"/>
         <text x="185" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Python • FastAPI</text>
 
-        <!-- C++ & DSA -->
         <rect x="300" y="0" width="105" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00599C" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="316" cy="17" r="4" fill="#659AD2"/>
         <text x="330" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">C++ • DSA</text>
 
-        <!-- React.js / Node -->
         <rect x="415" y="0" width="85" height="34" rx="8" fill="url(#st_cardBg)" stroke="#61DAFB" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="428" cy="17" r="4" fill="#61DAFB"/>
         <text x="440" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">React.js</text>
       </g>
     </g>
 
-    <!-- Category 2: Software Testing & Quality Engineering -->
     <g transform="translate(0, 90)">
       <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#00d2ff" letter-spacing="1">SOFTWARE TESTING &amp; QUALITY</text>
       <g transform="translate(0, 28)">
-        <!-- Software Validation -->
         <rect x="0" y="0" width="155" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00d2ff" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="16" cy="17" r="4" fill="#00d2ff"/>
         <text x="30" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Software Validation</text>
 
-        <!-- Semantic Verification (NLI) -->
         <rect x="165" y="0" width="165" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ffd166" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="181" cy="17" r="4" fill="#ffd166"/>
         <text x="195" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Semantic Verification</text>
 
-        <!-- Debugging & Data Validation -->
         <rect x="340" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ff354f" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="356" cy="17" r="4" fill="#ff354f"/>
         <text x="370" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Debugging &amp; Model Eval</text>
       </g>
     </g>
 
-    <!-- Category 3: Databases & AI/ML APIs -->
     <g transform="translate(0, 180)">
       <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#ff354f" letter-spacing="1">DATABASES, RAG &amp; FORENSICS</text>
       <g transform="translate(0, 28)">
-        <!-- MySQL & PostgreSQL -->
         <rect x="0" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00758F" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="16" cy="17" r="4" fill="#00758F"/>
         <text x="30" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">MySQL • PostgreSQL</text>
 
-        <!-- LangChain & RAG -->
         <rect x="170" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ffd166" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="186" cy="17" r="4" fill="#ffd166"/>
         <text x="200" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">LangGraph • RAG • LLM</text>
 
-        <!-- Forensics & SHA-256 -->
         <rect x="340" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ff354f" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="356" cy="17" r="4" fill="#ff354f"/>
         <text x="370" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">SHA-256 Forensics</text>
       </g>
     </g>
 
-    <!-- Bottom Metrics Banner -->
     <g transform="translate(0, 275)">
       <rect width="500" height="50" rx="12" fill="#0c162d" stroke="#1f335c" stroke-width="1"/>
       <text x="20" y="30" class="st-sans" font-size="13" fill="#94a3b8">
@@ -604,7 +572,7 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 print("[OK] Created assets/stack.svg")
 
 # ==============================================================================
-# 4. ID-DASHBOARD.SVG (Verified Resume CGPA 7.27, JSS Noida, SDET Career Objective)
+# 4. ID-DASHBOARD.SVG - FIXED LANYARD PASS PHOTO FRAMING (Top-aligned, full head & eyes visible)
 # ==============================================================================
 id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -620,7 +588,7 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
       <stop offset="100%" stop-color="#64748b"/>
     </linearGradient>
     <clipPath id="id_cardPhotoClip">
-      <rect x="85" y="95" width="230" height="150" rx="12"/>
+      <rect x="85" y="100" width="230" height="155" rx="14"/>
     </clipPath>
   </defs>
 
@@ -663,7 +631,7 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
     <text x="0" y="0" class="id-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 04 // DEVELOPER PASS &amp; VERIFIED CREDENTIALS</text>
   </g>
 
-  <!-- Left: Hanging Lanyard Pass Assembly -->
+  <!-- Left: Hanging Lanyard Pass Assembly with Perfectly Centered Top-Aligned Portrait -->
   <g class="id-lanyard-assembly">
     <!-- Strap -->
     <path d="M 185 0 L 195 55 L 205 55 L 215 0" fill="url(#id_strap)" opacity="0.9"/>
@@ -677,32 +645,32 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 
     <!-- ID Badge Card Body -->
     <g filter="url(#id_shadow)">
-      <rect x="70" y="80" width="260" height="310" rx="18" fill="#091326" stroke="#247bff" stroke-width="1.8"/>
+      <rect x="70" y="80" width="260" height="315" rx="20" fill="#091326" stroke="#247bff" stroke-width="1.8"/>
       
       <!-- Top Lanyard Hole Slot -->
       <rect x="180" y="86" width="40" height="6" rx="3" fill="#020611"/>
 
-      <!-- Embedded Photo inside Card -->
+      <!-- Embedded Photo inside Card - xMidYMin slice ensures head and face are fully visible -->
       <g clip-path="url(#id_cardPhotoClip)">
-        <image href="{id_b64}" x="85" y="90" width="230" height="170" preserveAspectRatio="xMidYMid slice"/>
+        <image href="{id_b64}" x="85" y="100" width="230" height="155" preserveAspectRatio="xMidYMin slice"/>
       </g>
-      <rect x="85" y="95" width="230" height="150" rx="12" fill="none" stroke="#247bff" stroke-width="1" opacity="0.6"/>
+      <rect x="85" y="100" width="230" height="155" rx="14" fill="none" stroke="#247bff" stroke-width="1" opacity="0.6"/>
 
       <!-- Cardholder Details -->
-      <text x="85" y="272" class="id-sans" font-size="20" font-weight="900" fill="#ffffff">ABHIJAT PATEL</text>
-      <text x="85" y="292" class="id-mono" font-size="11" font-weight="700" fill="#247bff" letter-spacing="1">SDET &amp; SOFTWARE ENGINEER</text>
+      <text x="85" y="280" class="id-sans" font-size="20" font-weight="900" fill="#ffffff">ABHIJAT PATEL</text>
+      <text x="85" y="300" class="id-mono" font-size="11" font-weight="700" fill="#247bff" letter-spacing="1">SDET &amp; SOFTWARE ENGINEER</text>
       
       <!-- Hologram / Barcode Footer -->
-      <g transform="translate(85, 312)">
-        <rect width="230" height="26" rx="4" fill="#040914"/>
+      <g transform="translate(85, 318)">
+        <rect width="230" height="24" rx="4" fill="#040914"/>
         <path d="M 10 6 h 3 m 4 0 h 2 m 4 0 h 6 m 3 0 h 2 m 5 0 h 4 m 6 0 h 2 m 5 0 h 5 m 3 0 h 2 m 5 0 h 6 m 4 0 h 3 m 5 0 h 2 m 6 0 h 4 m 5 0 h 2 m 5 0 h 5 m 4 0 h 2 m 6 0 h 6 m 3 0 h 2 m 5 0 h 3" stroke="#e2e8f0" stroke-width="1.5"/>
-        <text x="175" y="17" class="id-mono" font-size="9" fill="#247bff">#DEV-2027</text>
+        <text x="175" y="16" class="id-mono" font-size="9" fill="#247bff">#DEV-2027</text>
       </g>
 
       <!-- Verified Ribbon Badge -->
-      <g transform="translate(265, 90)">
-        <circle cx="16" cy="16" r="14" fill="#00e676" filter="url(#id_shadow)"/>
-        <text x="16" y="21" text-anchor="middle" font-size="14" font-weight="900" fill="#020611">✓</text>
+      <g transform="translate(268, 92)">
+        <circle cx="14" cy="14" r="13" fill="#00e676" filter="url(#id_shadow)"/>
+        <text x="14" y="19" text-anchor="middle" font-size="13" font-weight="900" fill="#020611">✓</text>
       </g>
     </g>
   </g>
@@ -769,13 +737,13 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 print("[OK] Created assets/id-dashboard.svg")
 
 # ==============================================================================
-# 5. CONNECT.SVG (Accurate Instagram @theabhijatpatel, Portfolio & Links)
+# 5. CONNECT.SVG - FIXED CHARACTER POSITIONING (Smooth bottom fit without border cut)
 # ==============================================================================
 connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
     {COMMON_DEFS.format(ns="cn_")}
     <clipPath id="cn_charClip">
-      <rect x="40" y="40" width="440" height="390" rx="16"/>
+      <rect x="20" y="15" width="460" height="420" rx="16"/>
     </clipPath>
   </defs>
 
@@ -803,15 +771,13 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
   <circle cx="280" cy="240" r="180" fill="url(#cn_blueGlow)"/>
   <circle cx="850" cy="225" r="220" fill="url(#cn_crimsonGlow)" opacity="0.4"/>
 
-  <!-- Left: Pointing Character -->
-  <g transform="translate(10, 20)">
-    <g clip-path="url(#cn_charClip)">
-      <image href="{pointing_b64}" x="20" y="25" width="460" height="400" preserveAspectRatio="xMidYMid meet"/>
-    </g>
+  <!-- Left: Pointing Character Perfectly Scaled and Positioned -->
+  <g clip-path="url(#cn_charClip)">
+    <image href="{pointing_b64}" x="15" y="20" width="460" height="415" preserveAspectRatio="xMidYMax meet"/>
   </g>
 
   <!-- Dynamic Nudging Arrow from Finger towards Social Cards -->
-  <g transform="translate(450, 220)" class="cn-arrow-nudge">
+  <g transform="translate(450, 230)" class="cn-arrow-nudge">
     <path d="M 0 0 C 40 -20, 60 10, 95 0" fill="none" stroke="#247bff" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="8 6"/>
     <polygon points="95,-8 112,0 95,8" fill="#ff354f"/>
   </g>
@@ -887,22 +853,22 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 print("[OK] Created assets/connect.svg")
 
 # ==============================================================================
-# 6. ROOT README.MD (With Clever AI Detection, ClarifyAI, CampusConnect, AgentIQ & Portfolio)
+# 6. ROOT README.MD (With all projects and updated assets)
 # ==============================================================================
 readme_content = """<div align="center">
 
 # ⚡ ABHIJAT PATEL
 ### SDET & Software Quality Engineer • Java Spring Boot & FastAPI • Multi-Agent AI & Forensics
 
-![Hero](./assets/hero.svg?v=1)
+![Hero](./assets/hero.svg?v=2)
 
-![About](./assets/about-life.svg?v=1)
+![About](./assets/about-life.svg?v=2)
 
-![Stack](./assets/stack.svg?v=1)
+![Stack](./assets/stack.svg?v=2)
 
-![Developer ID](./assets/id-dashboard.svg?v=1)
+![Developer ID](./assets/id-dashboard.svg?v=2)
 
-![Connect](./assets/connect.svg?v=1)
+![Connect](./assets/connect.svg?v=2)
 
 </div>
 
@@ -1054,19 +1020,19 @@ preview_html = """<!DOCTYPE html>
 
   <div class="container">
     <div class="card">
-      <img src="./assets/hero.svg?v=1" alt="Hero Section"/>
+      <img src="./assets/hero.svg?v=2" alt="Hero Section"/>
     </div>
     <div class="card">
-      <img src="./assets/about-life.svg?v=1" alt="About Section"/>
+      <img src="./assets/about-life.svg?v=2" alt="About Section"/>
     </div>
     <div class="card">
-      <img src="./assets/stack.svg?v=1" alt="Tech Stack Section"/>
+      <img src="./assets/stack.svg?v=2" alt="Tech Stack Section"/>
     </div>
     <div class="card">
-      <img src="./assets/id-dashboard.svg?v=1" alt="ID Dashboard Section"/>
+      <img src="./assets/id-dashboard.svg?v=2" alt="ID Dashboard Section"/>
     </div>
     <div class="card">
-      <img src="./assets/connect.svg?v=1" alt="Connect Section"/>
+      <img src="./assets/connect.svg?v=2" alt="Connect Section"/>
     </div>
   </div>
 </body>
