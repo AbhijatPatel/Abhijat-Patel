@@ -3,15 +3,15 @@
 # ⚡ ABHIJAT PATEL
 ### Software Development Engineer (SDE) • MERN Full Stack Developer • Java Spring Boot & FastAPI
 
-![Hero](./assets/hero.svg?v=5)
+![Hero](./assets/hero.svg?v=6)
 
-![About](./assets/about-life.svg?v=5)
+![About](./assets/about-life.svg?v=6)
 
-![Stack](./assets/stack.svg?v=5)
+![Stack](./assets/stack.svg?v=6)
 
-![Developer ID](./assets/id-dashboard.svg?v=5)
+![Developer ID](./assets/id-dashboard.svg?v=6)
 
-![Connect](./assets/connect.svg?v=5)
+![Connect](./assets/connect.svg?v=6)
 
 </div>
 
