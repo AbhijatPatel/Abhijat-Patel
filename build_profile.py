@@ -823,22 +823,24 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 print("[OK] Created assets/connect.svg")
 
 # ==============================================================================
-# 6. ROOT README.MD (Cache-busted to v=6)
+# 6. ROOT README.MD (Cache-busted to unique parameter)
 # ==============================================================================
-readme_content = """<div align="center">
+CACHE_KEY = "20261008_sde_pointing"
+
+readme_content = f"""<div align="center">
 
 # ⚡ ABHIJAT PATEL
 ### Software Development Engineer (SDE) • MERN Full Stack Developer • Java Spring Boot & FastAPI
 
-![Hero](./assets/hero.svg?v=6)
+![Hero](./assets/hero.svg?v={CACHE_KEY})
 
-![About](./assets/about-life.svg?v=6)
+![About](./assets/about-life.svg?v={CACHE_KEY})
 
-![Stack](./assets/stack.svg?v=6)
+![Stack](./assets/stack.svg?v={CACHE_KEY})
 
-![Developer ID](./assets/id-dashboard.svg?v=6)
+![Developer ID](./assets/id-dashboard.svg?v={CACHE_KEY})
 
-![Connect](./assets/connect.svg?v=6)
+![Connect](./assets/connect.svg?v={CACHE_KEY})
 
 </div>
 
@@ -920,15 +922,15 @@ print("[OK] Created README.md")
 # ==============================================================================
 # 7. PREVIEW.HTML
 # ==============================================================================
-preview_html = """<!DOCTYPE html>
+preview_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abhijat Patel - GitHub Profile Live Preview</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    body {{
       background-color: #030712;
       color: #f8fafc;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -936,8 +938,8 @@ preview_html = """<!DOCTYPE html>
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-    .header {
+    }}
+    .header {{
       max-width: 1200px;
       width: 100%;
       margin-bottom: 24px;
@@ -948,35 +950,35 @@ preview_html = """<!DOCTYPE html>
       background: #091224;
       border: 1px solid #1e293b;
       border-radius: 12px;
-    }
-    .header h1 { font-size: 20px; font-weight: 700; color: #ffffff; }
-    .badge {
+    }}
+    .header h1 {{ font-size: 20px; font-weight: 700; color: #ffffff; }}
+    .badge {{
       background: #247bff;
       color: #fff;
       padding: 4px 12px;
       border-radius: 20px;
       font-size: 12px;
       font-weight: 600;
-    }
-    .container {
+    }}
+    .container {{
       max-width: 1200px;
       width: 100%;
       display: flex;
       flex-direction: column;
       gap: 20px;
-    }
-    .card {
+    }}
+    .card {{
       width: 100%;
       background: #070b16;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    }
-    .card img {
+    }}
+    .card img {{
       display: block;
       width: 100%;
       height: auto;
-    }
+    }}
   </style>
 </head>
 <body>
@@ -990,19 +992,19 @@ preview_html = """<!DOCTYPE html>
 
   <div class="container">
     <div class="card">
-      <img src="./assets/hero.svg?v=5" alt="Hero Section"/>
+      <img src="./assets/hero.svg?v={CACHE_KEY}" alt="Hero Section"/>
     </div>
     <div class="card">
-      <img src="./assets/about-life.svg?v=5" alt="About Section"/>
+      <img src="./assets/about-life.svg?v={CACHE_KEY}" alt="About Section"/>
     </div>
     <div class="card">
-      <img src="./assets/stack.svg?v=5" alt="Tech Stack Section"/>
+      <img src="./assets/stack.svg?v={CACHE_KEY}" alt="Tech Stack Section"/>
     </div>
     <div class="card">
-      <img src="./assets/id-dashboard.svg?v=5" alt="ID Dashboard Section"/>
+      <img src="./assets/id-dashboard.svg?v={CACHE_KEY}" alt="ID Dashboard Section"/>
     </div>
     <div class="card">
-      <img src="./assets/connect.svg?v=5" alt="Connect Section"/>
+      <img src="./assets/connect.svg?v={CACHE_KEY}" alt="Connect Section"/>
     </div>
   </div>
 </body>
