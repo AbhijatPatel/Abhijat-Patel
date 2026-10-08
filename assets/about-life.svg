@@ -127,14 +127,14 @@
       <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Java Spring Boot, Python FastAPI, PostgreSQL, MySQL &amp; SQLAlchemy</text>
     </g>
 
-    <!-- Card 3: AI Verification & Multi-Agent -->
+    <!-- Card 3: Forensics & Multi-Modal AI (Clever AI & ClarifyAI) -->
     <g transform="translate(0, 172)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#ff354f"/>
       <circle cx="36" cy="37" r="18" fill="#3b1523"/>
-      <text x="36" y="42" text-anchor="middle" font-size="18">🤖</text>
-      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">ClarifyAI &amp; AgentIQ Verification Engines</text>
-      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Evidence retrieval, claim validation (NLI), LangGraph &amp; RAG pipelines</text>
+      <text x="36" y="42" text-anchor="middle" font-size="18">🔍</text>
+      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Digital Forensics &amp; AI Verification</text>
+      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Clever AI SHA-256 ELA forensics, ClarifyAI claim matching &amp; LangGraph</text>
     </g>
 
     <!-- Card 4: DSA & Computer Science Core -->
@@ -163,7 +163,7 @@
       <!-- Segment 2 -->
       <rect x="160" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
       <rect x="160" y="0" width="0" height="4" rx="2" fill="#00d2ff" class="ab-bar-2"/>
-      <text x="160" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">02 / BACKEND</text>
+      <text x="160" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">02 / FORENSICS &amp; AI</text>
 
       <!-- Segment 3 -->
       <rect x="320" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
@@ -193,25 +193,25 @@
       </g>
     </g>
 
-    <!-- Slide 2: ClarifyAI & Backend Architecture -->
+    <!-- Slide 2: Clever AI Detection & Forensics -->
     <g class="ab-slide-2" transform="translate(30, 70)" opacity="0">
-      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">ClarifyAI &amp; Backend Systems</text>
+      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">Clever AI Forensics &amp; ClarifyAI</text>
       <text x="0" y="60" class="ab-sans" font-size="14" fill="#cbd5e1">
-        Engineered end-to-end evidence verification pipelines classifying
+        Engineered multi-modal digital forensics detecting AI content with
       </text>
       <text x="0" y="82" class="ab-sans" font-size="14" fill="#cbd5e1">
-        claims with confidence scoring on FastAPI, PostgreSQL &amp; SQLAlchemy.
+        SHA-256 integrity, Error Level Analysis &amp; NLI evidence matching.
       </text>
 
       <!-- Highlight Chips -->
       <g transform="translate(0, 115)">
         <rect width="215" height="60" rx="10" fill="#0c232e" stroke="#00d2ff" stroke-width="1"/>
-        <text x="16" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">VERIFICATION ENGINE</text>
-        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">Evidence Retrieval &amp; NLI</text>
+        <text x="16" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">CLEVER AI PLATFORM</text>
+        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">SHA-256 &amp; ELA Forensics</text>
 
         <rect x="230" width="225" height="60" rx="10" fill="#0c232e" stroke="#00d2ff" stroke-width="1"/>
-        <text x="246" y="26" class="ab-mono" font-size="12" fill="#ffd166" font-weight="700">BACKEND STACK</text>
-        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">Spring Boot &amp; FastAPI</text>
+        <text x="246" y="26" class="ab-mono" font-size="12" fill="#ffd166" font-weight="700">CLARIFY AI ENGINE</text>
+        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">Evidence-Claim Matching</text>
       </g>
     </g>
 

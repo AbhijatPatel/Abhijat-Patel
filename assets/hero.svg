@@ -127,7 +127,7 @@
         </g>
         <!-- Role 3: AI & Verification -->
         <g class="h-role-3" opacity="0">
-          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ff354f">🤖 MULTI-AGENT AI &amp; SEMANTIC VERIFICATION</text>
+          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ff354f">🤖 MULTI-AGENT AI &amp; FORENSICS ENGINE</text>
         </g>
         <!-- Role 4: DSA & Core CS -->
         <g class="h-role-4" opacity="0">
@@ -137,13 +137,13 @@
       <text x="470" y="27" class="h-text-mono h-cursor" font-size="18" fill="#247bff">_</text>
     </g>
 
-    <!-- One-line Pitch based on Updated Career Objective -->
+    <!-- One-line Pitch based on Career Objective -->
     <g transform="translate(0, 250)">
       <text x="0" y="0" class="h-text-sans" font-size="16.5" fill="#cbd5e1" font-weight="400">
         Engineering backend applications, database-driven REST APIs, and automated
       </text>
       <text x="0" y="25" class="h-text-sans" font-size="16.5" fill="#cbd5e1" font-weight="400">
-        software verification pipelines with rigorous validation and high reliability.
+        software verification pipelines with rigorous validation and digital forensics.
       </text>
     </g>
 
@@ -192,7 +192,7 @@
       <circle cx="16" cy="18" r="4" fill="#ff354f"/>
       <circle cx="28" cy="18" r="4" fill="#ffb703"/>
       <circle cx="40" cy="18" r="4" fill="#00e676"/>
-      <text x="16" y="44" class="h-text-mono" font-size="12" font-weight="700" fill="#00d2ff">assert dev.status == OK</text>
+      <text x="16" y="44" class="h-text-mono" font-size="12" font-weight="700" fill="#00d2ff">assert test.passed == OK</text>
     </g>
   </g>
 </svg>

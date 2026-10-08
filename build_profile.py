@@ -151,7 +151,7 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
         </g>
         <!-- Role 3: AI & Verification -->
         <g class="h-role-3" opacity="0">
-          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ff354f">🤖 MULTI-AGENT AI &amp; SEMANTIC VERIFICATION</text>
+          <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ff354f">🤖 MULTI-AGENT AI &amp; FORENSICS ENGINE</text>
         </g>
         <!-- Role 4: DSA & Core CS -->
         <g class="h-role-4" opacity="0">
@@ -161,13 +161,13 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
       <text x="470" y="27" class="h-text-mono h-cursor" font-size="18" fill="#247bff">_</text>
     </g>
 
-    <!-- One-line Pitch based on Updated Career Objective -->
+    <!-- One-line Pitch based on Career Objective -->
     <g transform="translate(0, 250)">
       <text x="0" y="0" class="h-text-sans" font-size="16.5" fill="#cbd5e1" font-weight="400">
         Engineering backend applications, database-driven REST APIs, and automated
       </text>
       <text x="0" y="25" class="h-text-sans" font-size="16.5" fill="#cbd5e1" font-weight="400">
-        software verification pipelines with rigorous validation and high reliability.
+        software verification pipelines with rigorous validation and digital forensics.
       </text>
     </g>
 
@@ -216,7 +216,7 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
       <circle cx="16" cy="18" r="4" fill="#ff354f"/>
       <circle cx="28" cy="18" r="4" fill="#ffb703"/>
       <circle cx="40" cy="18" r="4" fill="#00e676"/>
-      <text x="16" y="44" class="h-text-mono" font-size="12" font-weight="700" fill="#00d2ff">assert dev.status == OK</text>
+      <text x="16" y="44" class="h-text-mono" font-size="12" font-weight="700" fill="#00d2ff">assert test.passed == OK</text>
     </g>
   </g>
 </svg>"""
@@ -317,14 +317,14 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Java Spring Boot, Python FastAPI, PostgreSQL, MySQL &amp; SQLAlchemy</text>
     </g>
 
-    <!-- Card 3: AI Verification & Multi-Agent -->
+    <!-- Card 3: Forensics & Multi-Modal AI (Clever AI & ClarifyAI) -->
     <g transform="translate(0, 172)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#ff354f"/>
       <circle cx="36" cy="37" r="18" fill="#3b1523"/>
-      <text x="36" y="42" text-anchor="middle" font-size="18">🤖</text>
-      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">ClarifyAI &amp; AgentIQ Verification Engines</text>
-      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Evidence retrieval, claim validation (NLI), LangGraph &amp; RAG pipelines</text>
+      <text x="36" y="42" text-anchor="middle" font-size="18">🔍</text>
+      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Digital Forensics &amp; AI Verification</text>
+      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Clever AI SHA-256 ELA forensics, ClarifyAI claim matching &amp; LangGraph</text>
     </g>
 
     <!-- Card 4: DSA & Computer Science Core -->
@@ -353,7 +353,7 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       <!-- Segment 2 -->
       <rect x="160" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
       <rect x="160" y="0" width="0" height="4" rx="2" fill="#00d2ff" class="ab-bar-2"/>
-      <text x="160" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">02 / BACKEND</text>
+      <text x="160" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">02 / FORENSICS &amp; AI</text>
 
       <!-- Segment 3 -->
       <rect x="320" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
@@ -383,25 +383,25 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       </g>
     </g>
 
-    <!-- Slide 2: ClarifyAI & Backend Architecture -->
+    <!-- Slide 2: Clever AI Detection & Forensics -->
     <g class="ab-slide-2" transform="translate(30, 70)" opacity="0">
-      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">ClarifyAI &amp; Backend Systems</text>
+      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">Clever AI Forensics &amp; ClarifyAI</text>
       <text x="0" y="60" class="ab-sans" font-size="14" fill="#cbd5e1">
-        Engineered end-to-end evidence verification pipelines classifying
+        Engineered multi-modal digital forensics detecting AI content with
       </text>
       <text x="0" y="82" class="ab-sans" font-size="14" fill="#cbd5e1">
-        claims with confidence scoring on FastAPI, PostgreSQL &amp; SQLAlchemy.
+        SHA-256 integrity, Error Level Analysis &amp; NLI evidence matching.
       </text>
 
       <!-- Highlight Chips -->
       <g transform="translate(0, 115)">
         <rect width="215" height="60" rx="10" fill="#0c232e" stroke="#00d2ff" stroke-width="1"/>
-        <text x="16" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">VERIFICATION ENGINE</text>
-        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">Evidence Retrieval &amp; NLI</text>
+        <text x="16" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">CLEVER AI PLATFORM</text>
+        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">SHA-256 &amp; ELA Forensics</text>
 
         <rect x="230" width="225" height="60" rx="10" fill="#0c232e" stroke="#00d2ff" stroke-width="1"/>
-        <text x="246" y="26" class="ab-mono" font-size="12" fill="#ffd166" font-weight="700">BACKEND STACK</text>
-        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">Spring Boot &amp; FastAPI</text>
+        <text x="246" y="26" class="ab-mono" font-size="12" fill="#ffd166" font-weight="700">CLARIFY AI ENGINE</text>
+        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">Evidence-Claim Matching</text>
       </g>
     </g>
 
@@ -433,7 +433,7 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 print("[OK] Created assets/about-life.svg")
 
 # ==============================================================================
-# 3. STACK.SVG (Technical Skills Taxonomy from Updated Resume)
+# 3. STACK.SVG (Technical Skills Taxonomy)
 # ==============================================================================
 stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -544,7 +544,7 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
         <!-- React.js / Node -->
         <rect x="415" y="0" width="85" height="34" rx="8" fill="url(#st_cardBg)" stroke="#61DAFB" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="428" cy="17" r="4" fill="#61DAFB"/>
-        <text x="440" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">React.js</text>
+        <text x="440" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">React.js</text>
       </g>
     </g>
 
@@ -555,38 +555,38 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
         <!-- Software Validation -->
         <rect x="0" y="0" width="155" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00d2ff" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="16" cy="17" r="4" fill="#00d2ff"/>
-        <text x="30" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">Software Validation</text>
+        <text x="30" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Software Validation</text>
 
         <!-- Semantic Verification (NLI) -->
         <rect x="165" y="0" width="165" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ffd166" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="181" cy="17" r="4" fill="#ffd166"/>
-        <text x="195" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">Semantic Verification</text>
+        <text x="195" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Semantic Verification</text>
 
         <!-- Debugging & Data Validation -->
         <rect x="340" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ff354f" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="356" cy="17" r="4" fill="#ff354f"/>
-        <text x="370" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">Debugging &amp; Model Eval</text>
+        <text x="370" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">Debugging &amp; Model Eval</text>
       </g>
     </g>
 
     <!-- Category 3: Databases & AI/ML APIs -->
     <g transform="translate(0, 180)">
-      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#ff354f" letter-spacing="1">DATABASES, RAG &amp; TOOLING</text>
+      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#ff354f" letter-spacing="1">DATABASES, RAG &amp; FORENSICS</text>
       <g transform="translate(0, 28)">
         <!-- MySQL & PostgreSQL -->
         <rect x="0" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00758F" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="16" cy="17" r="4" fill="#00758F"/>
-        <text x="30" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">MySQL • PostgreSQL</text>
+        <text x="30" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">MySQL • PostgreSQL</text>
 
         <!-- LangChain & RAG -->
         <rect x="170" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ffd166" stroke-width="1" stroke-opacity="0.7"/>
         <circle cx="186" cy="17" r="4" fill="#ffd166"/>
-        <text x="200" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">LangGraph • RAG • LLM</text>
+        <text x="200" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">LangGraph • RAG • LLM</text>
 
-        <!-- Tools / Git -->
-        <rect x="340" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#F05032" stroke-width="1" stroke-opacity="0.7"/>
-        <circle cx="356" cy="17" r="4" fill="#F05032"/>
-        <text x="370" y="22" class="st-sans" font-size="12" font-weight="600" fill="#ffffff">Git • VS Code • Antigravity</text>
+        <!-- Forensics & SHA-256 -->
+        <rect x="340" y="0" width="160" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ff354f" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="356" cy="17" r="4" fill="#ff354f"/>
+        <text x="370" y="22" class="st-sans" font-size="12.5" font-weight="600" fill="#ffffff">SHA-256 Forensics</text>
       </g>
     </g>
 
@@ -887,12 +887,12 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 print("[OK] Created assets/connect.svg")
 
 # ==============================================================================
-# 6. ROOT README.MD (With updated ClarifyAI, CampusConnect, AgentIQ & SDET profile)
+# 6. ROOT README.MD (With Clever AI Detection, ClarifyAI, CampusConnect, AgentIQ & Portfolio)
 # ==============================================================================
 readme_content = """<div align="center">
 
 # ⚡ ABHIJAT PATEL
-### SDET & Software Quality Engineer • Java Spring Boot & FastAPI • Multi-Agent AI & Verification
+### SDET & Software Quality Engineer • Java Spring Boot & FastAPI • Multi-Agent AI & Forensics
 
 ![Hero](./assets/hero.svg?v=1)
 
@@ -912,8 +912,9 @@ readme_content = """<div align="center">
 
 | Project | Description | Stack & Architecture | Links |
 | :--- | :--- | :--- | :---: |
-| 🎓 **CampusConnect** | **AI-Powered Placement & Resume Matching Portal**<br/>• Developed a Java Spring Boot and MySQL backend for managing student profiles, company job postings, and applications.<br/>• Built an end-to-end software workflow connecting student/company profiles, job postings, an AI microservice, ranking engine, and recruiter dashboard.<br/>• Designed a priority-based ranking algorithm using DSA and an NLP microservice to calculate resume-to-job-description similarity and rank candidates.<br/>• Worked across Java backend, Python services, database operations, and frontend components while validating end-to-end application workflows. | `Java` `Spring Boot` `MySQL` `React` `Python` `AI/NLP` `DSA` | [GitHub](https://github.com/AbhijatPatel) |
+| 🛡️ **Clever AI Detection** | **Multi-Modal AI Content Intelligence & Digital Forensics Platform**<br/>• Engineered a FastAPI backend verifying authenticity of text, documents, images, audio, and video using Error Level Analysis (ELA), metadata analysis, text stylometry, and deepfake temporal-consistency checks.<br/>• Developed an ensemble verdict engine with SHA-256 data integrity checks and an explainable dossier mapping AI-likelihood sentence by sentence; served via FastAPI REST endpoints with a Next.js frontend. | `Python` `FastAPI` `Next.js` `SHA-256` `Digital Forensics` `Data Validation` `Explainable AI` | [GitHub](https://github.com/AbhijatPatel) |
 | 🔍 **ClarifyAI** | **Confidence-Scored, Source-Verified Answer Engine**<br/>• Developed an end-to-end verification pipeline covering evidence retrieval, answer generation, claim extraction, evidence-claim matching, confidence scoring, and verified output.<br/>• Built a modular FastAPI backend with PostgreSQL and SQLAlchemy and implemented validation logic to classify claims as *Supported*, *Contradicted*, or *Insufficient*.<br/>• Engineered confidence-scoring mechanisms using evidence relevance, semantic support, contradiction signals, and source quality.<br/>• Debugged and validated software components across the verification pipeline. | `Python` `FastAPI` `PostgreSQL` `SQLAlchemy` `LLM APIs` `NLI` | [GitHub](https://github.com/AbhijatPatel) |
+| 🎓 **CampusConnect** | **AI-Powered Placement & Resume Matching Portal**<br/>• Developed a Java Spring Boot and MySQL backend for managing student profiles, company job postings, and applications.<br/>• Built an end-to-end software workflow connecting student/company profiles, job postings, an AI microservice, ranking engine, and recruiter dashboard.<br/>• Designed a priority-based ranking algorithm using DSA and an NLP microservice to calculate resume-to-job-description similarity and rank candidates.<br/>• Worked across Java backend, Python services, database operations, and frontend components while validating end-to-end application workflows. | `Java` `Spring Boot` `MySQL` `React` `Python` `AI/NLP` `DSA` | [GitHub](https://github.com/AbhijatPatel) |
 | 🤖 **AgentIQ** | **Autonomous Multi-Agent Research & Task Assistant**<br/>• Developed a multi-agent software pipeline consisting of planning, research, writing, and critique stages.<br/>• Implemented RAG and web-search retrieval to validate and ground generated outputs.<br/>• Developed a self-critique workflow in which generated drafts are reviewed and revised before producing the final report.<br/>• Exposed the application through FastAPI and developed a React dashboard for monitoring agent workflows and tool calls. | `Python` `LangChain` `LangGraph` `LLM APIs` `RAG` `FastAPI` `React` | [GitHub](https://github.com/AbhijatPatel) |
 | 🌐 **Developer Portfolio** | **Interactive Modern Engineering Portfolio**<br/>High-performance developer showcase highlighting production projects, technical capabilities, interactive demos, and contact integration. | `HTML5` `CSS3` `JavaScript` `Responsive UI` | [Live Site](https://abhijatpatel.github.io/My-Portfolio-Website/) • [GitHub](https://github.com/AbhijatPatel) |
 
