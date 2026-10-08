@@ -6,13 +6,15 @@ ROOT = Path(".")
 ASSETS = ROOT / "assets"
 ASSETS.mkdir(exist_ok=True)
 
-# 1. Read and encode real portrait image
+# 1. Read and encode real portrait images
 id_png = ASSETS / "id.png"
+pointing_png = ASSETS / "right_pointing.png"
 
-if not id_png.exists():
-    raise FileNotFoundError("id.png missing from assets/")
+if not id_png.exists() or not pointing_png.exists():
+    raise FileNotFoundError("id.png or right_pointing.png missing from assets/")
 
 id_b64 = "data:image/png;base64," + base64.b64encode(id_png.read_bytes()).decode("utf-8")
+pointing_b64 = "data:image/png;base64," + base64.b64encode(pointing_png.read_bytes()).decode("utf-8")
 
 # Common styling tokens
 COMMON_DEFS = """
@@ -110,7 +112,6 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
 
   <!-- Left Content Column -->
   <g transform="translate(60, 48)">
-    <!-- Terminal Header / Status Tag -->
     <g transform="translate(0, 0)">
       <rect x="0" y="0" width="310" height="32" rx="16" fill="#0d1933" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.4"/>
       <circle cx="16" cy="16" r="4" fill="#00e676">
@@ -119,14 +120,12 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
       <text x="30" y="21" class="h-text-mono" font-size="12" font-weight="600" fill="#247bff" letter-spacing="1.2">OPEN FOR SDE &amp; FULL STACK ROLES</text>
     </g>
 
-    <!-- Sub-greeting with typing prompt -->
     <g transform="translate(0, 62)">
       <text x="0" y="0" class="h-text-mono" font-size="15" fill="#94a3b8" letter-spacing="2">
         <tspan fill="#ff354f">&gt;</tspan> HELLO WORLD, I'M
       </text>
     </g>
 
-    <!-- Giant Name Reveal with Mask -->
     <g transform="translate(0, 75)">
       <g clip-path="url(#h_nameClip)">
         <text x="0" y="70" class="h-text-sans" font-size="64" font-weight="900" fill="#ffffff" letter-spacing="-1">
@@ -135,25 +134,20 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
       </g>
     </g>
 
-    <!-- Animated Cycling Role Badges -->
     <g transform="translate(0, 175)">
       <rect x="0" y="0" width="500" height="42" rx="10" fill="#0c152a" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.5"/>
       <rect x="0" y="0" width="6" height="42" rx="3" fill="url(#h_blueGrad)"/>
 
       <g transform="translate(24, 26)">
-        <!-- Role 1: SDE -->
         <g class="h-role-1">
           <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#247bff">🚀 SDE &amp; FULL STACK DEVELOPER</text>
         </g>
-        <!-- Role 2: MERN & Backend -->
         <g class="h-role-2" opacity="0">
           <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#00d2ff">⚡ MERN STACK &amp; BACKEND ARCHITECT</text>
         </g>
-        <!-- Role 3: Java & FastAPI -->
         <g class="h-role-3" opacity="0">
           <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ff354f">☕ JAVA SPRING BOOT &amp; FASTAPI DEV</text>
         </g>
-        <!-- Role 4: DSA & Core CS -->
         <g class="h-role-4" opacity="0">
           <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ffd166">🧠 C++, JAVA &amp; DSA PROBLEM SOLVER</text>
         </g>
@@ -161,7 +155,6 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
       <text x="470" y="27" class="h-text-mono h-cursor" font-size="18" fill="#247bff">_</text>
     </g>
 
-    <!-- One-line Pitch -->
     <g transform="translate(0, 250)">
       <text x="0" y="0" class="h-text-sans" font-size="16.5" fill="#cbd5e1" font-weight="400">
         Building high-performance MERN full-stack web applications, database-driven
@@ -171,7 +164,6 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
       </text>
     </g>
 
-    <!-- Info / Meta Row -->
     <g transform="translate(0, 325)">
       <g transform="translate(0, 0)">
         <rect x="0" y="0" width="180" height="34" rx="8" fill="#0a1224" stroke="#1e2d4d" stroke-width="1"/>
@@ -217,7 +209,7 @@ hero_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" wi
 print("[OK] Created assets/hero.svg")
 
 # ==============================================================================
-# 2. ABOUT-LIFE.SVG - MERN & Full Stack Focus
+# 2. ABOUT-LIFE.SVG
 # ==============================================================================
 about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -285,7 +277,6 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
   </g>
 
   <g transform="translate(60, 75)">
-    <!-- Card 1: MERN Full Stack Development -->
     <g transform="translate(0, 0)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#247bff"/>
@@ -295,7 +286,6 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">React.js, Node.js, Express.js, MongoDB, Next.js &amp; Modern UI/UX</text>
     </g>
 
-    <!-- Card 2: Backend Development & REST APIs -->
     <g transform="translate(0, 86)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#00d2ff"/>
@@ -305,7 +295,6 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Robust microservices, PostgreSQL, MySQL, SQLAlchemy &amp; RESTful APIs</text>
     </g>
 
-    <!-- Card 3: Forensics & Multi-Modal AI (Clever AI & ClarifyAI) -->
     <g transform="translate(0, 172)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#ff354f"/>
@@ -315,7 +304,6 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Clever AI SHA-256 ELA forensics, ClarifyAI claim matching &amp; LangGraph</text>
     </g>
 
-    <!-- Card 4: DSA & Computer Science Core -->
     <g transform="translate(0, 258)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#ffd166"/>
@@ -409,7 +397,7 @@ about_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 print("[OK] Created assets/about-life.svg")
 
 # ==============================================================================
-# 3. STACK.SVG - SDE & MERN Stack Orbit
+# 3. STACK.SVG
 # ==============================================================================
 stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -489,7 +477,6 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
   </g>
 
   <g transform="translate(640, 75)">
-    <!-- Category 1: MERN & Frontend -->
     <g transform="translate(0, 0)">
       <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">MERN &amp; FRONTEND ARCHITECTURE</text>
       <g transform="translate(0, 28)">
@@ -511,7 +498,6 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       </g>
     </g>
 
-    <!-- Category 2: Backend, Languages & Microservices -->
     <g transform="translate(0, 90)">
       <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#00d2ff" letter-spacing="1">BACKEND &amp; CORE LANGUAGES</text>
       <g transform="translate(0, 28)">
@@ -533,7 +519,6 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
       </g>
     </g>
 
-    <!-- Category 3: Databases & AI/ML APIs -->
     <g transform="translate(0, 180)">
       <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#ff354f" letter-spacing="1">DATABASES, RAG &amp; FORENSICS</text>
       <g transform="translate(0, 28)">
@@ -564,7 +549,7 @@ stack_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" w
 print("[OK] Created assets/stack.svg")
 
 # ==============================================================================
-# 4. ID-DASHBOARD.SVG - SDE / MERN Developer Pass (CGPA removed)
+# 4. ID-DASHBOARD.SVG - SDE / MERN Developer Pass
 # ==============================================================================
 id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
@@ -620,7 +605,6 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
     <text x="0" y="0" class="id-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 04 // DEVELOPER PASS &amp; VERIFIED CREDENTIALS</text>
   </g>
 
-  <!-- Left: Hanging Lanyard Pass Assembly -->
   <g class="id-lanyard-assembly">
     <path d="M 185 0 L 195 55 L 205 55 L 215 0" fill="url(#id_strap)" opacity="0.9"/>
     
@@ -656,10 +640,8 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
     </g>
   </g>
 
-  <!-- Right: Verified Developer Dashboard & Education Cards (No CGPA) -->
   <g transform="translate(380, 75)">
     <g transform="translate(0, 0)">
-      <!-- Card 1: Core Specialization -->
       <g transform="translate(0, 0)">
         <rect width="245" height="100" rx="14" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
         <rect x="0" y="0" width="4" height="100" rx="2" fill="#247bff"/>
@@ -668,7 +650,6 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
         <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">React, Node, Spring Boot, FastAPI</text>
       </g>
 
-      <!-- Card 2: Industry Internship -->
       <g transform="translate(265, 0)">
         <rect width="245" height="100" rx="14" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
         <rect x="0" y="0" width="4" height="100" rx="2" fill="#ff354f"/>
@@ -677,7 +658,6 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
         <text x="24" y="82" class="id-sans" font-size="12" fill="#94a3b8">AI Intern + IBM SkillsBuild</text>
       </g>
 
-      <!-- Card 3: Target Role -->
       <g transform="translate(530, 0)">
         <rect width="230" height="100" rx="14" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
         <rect x="0" y="0" width="4" height="100" rx="2" fill="#00e676"/>
@@ -687,7 +667,6 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
       </g>
     </g>
 
-    <!-- Bottom Row: Education & Milestone Overview (Clean Without CGPA) -->
     <g transform="translate(0, 120)">
       <rect width="760" height="205" rx="16" fill="url(#id_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       
@@ -715,13 +694,13 @@ id_dash_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 print("[OK] Created assets/id-dashboard.svg")
 
 # ==============================================================================
-# 5. CONNECT.SVG - Real Executive Portrait with SDE & MERN text
+# 5. CONNECT.SVG - REAL PERSON IN BLACK SUIT IN POINTING POSE
 # ==============================================================================
 connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
   <defs>
     {COMMON_DEFS.format(ns="cn_")}
-    <clipPath id="cn_realPhotoClip">
-      <rect x="60" y="50" width="340" height="360" rx="24"/>
+    <clipPath id="cn_realPointingClip">
+      <rect x="0" y="0" width="450" height="360" rx="20"/>
     </clipPath>
   </defs>
 
@@ -744,39 +723,40 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
   <rect width="1200" height="450" rx="20" fill="url(#cn_dots)"/>
   <rect x="1" y="1" width="1198" height="448" rx="19" fill="none" stroke="url(#cn_borderGrad)" stroke-width="1.5"/>
 
-  <circle cx="230" cy="230" r="200" fill="url(#cn_blueGlow)"/>
+  <!-- Ambient Glows -->
+  <circle cx="280" cy="240" r="190" fill="url(#cn_blueGlow)"/>
   <circle cx="850" cy="225" r="220" fill="url(#cn_crimsonGlow)" opacity="0.4"/>
 
-  <!-- Left: Real Executive Portrait Card Frame -->
-  <g>
-    <rect x="60" y="50" width="340" height="360" rx="24" fill="#091224" filter="url(#cn_shadow)"/>
-    <rect x="60" y="50" width="340" height="360" rx="24" fill="none" stroke="url(#cn_blueGrad)" stroke-width="2"/>
-    <rect x="60" y="50" width="340" height="360" rx="24" fill="none" stroke="url(#cn_crimsonGrad)" stroke-width="1.2" opacity="0.6"/>
+  <!-- Left: Real Photo in Suit Pointing Directly to the Right with transparent background inside executive card -->
+  <g transform="translate(45, 45)">
+    <!-- Card Base & Glow -->
+    <rect width="450" height="360" rx="20" fill="url(#cn_cardBg)" stroke="url(#cn_borderGrad)" stroke-width="1.6"/>
+    
+    <!-- Accent corner highlights -->
+    <path d="M 0 50 L 0 20 Q 0 0 20 0 L 50 0" fill="none" stroke="#00d2ff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 450 310 L 450 340 Q 450 360 430 360 L 400 360" fill="none" stroke="#ff354f" stroke-width="3" stroke-linecap="round"/>
 
-    <path d="M 60 80 L 60 60 Q 60 50 70 50 L 90 50" fill="none" stroke="#00d2ff" stroke-width="3"/>
-    <path d="M 370 410 L 390 410 Q 400 410 400 400 L 400 380" fill="none" stroke="#ff354f" stroke-width="3"/>
-
-    <g clip-path="url(#cn_realPhotoClip)">
-      <image href="{id_b64}" x="60" y="50" width="340" height="360" preserveAspectRatio="xMidYMin slice"/>
+    <!-- Pointing Portrait Image -->
+    <g clip-path="url(#cn_realPointingClip)">
+      <image href="{pointing_b64}" x="-10" y="-10" width="470" height="375" preserveAspectRatio="xMidYMax meet"/>
     </g>
 
-    <g transform="translate(80, 345)" filter="url(#cn_shadow)">
-      <rect width="200" height="42" rx="10" fill="#060c1c" stroke="#247bff" stroke-width="1.2" opacity="0.95"/>
-      <circle cx="16" cy="21" r="4" fill="#00e676">
-        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <text x="30" y="26" class="cn-mono" font-size="12" font-weight="700" fill="#ffffff">LET'S CONNECT</text>
+    <!-- Bottom Badge: LET'S CONNECT -->
+    <g transform="translate(20, 305)">
+      <rect width="165" height="36" rx="10" fill="#091326" stroke="#247bff" stroke-width="1.4"/>
+      <circle cx="20" cy="18" r="4.5" fill="#00e676"/>
+      <text x="34" y="23" class="cn-mono" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="1.5">LET'S CONNECT</text>
     </g>
   </g>
 
-  <!-- Dynamic Nudging Arrow from Portrait towards Social Cards -->
-  <g transform="translate(420, 220)" class="cn-arrow-nudge">
-    <path d="M 0 0 C 40 -20, 70 15, 120 0" fill="none" stroke="#247bff" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="8 6"/>
-    <polygon points="120,-8 138,0 120,8" fill="#ff354f"/>
+  <!-- Dynamic Nudging Arrow from Finger towards Social Cards -->
+  <g transform="translate(505, 220)" class="cn-arrow-nudge">
+    <path d="M 0 0 C 30 -15, 45 10, 60 0" fill="none" stroke="#247bff" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 4"/>
+    <polygon points="60,-7 74,0 60,7" fill="#ff354f"/>
   </g>
 
   <!-- Right: Generously Spaced Interactive-Styled Social Cards -->
-  <g transform="translate(580, 50)">
+  <g transform="translate(580, 45)">
     <g transform="translate(0, 0)">
       <text x="0" y="0" class="cn-mono" font-size="13" font-weight="700" fill="#ff354f" letter-spacing="2">&gt; 05 // LET'S COLLABORATE &amp; CONNECT</text>
       <text x="0" y="38" class="cn-sans" font-size="34" font-weight="900" fill="#ffffff">LET'S BUILD TOGETHER</text>
@@ -843,22 +823,22 @@ connect_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450"
 print("[OK] Created assets/connect.svg")
 
 # ==============================================================================
-# 6. ROOT README.MD (Cache-busted to v=4)
+# 6. ROOT README.MD (Cache-busted to v=5)
 # ==============================================================================
 readme_content = """<div align="center">
 
 # ⚡ ABHIJAT PATEL
 ### Software Development Engineer (SDE) • MERN Full Stack Developer • Java Spring Boot & FastAPI
 
-![Hero](./assets/hero.svg?v=4)
+![Hero](./assets/hero.svg?v=5)
 
-![About](./assets/about-life.svg?v=4)
+![About](./assets/about-life.svg?v=5)
 
-![Stack](./assets/stack.svg?v=4)
+![Stack](./assets/stack.svg?v=5)
 
-![Developer ID](./assets/id-dashboard.svg?v=4)
+![Developer ID](./assets/id-dashboard.svg?v=5)
 
-![Connect](./assets/connect.svg?v=4)
+![Connect](./assets/connect.svg?v=5)
 
 </div>
 
@@ -1010,19 +990,19 @@ preview_html = """<!DOCTYPE html>
 
   <div class="container">
     <div class="card">
-      <img src="./assets/hero.svg?v=4" alt="Hero Section"/>
+      <img src="./assets/hero.svg?v=5" alt="Hero Section"/>
     </div>
     <div class="card">
-      <img src="./assets/about-life.svg?v=4" alt="About Section"/>
+      <img src="./assets/about-life.svg?v=5" alt="About Section"/>
     </div>
     <div class="card">
-      <img src="./assets/stack.svg?v=4" alt="Tech Stack Section"/>
+      <img src="./assets/stack.svg?v=5" alt="Tech Stack Section"/>
     </div>
     <div class="card">
-      <img src="./assets/id-dashboard.svg?v=4" alt="ID Dashboard Section"/>
+      <img src="./assets/id-dashboard.svg?v=5" alt="ID Dashboard Section"/>
     </div>
     <div class="card">
-      <img src="./assets/connect.svg?v=4" alt="Connect Section"/>
+      <img src="./assets/connect.svg?v=5" alt="Connect Section"/>
     </div>
   </div>
 </body>

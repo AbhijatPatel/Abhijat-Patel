@@ -115,7 +115,6 @@
   </g>
 
   <g transform="translate(640, 75)">
-    <!-- Category 1: MERN & Frontend -->
     <g transform="translate(0, 0)">
       <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">MERN &amp; FRONTEND ARCHITECTURE</text>
       <g transform="translate(0, 28)">
@@ -137,7 +136,6 @@
       </g>
     </g>
 
-    <!-- Category 2: Backend, Languages & Microservices -->
     <g transform="translate(0, 90)">
       <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#00d2ff" letter-spacing="1">BACKEND &amp; CORE LANGUAGES</text>
       <g transform="translate(0, 28)">
@@ -159,7 +157,6 @@
       </g>
     </g>
 
-    <!-- Category 3: Databases & AI/ML APIs -->
     <g transform="translate(0, 180)">
       <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#ff354f" letter-spacing="1">DATABASES, RAG &amp; FORENSICS</text>
       <g transform="translate(0, 28)">

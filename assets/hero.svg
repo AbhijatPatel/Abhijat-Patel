@@ -88,7 +88,6 @@
 
   <!-- Left Content Column -->
   <g transform="translate(60, 48)">
-    <!-- Terminal Header / Status Tag -->
     <g transform="translate(0, 0)">
       <rect x="0" y="0" width="310" height="32" rx="16" fill="#0d1933" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.4"/>
       <circle cx="16" cy="16" r="4" fill="#00e676">
@@ -97,14 +96,12 @@
       <text x="30" y="21" class="h-text-mono" font-size="12" font-weight="600" fill="#247bff" letter-spacing="1.2">OPEN FOR SDE &amp; FULL STACK ROLES</text>
     </g>
 
-    <!-- Sub-greeting with typing prompt -->
     <g transform="translate(0, 62)">
       <text x="0" y="0" class="h-text-mono" font-size="15" fill="#94a3b8" letter-spacing="2">
         <tspan fill="#ff354f">&gt;</tspan> HELLO WORLD, I'M
       </text>
     </g>
 
-    <!-- Giant Name Reveal with Mask -->
     <g transform="translate(0, 75)">
       <g clip-path="url(#h_nameClip)">
         <text x="0" y="70" class="h-text-sans" font-size="64" font-weight="900" fill="#ffffff" letter-spacing="-1">
@@ -113,25 +110,20 @@
       </g>
     </g>
 
-    <!-- Animated Cycling Role Badges -->
     <g transform="translate(0, 175)">
       <rect x="0" y="0" width="500" height="42" rx="10" fill="#0c152a" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.5"/>
       <rect x="0" y="0" width="6" height="42" rx="3" fill="url(#h_blueGrad)"/>
 
       <g transform="translate(24, 26)">
-        <!-- Role 1: SDE -->
         <g class="h-role-1">
           <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#247bff">🚀 SDE &amp; FULL STACK DEVELOPER</text>
         </g>
-        <!-- Role 2: MERN & Backend -->
         <g class="h-role-2" opacity="0">
           <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#00d2ff">⚡ MERN STACK &amp; BACKEND ARCHITECT</text>
         </g>
-        <!-- Role 3: Java & FastAPI -->
         <g class="h-role-3" opacity="0">
           <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ff354f">☕ JAVA SPRING BOOT &amp; FASTAPI DEV</text>
         </g>
-        <!-- Role 4: DSA & Core CS -->
         <g class="h-role-4" opacity="0">
           <text x="0" y="0" class="h-text-mono" font-size="15" font-weight="700" fill="#ffd166">🧠 C++, JAVA &amp; DSA PROBLEM SOLVER</text>
         </g>
@@ -139,7 +131,6 @@
       <text x="470" y="27" class="h-text-mono h-cursor" font-size="18" fill="#247bff">_</text>
     </g>
 
-    <!-- One-line Pitch -->
     <g transform="translate(0, 250)">
       <text x="0" y="0" class="h-text-sans" font-size="16.5" fill="#cbd5e1" font-weight="400">
         Building high-performance MERN full-stack web applications, database-driven
@@ -149,7 +140,6 @@
       </text>
     </g>
 
-    <!-- Info / Meta Row -->
     <g transform="translate(0, 325)">
       <g transform="translate(0, 0)">
         <rect x="0" y="0" width="180" height="34" rx="8" fill="#0a1224" stroke="#1e2d4d" stroke-width="1"/>

@@ -103,7 +103,6 @@
   </g>
 
   <g transform="translate(60, 75)">
-    <!-- Card 1: MERN Full Stack Development -->
     <g transform="translate(0, 0)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#247bff"/>
@@ -113,7 +112,6 @@
       <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">React.js, Node.js, Express.js, MongoDB, Next.js &amp; Modern UI/UX</text>
     </g>
 
-    <!-- Card 2: Backend Development & REST APIs -->
     <g transform="translate(0, 86)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#00d2ff"/>
@@ -123,7 +121,6 @@
       <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Robust microservices, PostgreSQL, MySQL, SQLAlchemy &amp; RESTful APIs</text>
     </g>
 
-    <!-- Card 3: Forensics & Multi-Modal AI (Clever AI & ClarifyAI) -->
     <g transform="translate(0, 172)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#ff354f"/>
@@ -133,7 +130,6 @@
       <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Clever AI SHA-256 ELA forensics, ClarifyAI claim matching &amp; LangGraph</text>
     </g>
 
-    <!-- Card 4: DSA & Computer Science Core -->
     <g transform="translate(0, 258)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#ffd166"/>
