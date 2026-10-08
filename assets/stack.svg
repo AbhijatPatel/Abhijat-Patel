@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
+  <defs>
+    
+    <defs>
+      <linearGradient id="st_bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#070b16"/>
+        <stop offset="50%" stop-color="#0b1329"/>
+        <stop offset="100%" stop-color="#060a14"/>
+      </linearGradient>
+      <linearGradient id="st_cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0d172e" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="#080e1e" stop-opacity="0.95"/>
+      </linearGradient>
+      <linearGradient id="st_blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#247bff"/>
+        <stop offset="100%" stop-color="#00d2ff"/>
+      </linearGradient>
+      <linearGradient id="st_crimsonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#ff354f"/>
+        <stop offset="100%" stop-color="#ff758c"/>
+      </linearGradient>
+      <linearGradient id="st_borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#247bff" stop-opacity="0.6"/>
+        <stop offset="50%" stop-color="#ff354f" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="#247bff" stop-opacity="0.2"/>
+      </linearGradient>
+      <radialGradient id="st_blueGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#247bff" stop-opacity="0.4"/>
+        <stop offset="100%" stop-color="#247bff" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="st_crimsonGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#ff354f" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#ff354f" stop-opacity="0"/>
+      </radialGradient>
+      <pattern id="st_dots" width="24" height="24" patternUnits="userSpaceOnUse">
+        <circle cx="2" cy="2" r="1.2" fill="#247bff" opacity="0.12"/>
+      </pattern>
+      <filter id="st_glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="8" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+      </filter>
+      <filter id="st_shadow" x="-10%" y="-10%" width="120%" height="120%">
+        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+      </filter>
+    </defs>
+
+  </defs>
+
+  <style>
+    .st-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif; }
+    .st-mono { font-family: ui-monospace, "SF Mono", "Cascadia Code", "Fira Code", monospace; }
+
+    @keyframes st_pulse {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.15); opacity: 1; }
+    }
+    .st-core-node { transform-origin: 320px 240px; animation: st_pulse 4s infinite ease-in-out; }
+  </style>
+
+  <!-- Container Frame -->
+  <rect width="1200" height="450" rx="20" fill="url(#st_bg)"/>
+  <rect width="1200" height="450" rx="20" fill="url(#st_dots)"/>
+  <rect x="1" y="1" width="1198" height="448" rx="19" fill="none" stroke="url(#st_borderGrad)" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <g transform="translate(60, 42)">
+    <text x="0" y="0" class="st-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 03 // TECH STACK &amp; PLANETARY ECOSYSTEM</text>
+  </g>
+
+  <!-- Left Side: 3 Tilted Elliptical Orbits with Core Node & Tech Icons -->
+  <g transform="translate(0, 10)">
+    <!-- Glow behind orbit core -->
+    <circle cx="320" cy="235" r="140" fill="url(#st_blueGlow)"/>
+
+    <!-- Orbit 1: Outer Orbit (Cloud / DB) -->
+    <g transform="rotate(-15 320 235)">
+      <ellipse cx="320" cy="235" rx="260" ry="110" fill="none" stroke="#1b305c" stroke-width="1.5" stroke-dasharray="6 6"/>
+      <!-- Orbit 1 Tech Nodes -->
+      <g transform="translate(80, 210)">
+        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#47A248" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#47A248">Mongo</text>
+      </g>
+      <g transform="translate(520, 220)">
+        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#00618A" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#00758F">MySQL</text>
+      </g>
+      <g transform="translate(320, 115)">
+        <circle cx="16" cy="16" r="18" fill="#0d1b33" stroke="#F05032" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#F05032">Git</text>
+      </g>
+    </g>
+
+    <!-- Orbit 2: Mid Orbit (Backend / Languages) -->
+    <g transform="rotate(18 320 235)">
+      <ellipse cx="320" cy="235" rx="190" ry="80" fill="none" stroke="#247bff" stroke-width="1.5" opacity="0.6"/>
+      <!-- Orbit 2 Tech Nodes -->
+      <g transform="translate(140, 215)">
+        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#83CD29" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#83CD29">Node</text>
+      </g>
+      <g transform="translate(460, 215)">
+        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#3776AB" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#3776AB">Python</text>
+      </g>
+      <g transform="translate(305, 145)">
+        <circle cx="16" cy="16" r="20" fill="#0d1b33" stroke="#00599C" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="11" font-weight="700" fill="#659AD2">C++</text>
+      </g>
+    </g>
+
+    <!-- Orbit 3: Inner Orbit (Frontend) -->
+    <g transform="rotate(-5 320 235)">
+      <ellipse cx="320" cy="235" rx="115" ry="50" fill="none" stroke="#ff354f" stroke-width="1.5" opacity="0.7"/>
+      <!-- Orbit 3 Tech Nodes -->
+      <g transform="translate(205, 218)">
+        <circle cx="16" cy="16" r="18" fill="#0d1b33" stroke="#61DAFB" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="10" font-weight="700" fill="#61DAFB">React</text>
+      </g>
+      <g transform="translate(395, 218)">
+        <circle cx="16" cy="16" r="18" fill="#0d1b33" stroke="#F7DF1E" stroke-width="1.5"/>
+        <text x="16" y="21" text-anchor="middle" class="st-sans" font-size="10" font-weight="700" fill="#F7DF1E">JS</text>
+      </g>
+    </g>
+
+    <!-- Planetary Core Node -->
+    <g class="st-core-node">
+      <circle cx="320" cy="235" r="36" fill="#0b1733" stroke="url(#st_blueGrad)" stroke-width="2.5" filter="url(#st_shadow)"/>
+      <text x="320" y="242" text-anchor="middle" class="st-mono" font-size="15" font-weight="900" fill="#ffffff">&lt;/&gt;</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Categorized Stack Chips Grid -->
+  <g transform="translate(640, 75)">
+    <!-- Category 1: Frontend & UI -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#247bff" letter-spacing="1">FRONTEND &amp; CLIENT</text>
+      <g transform="translate(0, 28)">
+        <!-- React -->
+        <rect x="0" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#61DAFB" stroke-width="1" stroke-opacity="0.6"/>
+        <circle cx="16" cy="17" r="4" fill="#61DAFB"/>
+        <text x="30" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">React.js</text>
+
+        <!-- JavaScript -->
+        <rect x="125" y="0" width="125" height="34" rx="8" fill="url(#st_cardBg)" stroke="#F7DF1E" stroke-width="1" stroke-opacity="0.6"/>
+        <circle cx="141" cy="17" r="4" fill="#F7DF1E"/>
+        <text x="155" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">JavaScript (ES6+)</text>
+
+        <!-- HTML5/CSS3 -->
+        <rect x="260" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#E34F26" stroke-width="1" stroke-opacity="0.6"/>
+        <circle cx="276" cy="17" r="4" fill="#E34F26"/>
+        <text x="290" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">HTML5 / CSS3</text>
+
+        <!-- Tailwind -->
+        <rect x="385" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.6"/>
+        <circle cx="401" cy="17" r="4" fill="#38BDF8"/>
+        <text x="415" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">TailwindCSS</text>
+      </g>
+    </g>
+
+    <!-- Category 2: Backend & Server -->
+    <g transform="translate(0, 90)">
+      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#00d2ff" letter-spacing="1">BACKEND &amp; RUNTIMES</text>
+      <g transform="translate(0, 28)">
+        <!-- Node.js -->
+        <rect x="0" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#83CD29" stroke-width="1" stroke-opacity="0.6"/>
+        <circle cx="16" cy="17" r="4" fill="#83CD29"/>
+        <text x="30" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Node.js</text>
+
+        <!-- Express.js -->
+        <rect x="125" y="0" width="125" height="34" rx="8" fill="url(#st_cardBg)" stroke="#ffffff" stroke-width="1" stroke-opacity="0.4"/>
+        <circle cx="141" cy="17" r="4" fill="#ffffff"/>
+        <text x="155" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Express.js</text>
+
+        <!-- REST APIs -->
+        <rect x="260" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#247bff" stroke-width="1" stroke-opacity="0.6"/>
+        <circle cx="276" cy="17" r="4" fill="#247bff"/>
+        <text x="290" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">REST APIs</text>
+
+        <!-- Python -->
+        <rect x="385" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#3776AB" stroke-width="1" stroke-opacity="0.6"/>
+        <circle cx="401" cy="17" r="4" fill="#3776AB"/>
+        <text x="415" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Python</text>
+      </g>
+    </g>
+
+    <!-- Category 3: Databases, Algorithms & Tools -->
+    <g transform="translate(0, 180)">
+      <text x="0" y="16" class="st-mono" font-size="12" font-weight="700" fill="#ff354f" letter-spacing="1">DATA, DSA &amp; SYSTEM TOOLS</text>
+      <g transform="translate(0, 28)">
+        <!-- MongoDB -->
+        <rect x="0" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#47A248" stroke-width="1" stroke-opacity="0.6"/>
+        <circle cx="16" cy="17" r="4" fill="#47A248"/>
+        <text x="30" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">MongoDB</text>
+
+        <!-- MySQL -->
+        <rect x="125" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00758F" stroke-width="1" stroke-opacity="0.6"/>
+        <circle cx="141" cy="17" r="4" fill="#00758F"/>
+        <text x="155" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">MySQL</text>
+
+        <!-- C++ DSA -->
+        <rect x="250" y="0" width="125" height="34" rx="8" fill="url(#st_cardBg)" stroke="#00599C" stroke-width="1" stroke-opacity="0.6"/>
+        <circle cx="266" cy="17" r="4" fill="#659AD2"/>
+        <text x="280" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">C++ &amp; DSA</text>
+
+        <!-- Git / GitHub -->
+        <rect x="385" y="0" width="115" height="34" rx="8" fill="url(#st_cardBg)" stroke="#F05032" stroke-width="1" stroke-opacity="0.6"/>
+        <circle cx="401" cy="17" r="4" fill="#F05032"/>
+        <text x="415" y="22" class="st-sans" font-size="13" font-weight="600" fill="#ffffff">Git / GitHub</text>
+      </g>
+    </g>
+
+    <!-- Bottom Metrics Banner -->
+    <g transform="translate(0, 275)">
+      <rect width="500" height="50" rx="12" fill="#0c162d" stroke="#1f335c" stroke-width="1"/>
+      <text x="20" y="30" class="st-sans" font-size="13" fill="#94a3b8">
+        Focused on building <tspan fill="#00d2ff" font-weight="700">clean architectures</tspan>, optimized queries &amp; scalable web services.
+      </text>
+    </g>
+  </g>
+</svg>
