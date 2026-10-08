@@ -1,17 +1,17 @@
 <div align="center">
 
 # ⚡ ABHIJAT PATEL
-### SDET & Software Quality Engineer • Java Spring Boot & FastAPI • Multi-Agent AI & Forensics
+### Software Development Engineer (SDE) • MERN Full Stack Developer • Java Spring Boot & FastAPI
 
-![Hero](./assets/hero.svg?v=3)
+![Hero](./assets/hero.svg?v=4)
 
-![About](./assets/about-life.svg?v=3)
+![About](./assets/about-life.svg?v=4)
 
-![Stack](./assets/stack.svg?v=3)
+![Stack](./assets/stack.svg?v=4)
 
-![Developer ID](./assets/id-dashboard.svg?v=3)
+![Developer ID](./assets/id-dashboard.svg?v=4)
 
-![Connect](./assets/connect.svg?v=3)
+![Connect](./assets/connect.svg?v=4)
 
 </div>
 
@@ -39,7 +39,7 @@
   - Gained industry-aligned exposure to Generative AI, AI tools, and cloud computing fundamentals.
   - Completed structured modules involving cloud fundamentals and practical GenAI use cases.
 - 🎓 **Bachelor of Technology (B.Tech) in Information Technology** (2023 – 2027)
-  - *JSS Academy of Technical Education, Noida* | **CGPA: 7.27 / 10**
+  - *JSS Academy of Technical Education, Noida*
 - 📜 **Certifications**:
   - Communication Skills — *TCS iON, Tata Consultancy Services*
   - GenAI & Cloud Computing Internship — *IBM SkillsBuild, AICTE–BharatCares*
@@ -80,7 +80,7 @@ npx abhijat-patel
 ---
 
 <p align="center">
-  <b>VALIDATE • TEST • BUILD • SCALE</b><br/>
+  <b>BUILD • SCALE • SOLVE • INNOVATE</b><br/>
   <i>Crafted with precision for Abhijat Patel</i>
 </p>
 

@@ -99,28 +99,31 @@
   <rect x="1" y="1" width="1198" height="448" rx="19" fill="none" stroke="url(#ab_borderGrad)" stroke-width="1.5"/>
 
   <g transform="translate(60, 42)">
-    <text x="0" y="0" class="ab-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 02 // TECHNICAL CAPABILITIES &amp; SOFTWARE QUALITY</text>
+    <text x="0" y="0" class="ab-mono" font-size="13" font-weight="700" fill="#247bff" letter-spacing="2">&gt; 02 // TECHNICAL CAPABILITIES &amp; FULL STACK ENGINEERING</text>
   </g>
 
   <g transform="translate(60, 75)">
+    <!-- Card 1: MERN Full Stack Development -->
     <g transform="translate(0, 0)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#247bff"/>
       <circle cx="36" cy="37" r="18" fill="#0d244d"/>
-      <text x="36" y="42" text-anchor="middle" font-size="18">🛡️</text>
-      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Software Testing &amp; Quality Engineering</text>
-      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Software validation, semantic verification, data validation &amp; debugging</text>
+      <text x="36" y="42" text-anchor="middle" font-size="18">⚡</text>
+      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">MERN Full Stack &amp; Web Systems</text>
+      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">React.js, Node.js, Express.js, MongoDB, Next.js &amp; Modern UI/UX</text>
     </g>
 
+    <!-- Card 2: Backend Development & REST APIs -->
     <g transform="translate(0, 86)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#00d2ff"/>
       <circle cx="36" cy="37" r="18" fill="#0b2e3b"/>
-      <text x="36" y="42" text-anchor="middle" font-size="18">⚡</text>
-      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Backend Development &amp; REST APIs</text>
-      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Java Spring Boot, Python FastAPI, PostgreSQL, MySQL &amp; SQLAlchemy</text>
+      <text x="36" y="42" text-anchor="middle" font-size="18">☕</text>
+      <text x="68" y="32" class="ab-sans" font-size="16" font-weight="700" fill="#ffffff">Java Spring Boot &amp; Python FastAPI</text>
+      <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Robust microservices, PostgreSQL, MySQL, SQLAlchemy &amp; RESTful APIs</text>
     </g>
 
+    <!-- Card 3: Forensics & Multi-Modal AI (Clever AI & ClarifyAI) -->
     <g transform="translate(0, 172)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#ff354f"/>
@@ -130,6 +133,7 @@
       <text x="68" y="54" class="ab-sans" font-size="13" fill="#94a3b8">Clever AI SHA-256 ELA forensics, ClarifyAI claim matching &amp; LangGraph</text>
     </g>
 
+    <!-- Card 4: DSA & Computer Science Core -->
     <g transform="translate(0, 258)">
       <rect width="520" height="74" rx="14" fill="url(#ab_cardBg)" stroke="#1a2d52" stroke-width="1.2"/>
       <rect x="0" y="0" width="4" height="74" rx="2" fill="#ffd166"/>
@@ -146,7 +150,7 @@
     <g transform="translate(30, 24)">
       <rect x="0" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
       <rect x="0" y="0" width="0" height="4" rx="2" fill="#247bff" class="ab-bar-1"/>
-      <text x="0" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">01 / SDET &amp; QA</text>
+      <text x="0" y="20" class="ab-mono" font-size="11" fill="#64748b" font-weight="600">01 / SDE &amp; MERN</text>
 
       <rect x="160" y="0" width="140" height="4" rx="2" fill="#1b2a47"/>
       <rect x="160" y="0" width="0" height="4" rx="2" fill="#00d2ff" class="ab-bar-2"/>
@@ -158,22 +162,22 @@
     </g>
 
     <g class="ab-slide-1" transform="translate(30, 70)">
-      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">Software Testing &amp; Verification</text>
+      <text x="0" y="28" class="ab-sans" font-size="24" font-weight="800" fill="#ffffff">MERN &amp; Full Stack Craft</text>
       <text x="0" y="60" class="ab-sans" font-size="14" fill="#cbd5e1">
-        Applying strong software validation, test automation logic, and
+        Developing end-to-end full stack web applications with React.js,
       </text>
       <text x="0" y="82" class="ab-sans" font-size="14" fill="#cbd5e1">
-        semantic verification to guarantee robust, bug-free production code.
+        Node.js, Express.js, MongoDB, and high-throughput RESTful services.
       </text>
 
       <g transform="translate(0, 115)">
         <rect width="215" height="60" rx="10" fill="#0e1b38" stroke="#247bff" stroke-width="1"/>
-        <text x="16" y="26" class="ab-mono" font-size="12" fill="#247bff" font-weight="700">TARGET ROLE</text>
-        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">SDET / QA Engineer</text>
+        <text x="16" y="26" class="ab-mono" font-size="12" fill="#247bff" font-weight="700">PRIMARY ROLE</text>
+        <text x="16" y="46" class="ab-sans" font-size="13" fill="#ffffff">SDE / Full Stack Dev</text>
 
         <rect x="230" width="225" height="60" rx="10" fill="#0e1b38" stroke="#247bff" stroke-width="1"/>
-        <text x="246" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">CORE FOCUS</text>
-        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">Validation &amp; Verification</text>
+        <text x="246" y="26" class="ab-mono" font-size="12" fill="#00d2ff" font-weight="700">STACK FOCUS</text>
+        <text x="246" y="46" class="ab-sans" font-size="13" fill="#ffffff">MERN • Spring • FastAPI</text>
       </g>
     </g>
 
